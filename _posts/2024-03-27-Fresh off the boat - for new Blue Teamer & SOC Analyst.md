@@ -24,7 +24,7 @@ This is the list that I would always check when I got to a new system/network. I
 Reading the system audit checklist and book is good you should read it, the guide was my thought before I knew about system audits.
 
 
-# 1. Internet-facing servers/services
+# Internet-facing servers/services
 
 This is the first thing attackers can get their hands on (look at the Kill Chain - Recon). It is public to the internet so it is crucial that you understand and know these things (How many are there in your system)
 - Server's operating system (How many Linux, Windows, Mac, and its versions?)
@@ -35,7 +35,7 @@ This is the first thing attackers can get their hands on (look at the Kill Chain
 - Are there any remote access services that are public to the internet (RDP, VNC, VPN, SSH)
 - Firewall
 
-# 2. Understand Windows and Linux
+# Understand Windows and Linux
 
 Set up a lab and start poking around, you can create a lab as below, don't mind the AWS part just use VMware or VirtualBox or Docker Container to do it, and you will learn a lot.
 
@@ -43,7 +43,7 @@ If you wondering what operating system that you should focus on, go with Windows
 
 
 
-# 3. Email
+# Email
 
 Most of the attacks come from BES (Business Email Compromise). 
 
@@ -52,7 +52,7 @@ Small companies don't have the luxury of buying email services, they will self-h
 Understand Email Header and how to investigate a phishing ticket
 
 
-# 4. Logs 
+# Logging
 
 That is the data that you are collecting for your SIEM (If you don't have one, build one) -> ELK is a great start, and start ingesting logs to that instance and play around with it, such as what if you use PowerShell what logs does it generate? what is event ID, and what are the best practices to use that log -> any detection that could use this log source
 
@@ -85,7 +85,7 @@ You need to understand which log has high value and what are their use case, for
 
 After you understand those concepts, now you need to understand how much data is enough.
 
-# 5. Build your own dashboard
+# Build your own dashboard
 
 So you don't know how to do data analysis, but you have an account on SIEM and you can create your own shit then "Hell Yah" -> Create your own shit.
 
@@ -98,12 +98,12 @@ So why build your own dashboard and why can I use the default or someone else da
 - You can statistically create a baseline (What computer is talking to, how often it does that, and many more questions that you could come up with your own)
 
 
-# 6. Familiar with the ticketing system
+# Familiar with the ticketing system
 
 Most of the time if you are a young analyst you will have to do ticketing (case management) I don't like this but this is something you must do, although it is the simplest form of security task it is also one of the most important ones
 
 
-# 7. Get to know the people 
+# Get to know the people 
 
 Okay, It is true that you need to have a list of systems and who is the owner of it, and learn by asking what is normal to them. 
 
