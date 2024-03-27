@@ -17,14 +17,14 @@ When you are on the new system and don't know a thing about it, here is a checkl
 {: .prompt-info }
 
 
-# Overview
+## Overview
 
 This is the list that I would always check when I got to a new system/network. I know that this list can't give you a well-rounded look at the system but it will make you think and gain knowledge of the system that you are working with -> and plan the improvement or find something that is not right in the system
 
 Reading the system audit checklist and book is good you should read it, the guide was my thought before I knew about system audits.
 
 
-# Internet-facing servers/services
+## Internet-facing servers/services
 
 This is the first thing attackers can get their hands on (look at the Kill Chain - Recon). It is public to the internet so it is crucial that you understand and know these things (How many are there in your system)
 - Server's operating system (How many Linux, Windows, Mac, and its versions?)
@@ -35,7 +35,7 @@ This is the first thing attackers can get their hands on (look at the Kill Chain
 - Are there any remote access services that are public to the internet (RDP, VNC, VPN, SSH)
 - Firewall
 
-# Understand Windows and Linux
+## Understand Windows and Linux
 
 Set up a lab and start poking around, you can create a lab as below, don't mind the AWS part just use VMware or VirtualBox or Docker Container to do it, and you will learn a lot.
 
@@ -43,7 +43,7 @@ If you wondering what operating system that you should focus on, go with Windows
 
 
 
-# Email
+## Email
 
 Most of the attacks come from BES (Business Email Compromise). 
 
@@ -52,7 +52,7 @@ Small companies don't have the luxury of buying email services, they will self-h
 Understand Email Header and how to investigate a phishing ticket
 
 
-# Logging
+## Logging
 
 That is the data that you are collecting for your SIEM (If you don't have one, build one) -> ELK is a great start, and start ingesting logs to that instance and play around with it, such as what if you use PowerShell what logs does it generate? what is event ID, and what are the best practices to use that log -> any detection that could use this log source
 
@@ -68,7 +68,7 @@ A better understanding of the log source or the data source will better your det
 
 `Don't be scare, you will have time and mentor to guide you, and if not then it is ok, you still have a lot of time to familiar yourself with all of this 😘.`
 
-## Log Format
+### Log Format
 
 You must learn about the log format
 
@@ -79,13 +79,13 @@ You must learn about the log format
 - Windows Event Log 
 - Product Logs -> which is the log that is generated specifically for your company's product or vendor's product
 
-## How much log is enough?
+### How much log is enough?
 
 You need to understand which log has high value and what are their use case, for example why you collect Event ID 4688 (search the internet and come back to these blogs and tell me why) 
 
 After you understand those concepts, now you need to understand how much data is enough.
 
-# Build your own dashboard
+## Build your own dashboard
 
 So you don't know how to do data analysis, but you have an account on SIEM and you can create your own shit then "Hell Yah" -> Create your own shit.
 
@@ -137,7 +137,7 @@ After you follow a bunch of people, Twitter Algorithm will suggesst you even mor
 These channel provide me with huge amount of knowledge and links to article that help me to get my job and stay relevant in the Cyber Security scene.
 
 
-# Learning Structured Analytic (optional but not too optional)
+## Learning Structured Analytic (optional but not too optional)
 
 
-# Conclusion
+## Conclusion
