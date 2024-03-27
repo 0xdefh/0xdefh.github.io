@@ -137,7 +137,7 @@ After you follow a bunch of people, Twitter Algorithm will suggesst you even mor
 These channel provide me with huge amount of knowledge and links to article that help me to get my job and stay relevant in the Cyber Security scene.
 
 
-# 8. Learning Structured Analytic (optional but not too optional)
+# Learning Structured Analytic (optional but not too optional)
 
 
 # Conclusion
