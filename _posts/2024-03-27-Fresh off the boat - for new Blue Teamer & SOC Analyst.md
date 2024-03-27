@@ -4,7 +4,7 @@ date: 2024-03-27
 author: khuong
 layout: post
 categories: [BlueTeam, Security, SOC]
-tags: [beginner]   
+tags: [begineer]   
 toc: true
 ---
 
