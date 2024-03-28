@@ -85,6 +85,11 @@ You need to understand which log has high value and what are their use case, for
 
 After you understand those concepts, now you need to understand how much data is enough.
 
+### What should I look for
+
+In Windows you can reference to this article: 
+- [Monitoring AD for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise) which show you how to 
+
 ## Build your own dashboard
 
 So you don't know how to do data analysis, but you have an account on SIEM and you can create your own shit then "Hell Yah" -> Create your own shit.
