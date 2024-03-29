@@ -88,7 +88,7 @@ After you understand those concepts, now you need to understand how much data is
 ### What should I look for
 
 In Windows you can reference to this article: 
-- [Monitoring AD for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise) which show you how to 
+- [Monitoring AD for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise) which show which log (artifact) that you could use during your investigate and value that provided by the Windows 
 
 ## Build your own dashboard
 
@@ -116,33 +116,32 @@ Join a community and follow people on Twitter, here are some channels, and peopl
 
 **Twitter**
 
-- Black Hills Information Security (https://twitter.com/BHinfoSecurity) -> Great Team 10/10, a lot of tutorials and helpful videos, good community
-- vx-underground (https://twitter.com/vxunderground) 
-- Netresec https://twitter.com/netresec (About computer networking)
-- Mandiant (https://twitter.com/Mandiant) 
-- The DFIR Report (https://twitter.com/TheDFIRReport) 
-- Cyber Monk (https://twitter.com/Cyb3rMonk)
-- Shadow Server (https://twitter.com/Shadowserver)
-- CISA (https://twitter.com/CISACyber)
+- [Black Hills Information Security](https://twitter.com/BHinfoSecurity) -> Great Team 10/10, a lot of tutorials and helpful videos, good community
+- [vx-underground](https://twitter.com/vxunderground) 
+- [Netresec](https://twitter.com/netresec)
+- [Mandiant](https://twitter.com/Mandiant) 
+- [The DFIR Report](https://twitter.com/TheDFIRReport) 
+- [Cyber Monk](https://twitter.com/Cyb3rMonk)
+- [Shadow Server](https://twitter.com/Shadowserver)
+- [CISA](https://twitter.com/CISACyber)
 - SANS (all of the accounts that belong to SANS Institute)
-- Florian Roth (https://twitter.com/cyb3rops)
-- Sergio Caltagirone (https://twitter.com/cnoanalysis)
-- Red Canary (https://twitter.com/redcanary)
+- [Florian Roth](https://twitter.com/cyb3rops)
+- [Sergio Caltagirone](https://twitter.com/cnoanalysis)
+- [Red Canary](https://twitter.com/redcanary)
+- [Sekoia](https://twitter.com/sekoia_io)
 
 After you follow a bunch of people, Twitter Algorithm will suggesst you even more yay!
 
 **Discord**
 
-- Gynvael (https://discord.gg/JXyKVpxzgf)
-- Black Hills Information Security (https://discord.gg/bhis)
-- DFIR (https://discord.gg/digitalforensics)
-- OALabs https://discord.gg/oalabs
-- Threat Hunter https://discord.gg/threathunter
+- [Gynvael](https://discord.gg/JXyKVpxzgf)
+- [Black Hills Information Security](https://discord.gg/bhis)
+- [DFIR](https://discord.gg/digitalforensics)
+- [OALabs](https://discord.gg/oalabs)
+- [Threat Hunter](https://discord.gg/threathunter)
 
 These channel provide me with huge amount of knowledge and links to article that help me to get my job and stay relevant in the Cyber Security scene.
 
-
 ## Learning Structured Analytic (optional but not too optional)
-
 
 ## Conclusion
