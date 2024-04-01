@@ -132,7 +132,9 @@ You must learn about the log format
 
 You need to understand which log has high value and what are their use case, for example why you collect Event ID 4688 (search the internet and come back to these blogs and tell me why) 
 
-After you understand those concepts, now you need to understand how much data is enough.
+After you understand those concepts, now you need to understand how much data is enough. 
+
+You can't ingest all the log into your SIEM, because just like anything else, 
 
 #### What should I look for
 
@@ -146,12 +148,13 @@ So you don't know how to do data analysis, but you have an account on SIEM and y
 
 So why build your own dashboard and why can I use the default or someone else dashboard, oh you could use the default and be done with it but that's not why you're here, you want to be better, you hunt for hackers not the other way around -> BUILD YOU OWN DASHBOARD (For a small scope first -> build dashboard for a VLAN first).
 
-**The benefit of that is that:**
+**The benefit of that are:**
 
 - You know what you are looking at, the data source, you know what you are monitoring 
-- You can quickly learn how the data in that VLAN or System
+- You can quickly learn how the data in that VLAN or System by looking at the metric that you are set up
 - You can statistically create a baseline (What computer is talking to, how often it does that, and many more questions that you could come up with your own)
 
+Just like a general or CEO you need glass panel of information ready for you to look at every morning and determined whether shit happend or not
 
 ### Familiar with the ticketing system
 
@@ -181,7 +184,7 @@ Join a community and follow people on Twitter, here are some channels, and peopl
 
 After you follow a bunch of people, Twitter Algorithm will suggesst you even more yay!
 
-**Discord**
+**Discords**
 
 - [Gynvael](https://discord.gg/JXyKVpxzgf)
 - [Black Hills Information Security](https://discord.gg/bhis)
@@ -190,6 +193,12 @@ After you follow a bunch of people, Twitter Algorithm will suggesst you even mor
 - [Threat Hunter](https://discord.gg/threathunter)
 
 These channel provide me with huge amount of knowledge and links to article that help me to get my job and stay relevant in the Cyber Security scene.
+
+**Blogs**
+
+- [Tao Security](https://taosecurity.blogspot.com/)
+- ...
+
 
 ### Learning Structured Analytic (optional but not too optional)
 
@@ -202,7 +211,9 @@ When I first landed my job to do cyber security, I was shocked that there are so
 
 ### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
 
-This is like the special forces in the Cyber Security, Cyber Security is broad and always changing 
+This is like the special forces in the Cyber Security, Cyber Security is broad and always changing. But the demand are not that much in VN, 
+
+In VN, there are not much of an opportunity for these job, you either go work for Viettel, VinCSS,... or you work remote for any company in Singapore 
 
 ---
 ## Know the Enemy
@@ -211,4 +222,8 @@ Knowning what are the enemny (threat actor, hackers) are doing, what CVE are the
 
 ### Conclusion and How to to get your training
 
-Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet
+Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet. 
+
+The key? Stay curious, stay active, and be proactive! There's always something new to learn, and that's what makes this field so dynamic.
+
+My goal?  To give you a clear picture of the industry's direction and how I approach running a Security Operations Center (SOC)
