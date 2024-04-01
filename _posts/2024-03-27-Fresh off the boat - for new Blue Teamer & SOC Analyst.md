@@ -82,9 +82,6 @@ Understand Email Header, Email  and how to investigate a phishing ticket.
 
 ### Logging / Analyze Logs
 
-![You need logs](/assets/img/logs-logs-everywhere.jpg)
-_You need a lot of logs_
-
 **Seeing Through the Fog: Understanding Your IT Environment with Logs**
 
 Ever feel like you're flying blind in your IT environment?  Unsure what your servers are up to, or if they're harboring malicious activity?  The answer lies in a treasure trove of information often ignored: logs.
