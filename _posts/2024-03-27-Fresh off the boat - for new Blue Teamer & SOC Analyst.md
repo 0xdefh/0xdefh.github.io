@@ -221,9 +221,12 @@ In VN, there are not much of an opportunity for these job, you either go work fo
 ---
 ## Know the Enemy
 
-Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the 
+Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper.
 
-### Conclusion and How to to get your training
+"Will continue this section soon"
+
+---
+## Conclusion and How to to get your training
 
 Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet. 
 
