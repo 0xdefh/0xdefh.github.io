@@ -38,16 +38,26 @@ Cyber Security take a lot of concept from the military and physical world defens
 - Deception or counter-intelligence 
 - ...
 
-So when doing Cyber Security, you think of yourself is a solder or a general, warchief and you are at war, you need to use all your exising resource and make the defenses work just like Sun Tzu said
+In the realm of cybersecurity, you're not just a soldier, you're the general, the strategist. It's a constant battle, and just like Sun Tzu said, victory hinges on knowing both your defenses and your adversaries.
 
 `"If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle." - Sun Tzu, The Art of War  `
+
+Mastering the strategic thinking of Sun Tzu's Art of War can transform you into a more effective cybersecurity defender.
+
+The Cuckoo Egg by Cliff Stoll is a great resource for cybersecurity. Did you know there's a Vietnamese translation available? You might want to check it out!
 
 ---
 
 ## Know Yourself 
+
+With the NIST framework by your side and the mindset of a general you now must get your hand dirty by actually doing the work. First know yourself -> know your IT/OT environment.
+
 ###  Internet-facing servers/services
 
-This is the first thing attackers can get their hands on (look at the Kill Chain - Recon). It is public to the internet so it is crucial that you understand and know these things (How many are there in your system)
+The initial stage of an attack often involves reconnaissance, where attackers gather publicly available information. Understanding what data is exposed online is critical for your defense.  How much of your system's information is publicly accessible?
+
+You as a defender always has a upper hand in this case, you have control over the asset far better than the attacker. So why not mapping out the network and understand how 
+
 - Server's operating system (How many Linux, Windows, Mac, and its versions?)
 - Number of Web application services (What are the technologies that are being used to build those websites?)
 - Number of Web servers (IIS, Apache, Nginx) 
@@ -58,11 +68,9 @@ This is the first thing attackers can get their hands on (look at the Kill Chain
 
 ### Understand Windows and Linux 
 
-Set up a lab and start poking around, you can create a lab as below, don't mind the AWS part just use VMware or VirtualBox or Docker Container to do it, and you will learn a lot.
+Hands-on learning is key! Set up a cybersecurity lab using a free tool like VMware, VirtualBox, or Docker containers. This lets you safely experiment with different scenarios and learn through exploration.
 
-If you wondering what operating system that you should focus on, go with Windows first and then Linux (or mix up but always pay more time for Windows) 
-
-
+For operating systems, focus on Windows first.  Linux is valuable too, but mastering Windows vulnerabilities is crucial as it's a common target. You can eventually explore both, but prioritize Windows initially.
 
 ### Email 
 
@@ -70,22 +78,42 @@ Most of the attacks come from BES (Business Email Compromise).
 
 Small companies don't have the luxury of buying email services, they will self-hosted and will not have a protection system so there will be no filter or any security measure against the top vector of attack which is Email Phishing -> You need to look for Email system and its data flow.
 
-Understand Email Header and how to investigate a phishing ticket
+Understand Email Header, Email  and how to investigate a phishing ticket. 
 
+### Logging / Analyze Logs
 
-### Logging
+**Seeing Through the Fog: Understanding Your IT Environment with Logs**
 
-That is the data that you are collecting for your SIEM (If you don't have one, build one) -> ELK is a great start, and start ingesting logs to that instance and play around with it, such as what if you use PowerShell what logs does it generate? what is event ID, and what are the best practices to use that log -> any detection that could use this log source
+Ever feel like you're flying blind in your IT environment?  Unsure what your servers are up to, or if they're harboring malicious activity?  The answer lies in a treasure trove of information often ignored: logs.
+
+Logs are detailed records of system activity, capturing everything from successful logins to application errors.  By analyzing these logs, you gain valuable insights into the health and security of your IT infrastructure.  But unanalyzed logs are like locked treasure chests - useless until unlocked.
+
+**Unlocking the Power of Logs with SIEM**
+
+Security Information and Event Management (SIEM) systems are designed to do just that.  They centralize and analyze logs from various sources, helping you identify patterns and potential threats.
+
+Don't have a dedicated SIEM? No worries!
+
+Building Your Own Security Arsenal with ELK Stack
+
+ELK Stack (Elasticsearch, Logstash, and Kibana) is a free and open-source platform that allows you to build your own powerful SIEM.
+
+Taking Control with Hands-on Exploration
+
+Once you have ELK set up, the fun begins! Start collecting logs from your systems and feeding them into ELK.  This lets you explore the data and ask critical questions like:
+
+- What happens when you use PowerShell? What logs are generated?
+- What information can an event ID tell me?
+- How can I leverage these logs to identify and stop security threats?
+- By actively analyzing logs, you gain a clear view of your IT environment, enabling you to detect suspicious activities and proactively secure your systems.
 
 Ref:
-
-- https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html#introduction (Logging for application)
-- https://csrc.nist.gov/publications/detail/sp/800-92/final (NIST about logging management)
+- [OWASP Cheat Sheet - Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html#introduction)
+- [NIST about Logging ](https://csrc.nist.gov/publications/detail/sp/800-92/final)
 
 It is essential, logging is an act of mercy for you and your company, if you do not collect enough logs you will lose your visibility on your system. If your SIEM can handle the sheer amount of logs that pour in then good -> You will learn a lot by analyzing those data 
 
 A better understanding of the log source or the data source will better your detection and your DFIR process later on. I mean you should know what the data source provides you information as IP Address, process execution time when it first appears on the system, does the process communicates to the Internet, and so on. 
-
 
 `Don't be scare, you will have time and mentor to guide you, and if not then it is ok, you still have a lot of time to familiar yourself with all of this 😘.`
 
@@ -129,9 +157,9 @@ So why build your own dashboard and why can I use the default or someone else da
 
 Most of the time if you are a young analyst you will have to do ticketing (case management) I don't like this but this is something you must do, although it is the simplest form of security task it is also one of the most important ones
 
-### Get to know the people 
+### Get to know the people in your IT Envinroment and surround yourself with people who are in the security field
 
-Okay, It is true that you need to have a list of systems and who is the owner of it, and learn by asking what is normal to them. 
+Okay, It is true that you need to have a list of systems and who is the owner of it, and learn by asking what is normal to them, rather than just figure it out youself, being a cyber security is like a  
 
 Join a community and follow people on Twitter, here are some channels, and people you need to follow
 
@@ -171,6 +199,11 @@ Know how to do programming would greatly improve you skill
 
 When I first landed my job to do cyber security, I was shocked that there are so many data that flowing to our SIEM.
 
+
+### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
+
+This is like the special forces in the Cyber Security, Cyber Security is broad and always changing 
+
 ---
 ## Know the Enemy
 
@@ -178,4 +211,4 @@ Knowning what are the enemny (threat actor, hackers) are doing, what CVE are the
 
 ### Conclusion and How to to get your training
 
-Leaning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of 
+Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet
