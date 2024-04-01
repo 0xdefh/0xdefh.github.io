@@ -226,4 +226,4 @@ Learning Cyber Security is hard, there are a lot of concept you need to know and
 
 The key? Stay curious, stay active, and be proactive! There's always something new to learn, and that's what makes this field so dynamic.
 
-My goal?  To give you a clear picture of the industry's direction and how I approach running a Security Operations Center (SOC)
+My goal? To give you a clear picture of the industry's direction and how I approach running a Security Operations Center (SOC)
