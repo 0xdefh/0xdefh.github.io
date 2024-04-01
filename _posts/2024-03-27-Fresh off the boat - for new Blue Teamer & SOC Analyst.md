@@ -82,7 +82,7 @@ Understand Email Header, Email  and how to investigate a phishing ticket.
 
 ### Logging / Analyze Logs
 
-![You need logs](/0xdefh.github.io/assets/img/logs-logs-everywhere.jpg)
+![You need logs](/assets/img/logs-logs-everywhere.jpg)
 _You need a lot of logs_
 
 **Seeing Through the Fog: Understanding Your IT Environment with Logs**
