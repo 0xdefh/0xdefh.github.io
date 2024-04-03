@@ -23,7 +23,6 @@ My observation that most of Vietnamese CTI are actually not very TI at all
 ## Overview of Cyber Threat Intelligence and CTI Requirement
 
 
-
 When I studied and learned about CTI there was a cycle that at first I overlooked but now I realize it is very crucial to understand this cycle, which is the CTI Life Cycle.
 
 The first thing in CTI is to have a requirement.

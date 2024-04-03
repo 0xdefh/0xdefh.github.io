@@ -60,11 +60,13 @@ You as a defender always has a upper hand in this case, you have control over th
 
 - Server's operating system (How many Linux, Windows, Mac, and its versions?)
 - Number of Web application services (What are the technologies that are being used to build those websites?)
-- Number of Web servers (IIS, Apache, Nginx) 
+- Number of Web servers (IIS, Apache, Nginx,...) 
 - Domain (how many subdomains?) 
 - 5-tuples (Src, Dest IP Address, Src, Dest Port, Protocol)
 - Are there any remote access services that are public to the internet (RDP, VNC, VPN, SSH)
-- Firewall
+- Firewall, IDS/IPS 
+
+There are so many to understand but the easiest thing in my opinion is to understand this. 
 
 ### Understand Windows and Linux 
 
@@ -134,7 +136,7 @@ You need to understand which log has high value and what are their use case, for
 
 After you understand those concepts, now you need to understand how much data is enough. 
 
-You can't ingest all the log into your SIEM, because just like anything else, 
+It's important to prioritize log selection for your SIEM to ensure efficient operation and accurate threat detection. Not all logs are equally valuable.
 
 #### What should I look for
 
@@ -154,17 +156,27 @@ So why build your own dashboard and why can I use the default or someone else da
 - You can quickly learn how the data in that VLAN or System by looking at the metric that you are set up
 - You can statistically create a baseline (What computer is talking to, how often it does that, and many more questions that you could come up with your own)
 
-Just like a general or CEO you need glass panel of information ready for you to look at every morning and determined whether shit happend or not
+Just like a general or CEO you need glass panel of information ready for you to look at every morning and determined whether shit happend or not.
 
 ### Familiar with the ticketing system
 
-Most of the time if you are a young analyst you will have to do ticketing (case management) I don't like this but this is something you must do, although it is the simplest form of security task it is also one of the most important ones
+Most of the time if you are a young analyst you will have to do ticketing (case management) I don't like this but this is something you must do, although it is the simplest form of security task it is also one of the most important ones.
+
+But khuong, why? well because:
+- 
 
 ### Get to know the people in your IT Envinroment and surround yourself with people who are in the security field
 
-Okay, It is true that you need to have a list of systems and who is the owner of it, and learn by asking what is normal to them, rather than just figure it out youself, being a cyber security is like a  
+Absolutely, maintaining a system ownership list is crucial. It's much faster and likely more accurate to inquire about typical behavior from the owners themselves, rather than attempting to figure it out independently. However, be mindful of potential bias or misinformation - it's always wise to pursue verification for complete accuracy.
+
+**Surround yourself with Cyber Security folks**
 
 Join a community and follow people on Twitter, here are some channels, and people you need to follow
+
+
+**VN Cyber Security folks**
+
+- 
 
 **Twitter**
 
@@ -217,9 +229,12 @@ By learning data analytic you can applied those techniques such as:
 - Cluster analysis
 - Stack counting
 - Grouping
-- Abnomalies 
+- Abnomalies detection
 - 
 
+By learning Python, you can use Jupyter Notebook to do various thing:
+- [Threat Hunter Playbook](https://threathunterplaybook.com/tutorials/jupyter/introduction.html)
+- 
 ### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
 
 This is like the special forces in the Cyber Security, Cyber Security is broad and always changing. But the demand are not that much in VN, 
@@ -229,14 +244,18 @@ In VN, there are not much of an opportunity for these job, you either go work fo
 ---
 ## Know the Enemy
 
-Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper.
+Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper. This is probably call **Threat Intelligence**
+
+
 
 "Will continue this section soon"
 
 ---
 ## Conclusion and How to to get your training
 
-Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet. 
+Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet.
+
+
 
 The key? Stay curious, stay active, and be proactive! There's always something new to learn, and that's what makes this field so dynamic.
 

@@ -22,12 +22,12 @@ There are a lot of forums, telegram, and discord groups where these threat actor
 
 ## How do I find these stuffs?
 
-First of all if not because of this SANS webcast, I could never know about this: https://www.sans.org/webcasts/setting-up-osint-watchdogs-create-free-persistent-monitoring-tools-python/, and exchange information with "Konoha" give me an idea that I could do something like that for myself to, so my journey to find Information Stealer Channels began.
+First of all if not because of this SANS webcast, I could never know about this: [Setting up OSINT Watchdog - Create Free Perisistent Monitoring Tools Python](https://www.sans.org/webcasts/setting-up-osint-watchdogs-create-free-persistent-monitoring-tools-python/), and exchange information with "Konoha" give me an idea that I could do something like that for myself to, so my journey to find Information Stealer Channels began.
 
 
 ### Existing List
 
-By following this list or this list: https://github.com/fastfire/deepdarkCTI/blob/main/telegram.md You can participate in many sources, but the problem is you don’t have the full-time to monitor these chat channels. The need for automation and crawlers is real. (This list is just a starting point for you,; we will develop the OSINT skill to find more channels)
+By following this list or this list: [Deep Dark CTI](https://github.com/fastfire/deepdarkCTI/blob/main/telegram.md) You can participate in many sources, but the problem is you don’t have the full-time to monitor these chat channels. The need for automation and crawlers is real. (This list is just a starting point for you,; we will develop the OSINT skill to find more channels)
 
 ### OSINT
 
@@ -104,17 +104,17 @@ Remember, this is just the tip of the iceberg! Information stealer data is a fas
 
 ## References and credits
 
-In this section, I'll give you my understanding of these channels during my learning (I just re-learn this knowledge from the best OSINT practitioner around the world) thanks https://twitter.com/matt0177 (Matt Edmondson) for sharing his knowledge. Also Michael Bazzel for the Inteltechniques and many other OSINT practitioners.
+In this section, I'll give you my understanding of these channels during my learning (I just re-learn this knowledge from the best OSINT practitioner around the world) thanks [Matt Edmondson Twitter](https://twitter.com/matt0177) (Matt Edmondson) for sharing his knowledge. Also Michael Bazzel for the Inteltechniques and many other OSINT practitioners.
 
 Also "N" who together with me built the script, reinvented quite a lot of wheels but it was quite fun and the best part is that we learned something new. I appreciate your help, contributions, and support
 
 Refs I'll update this list regularly.
-- https://therecord.media/redline-stealer-identified-as-primary-source-of-stolen-credentials-on-two-dark-web-markets
-- https://www.youtube.com/watch?v=gFp1XOmssAg&ab_channel=FIRST (Very good talk, I like it)
-- https://www.first.org/resources/papers/conf2023/FIRSTCON23-TLPCLEAR-Kim-Info-Stealer-Most-Bang-for-the-Buck-Malware.pdf (The slide from the above talk)
-- https://start.me/p/DPYPMz/the-ultimate-osint-collection
-- https://medium.com/@nijithneo/guide-to-osint-in-person-investigation-bd2a38cd3616
-- https://inteltechniques.com/blog/2022/07/06/new-breach-data-lesson-ii-stealer-logs/
+- [Redline Stealer identified as primary source of stolen credentials on two dark web markets](https://therecord.media/redline-stealer-identified-as-primary-source-of-stolen-credentials-on-two-dark-web-markets)
+- [Info Stealer Most Bang for Buck Malware](https://www.youtube.com/watch?v=gFp1XOmssAg&ab_channel=FIRST) (Very good talk, I like it)
+- [Info Stealer Most Bang for Buck Malware Slide](https://www.first.org/resources/papers/conf2023/FIRSTCON23-TLPCLEAR-Kim-Info-Stealer-Most-Bang-for-the-Buck-Malware.pdf) (The slide from the above talk)
+- [Ultimate OSINT Collection](https://start.me/p/DPYPMz/the-ultimate-osint-collection)
+- [Guide to OSINT in person investigation](https://medium.com/@nijithneo/guide-to-osint-in-person-investigation-bd2a38cd3616)
+- [New Breach Data Lesson II - Stealer Logs](https://inteltechniques.com/blog/2022/07/06/new-breach-data-lesson-ii-stealer-logs/)
 - https://arstechnica.com/security/2023/11/hackers-spent-2-years-looting-secrets-of-chipmaker-nxp-before-being-detected/ (Just someone of many reasons why you should monitor data leak)
 
 ## What's next
@@ -125,3 +125,5 @@ Find the relations between telegram channels.
 Learn about data breaches and how to obtain them. In this Telegram Monitoring, I'm talking about breaches that much.
 
 Learn more from others. 
+
+
