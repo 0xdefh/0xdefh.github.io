@@ -4,12 +4,14 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> https://www.rfc-editor.org/rfc/rfc3552 Always read this (https://vnhacker.blogspot.com/2009/12/giam-sat-ninh-mang-hay-la-lam-nao-e.html)
+>  Always read this [Giam sat an ninh mang](https://vnhacker.blogspot.com/2009/12/giam-sat-ninh-mang-hay-la-lam-nao-e.html) and [RFC3552](https://www.rfc-editor.org/rfc/rfc3552)
 {: .prompt-tip }
 
 ## My name is Zeroska
 
 What's in a name? Whether you call me Zeroska or something else, what really matters is that you've found your way here. I'm glad you're here, and I hope you'll find something useful on this page
+
+My work in cybersecurity keeps me on the cutting edge of technology, while my passion lies in exploring the big questions of life through philosophy. I'm also fascinated by intelligence and business, both on a practical and theoretical level.
 
 ## The Inspiration Behind My Writing
 
