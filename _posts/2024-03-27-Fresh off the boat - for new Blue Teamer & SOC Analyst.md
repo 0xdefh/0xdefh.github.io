@@ -10,7 +10,7 @@ toc: true
 
 When you are on the new system and don't know a thing about it, here is a checklist to improve your visibility and its condition, or you are just a fresher blue team and want to learn. 
 
-> Cyber Kill Chain is the keyword you should look at -> it describes how an attacker will normally do, MITRE ATT&CK will help you know about the detail of each step of the Kill Chain (the ATT&CK  is not a list of all threat actor techniques in the world but it is a list of known techniques)
+> Cyber Kill Chain is the keyword you should look at -> it describes how an attacker will normally do, [MITRE ATT&CK](https://attack.mitre.org/) will help you know about the detail of each step of the Kill Chain (the ATT&CK  is not a list of all threat actor techniques in the world but it is a list of known techniques)
 {: .prompt-info }
 
 > NIST Framework is the place you want to look for first, get the guideline clear and correct, and play it to your system, for me the first important step is to IDENTIFY your environment. 
@@ -191,29 +191,40 @@ After you follow a bunch of people, Twitter Algorithm will suggesst you even mor
 - [DFIR](https://discord.gg/digitalforensics)
 - [OALabs](https://discord.gg/oalabs)
 - [Threat Hunter](https://discord.gg/threathunter)
+- ...
 
 These channel provide me with huge amount of knowledge and links to article that help me to get my job and stay relevant in the Cyber Security scene.
 
 **Blogs**
 
 - [Tao Security](https://taosecurity.blogspot.com/)
+- [The DFIR Report](https://thedfirreport.com/) - For the love of god please read this 
+- [Hexacorn](https://hexacorn.com/)
+- [AD Security](https://adsecurity.org/)
+- [Elastic Security Lab](https://www.elastic.co/security-labs)
 - ...
-
 
 ### Learning Structured Analytic (optional but not too optional)
 
 ### Learning Data Analytic (Important)
 
-Know how to do programming would greatly improve you skill
+Programming skills are a powerful asset and can significantly boost your skillset and also makes you more valuable in the job market.
 
-When I first landed my job to do cyber security, I was shocked that there are so many data that flowing to our SIEM.
+In my first cybersecurity role, I was overwhelmed by the sheer volume of data flowing into our SIEM (Security Information and Event Management system). I felt lost amidst a sea of unfamiliar terms: Windows Event Logs, Application Logs, Firewall Logs, internal IP addresses, VLANs, server names... the list went on. The biggest challenge? Knowing where to even begin! 
 
+By learning data analytic you can applied those techniques such as:
+- Freqency analysis
+- Cluster analysis
+- Stack counting
+- Grouping
+- Abnomalies 
+- 
 
 ### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
 
 This is like the special forces in the Cyber Security, Cyber Security is broad and always changing. But the demand are not that much in VN, 
 
-In VN, there are not much of an opportunity for these job, you either go work for Viettel, VinCSS,... or you work remote for any company in Singapore 
+In VN, there are not much of an opportunity for these job, you either go work for Viettel, VinCSS,... or you work remote for any company in Singapore. But don't let that be a blockage, the VN Cyber Security is getting better and better
 
 ---
 ## Know the Enemy
