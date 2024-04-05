@@ -83,9 +83,7 @@ Small companies don't have the luxury of buying email services, they will self-h
 
 Understand Email Header, Email  and how to investigate a phishing ticket. 
 
-### Logging / Analyze Logs
-
-![logeverywhere](/assets//img/logs-logs-everywhere.jpg)  
+### Logging / Analyze Logs 
 
 **Seeing Through the Fog: Understanding Your IT Environment with Logs**
 
