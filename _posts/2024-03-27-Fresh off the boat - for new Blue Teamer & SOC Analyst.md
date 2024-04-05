@@ -4,7 +4,7 @@ date: 2024-03-27
 author: khuong
 layout: post
 categories: [BlueTeam, Security, SOC]
-tags: [begineer]   
+tags: [beginner]   
 toc: true
 ---
 
@@ -142,6 +142,7 @@ It's important to prioritize log selection for your SIEM to ensure efficient ope
 
 In Windows you can reference to this article: 
 - [Monitoring AD for signs of compromise](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise) which show which log (artifact) that you could use during your investigate and value that provided by the Windows 
+- [IAN Research - SOC Logging and Monitoring Best Practises](https://www.iansresearch.com/resources/all-blogs/post/security-blog/2021/04/29/soc-logging-and-monitoring-best-practices)
 - 
 
 ### Build your own dashboard
@@ -162,8 +163,7 @@ Just like a general or CEO you need glass panel of information ready for you to 
 
 Most of the time if you are a young analyst you will have to do ticketing (case management) I don't like this but this is something you must do, although it is the simplest form of security task it is also one of the most important ones.
 
-But khuong, why? well because:
-- 
+But khuong, why? well because of this please read this: [Hexacorn - How to become the best SOC analyst e-v-e-r.](https://www.hexacorn.com/blog/2018/02/25/how-to-become-the-best-soc-analyst-e-v-e-r/)
 
 ### Get to know the people in your IT Envinroment and surround yourself with people who are in the security field
 
@@ -171,12 +171,11 @@ Absolutely, maintaining a system ownership list is crucial. It's much faster and
 
 **Surround yourself with Cyber Security folks**
 
-Join a community and follow people on Twitter, here are some channels, and people you need to follow
-
+Join a community and follow people on Twitter, here are some channels, and people you need to follow:
 
 **VN Cyber Security folks**
 
-- 
+- A lot of people I want to mention here but I don't have their consent, probably I'll have them list right here soon.
 
 **Twitter**
 
@@ -224,23 +223,28 @@ Programming skills are a powerful asset and can significantly boost your skillse
 
 In my first cybersecurity role, I was overwhelmed by the sheer volume of data flowing into our SIEM (Security Information and Event Management system). I felt lost amidst a sea of unfamiliar terms: Windows Event Logs, Application Logs, Firewall Logs, internal IP addresses, VLANs, server names... the list went on. The biggest challenge? Knowing where to even begin! 
 
-By learning data analytic you can applied those techniques such as:
-- Freqency analysis
-- Cluster analysis
-- Stack counting
-- Grouping
-- Abnomalies detection
-- ...
+Instead of relying solely on reactive ticketing systems, security professionals can leverage Jupyter Notebooks to become active threat hunters.  These notebooks can serve as a daily log, documenting security events and findings. 
+
+Additionally, they can be used to visualize network activity through charts and maps, focusing on the specific VLANs under your responsibility. Most importantly, Jupyter Notebooks empower a proactive approach.  You can create routines that go beyond just responding to tickets.  These routines can involve actively searching for threats within your network and statistically analyzing security events to identify potential issues before they escalate.
+
+By learning data analytics, you can apply various techniques to uncover insights from data. Here are some examples:
+- **Frequency analysis**: This technique helps you understand how often certain values appear in your data.
+- **Cluster analysis**: This technique allows you to group similar data points together, revealing hidden patterns.
+- **Grouping**: This technique involves organizing data into categories based on shared characteristics.
+- **Anomaly detection**: This technique helps you identify unusual data points that deviate from the expected patterns.
+... (and many more!)"
 
 By learning Python, you can use Jupyter Notebook to do various thing:
 - [Threat Hunter Playbook](https://threathunterplaybook.com/tutorials/jupyter/introduction.html)
-- 
+- [Data Exfiltration](https://pberba.github.io/security/2019/10/08/data-exfiltration/) this blog is amazing btw
+- [Handbook of anomaly detection with python outlier detection 1 introduction](https://medium.com/dataman-in-ai/handbook-of-anomaly-detection-with-python-outlier-detection-1-introduction-c8f30f71961c)
+- There are many more, I'll added soon
 
 ### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
 
 This is like the special forces in the Cyber Security, Cyber Security is broad and always changing. But the demand are not that much in VN, 
 
-In VN, there are not much of an opportunity for these job, you either go work for Viettel, VinCSS,... or you work remote for any company in Singapore. But don't let that be a blockage, the VN Cyber Security is getting better and better
+Vietnam's cybersecurity job market is still developing. While major players like Viettel and VinCSS offer opportunities, remote work for Singaporean companies is another option. But this limited scope shouldn't discourage you. Vietnam's cybersecurity landscape is rapidly improving. Public awareness is growing, and the demand for cybersecurity professionals is on the rise.
 
 ---
 ## Know the Enemy
@@ -256,4 +260,4 @@ Learning Cyber Security is hard, there are a lot of concept you need to know and
 
 The key? Stay curious, stay active, and be proactive! There's always something new to learn, and that's what makes this field so dynamic.
 
-My goal? To give you a clear picture of the industry's direction and how I approach running a Security Operations Center (SOC)
+My goal? To give you a clear picture of the industry's direction and how I approach running a Security Operations Center (SOC).

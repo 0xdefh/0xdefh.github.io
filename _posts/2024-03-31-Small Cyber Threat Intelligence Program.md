@@ -4,7 +4,7 @@ date: 2024-03-31
 author: khuong
 layout: post
 categories: [Security]
-tags: [begineer,threatintelligence]   
+tags: [beginner,threatintelligence]   
 toc: true
 ---
 

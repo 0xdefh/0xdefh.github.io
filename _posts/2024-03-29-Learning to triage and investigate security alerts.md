@@ -4,7 +4,7 @@ date: 2024-03-28
 author: khuong
 layout: post
 categories: [Security]
-tags: [begineer]   
+tags: [beginner]   
 toc: true
 ---
 ## Comming soon in April 
