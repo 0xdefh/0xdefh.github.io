@@ -8,6 +8,7 @@ tags: [beginner]
 toc: true
 ---
 
+
 When you are on the new system and don't know a thing about it, here is a checklist to improve your visibility and its condition, or you are just a fresher blue team and want to learn. 
 
 > Cyber Kill Chain is the keyword you should look at -> it describes how an attacker will normally do, [MITRE ATT&CK](https://attack.mitre.org/) will help you know about the detail of each step of the Kill Chain (the ATT&CK  is not a list of all threat actor techniques in the world but it is a list of known techniques)
@@ -83,6 +84,8 @@ Small companies don't have the luxury of buying email services, they will self-h
 Understand Email Header, Email  and how to investigate a phishing ticket. 
 
 ### Logging / Analyze Logs
+
+![logeverywhere](/assets//img/logs-logs-everywhere.jpg)  
 
 **Seeing Through the Fog: Understanding Your IT Environment with Logs**
 
