@@ -220,7 +220,7 @@ These channel provide me with huge amount of knowledge and links to article that
 
 ### Learning Data Analytic (Important)
 
-Programming skills are a powerful asset and can significantly boost your skillset and also makes you more valuable in the job market.
+Programming skills are a powerful asset and can significantly boost your skillset and also makes you more valuable in the job market. also Data Analytic
 
 In my first cybersecurity role, I was overwhelmed by the sheer volume of data flowing into our SIEM (Security Information and Event Management system). I felt lost amidst a sea of unfamiliar terms: Windows Event Logs, Application Logs, Firewall Logs, internal IP addresses, VLANs, server names... the list went on. The biggest challenge? Knowing where to even begin! 
 
@@ -230,11 +230,12 @@ By learning data analytic you can applied those techniques such as:
 - Stack counting
 - Grouping
 - Abnomalies detection
-- 
+- ...
 
 By learning Python, you can use Jupyter Notebook to do various thing:
 - [Threat Hunter Playbook](https://threathunterplaybook.com/tutorials/jupyter/introduction.html)
 - 
+
 ### But what about Malware Analysis, DFIR, Threat Intelligence, Threat Hunter, ... and other cool jobs
 
 This is like the special forces in the Cyber Security, Cyber Security is broad and always changing. But the demand are not that much in VN, 
@@ -246,16 +247,12 @@ In VN, there are not much of an opportunity for these job, you either go work fo
 
 Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper. This is probably call **Threat Intelligence**
 
-
-
 "Will continue this section soon"
 
 ---
 ## Conclusion and How to to get your training
 
 Learning Cyber Security is hard, there are a lot of concept you need to know and understand, a lot of time is just compliance and doing data analysis, asset managment and spread sheet.
-
-
 
 The key? Stay curious, stay active, and be proactive! There's always something new to learn, and that's what makes this field so dynamic.
 
