@@ -20,8 +20,8 @@ In NIST, the first step a of Cyber Security program that is IDENTIFY. The assets
 
 
 Refs:
-- https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-AM.pdf
-- https://www.nccoe.nist.gov/publication/1800-5/index.html
+- [CRR Resource Guide - CISA](https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-AM.pdf)
+- [NIST 1800-5](https://www.nccoe.nist.gov/publication/1800-5/index.html)
 - ...
 
 ## Overview
@@ -37,16 +37,13 @@ Note: A service is a set of activities that the organization carries out in the 
 
 ## Plan for asset managment
 
-First step is to prepare all the necessary documents that support the Asset Managment process and getting the approval from the upper managment in order to determined the scope of the assets management. Most of the 
+First step is to prepare all the necessary documents that support the Asset Managment process and getting the approval from the upper managment in order to determined the scope of the assets management.
 
 
 ## Identify and prioritize the services
 
-![Identify and prioritize the services](/assets/img/identify-the-services.png)
-
 ## Identify the assets
 
-[]()
 
 ## Document the assets
 
