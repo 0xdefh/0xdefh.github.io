@@ -42,6 +42,8 @@ First step is to prepare all the necessary documents that support the Asset Mana
 
 ## Identify and prioritize the services
 
+![Identify and Prioritize the Services](/assets/img/identify-the-services.png)
+
 ## Identify the assets
 
 
