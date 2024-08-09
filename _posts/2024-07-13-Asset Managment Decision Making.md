@@ -96,7 +96,7 @@ After you have all the necessary document, you have define the process and the d
 
 Assets that support the service, such as people, technologies, informations, and facilities. 
 
-![Identify the assets](/assets/img/)
+![Identify the assets](/assets/img/identify-the-services.png)
 
 
 ## Document the assets
