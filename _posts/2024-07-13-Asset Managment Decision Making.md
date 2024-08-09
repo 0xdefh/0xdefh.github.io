@@ -55,32 +55,36 @@ You have to understand:
 1. What are the services that the business provide for the customer?
     - Internal services (Interal service that support in-direct to the external service)
     - External services (Mostly the service that the business provide for the customer)
-2. Which are the most important services that the business reply on? 
-3. Which are the services that support the most important services? 
+2. Which are the most important services?
+3. Does those services has a any relationship with each other (does it support each other to fulfill the business goal)
+4. What are the order of criticality of those services
 
 Example:
 
-Imagine we are doing security engineer for a company that provide crypto exchange (probably Binance, OKX,...), let ask those questions to ourself. Please remember this is just an example. I found this on the internet [How does a centralised crypto exchange actually work ?](https://medium.com/coinmonks/how-does-a-centralised-crypto-exchange-actually-work-84a574fe0a1) which have a diagram of crypto exchange system.
+Imagine that we are working as a security engineer for a company that provide crypto exchange (probably Binance, OKX,...), let ask those questions to ourself. Please remember this is just an example. I found this on the internet [How does a centralised crypto exchange actually work ?](https://medium.com/coinmonks/how-does-a-centralised-crypto-exchange-actually-work-84a574fe0a1) which have a diagram of crypto exchange system, Let's us try to dissect it and do Assest Managment on it
 
 ![Cryto Exhange System](/assets/img/Screenshot%202024-08-06%20at%2019.29.09.png)
 
 Now we answer those questions above:
 
 1. Provide a platform that trader could trade and exchange crypto, customer will deposit an amount of money, and the compnay will take that money and start trading on behave of the customer, or act as a broker
-2. These could be:
-    - Trading Engine
-    - 
-3. Trading, deposit, withdraw function
+2. These will be:
+    - Deposit Money to Trading Account
+    - Sell / Buy Crypto
+    - Store Crypto
+3. Yes! It all related to each other, you can buy or sell cryto if you don't have money, and if the crypto balance doesn't show up on your app while you have a bunch of them -> the customer are not going like it 
 
 > These information could be taken from Business Impact Analysis (BIA) or any activities that the GRC had conducted, you should leverage that information.
 {: .prompt-info }
 
 After you identify the services and the supported services you should have a diagram look like this:
 
+![Critical Services](/assets/img/critcal-services.png)
 
-
-
-Then you have to define which information should you have to 
+These are the critical services that support the business goal which is crypto exchange, if we prioritize which is the most critical services it would be like this:
+1. Sell / Buy Crypto
+2. Deposit Money 
+3. Store Crypto 
 
 
 ![Identify and Prioritize the Services](/assets/img/identify-the-services.png)
@@ -91,6 +95,8 @@ Then you have to define which information should you have to
 After you have all the necessary document, you have define the process and the definition of the asset that you want trying to manage. Now you need to break down the services in to assets
 
 Assets that support the service, such as people, technologies, informations, and facilities. 
+
+![Identify the assets](/assets/img/)
 
 
 ## Document the assets
