@@ -63,7 +63,7 @@ Example:
 
 Imagine that we are working as a security engineer for a company that provide crypto exchange (probably Binance, OKX,...), let ask those questions to ourself. Please remember this is just an example. I found this on the internet [How does a centralised crypto exchange actually work ?](https://medium.com/coinmonks/how-does-a-centralised-crypto-exchange-actually-work-84a574fe0a1) which have a diagram of crypto exchange system, Let's us try to dissect it and do Assest Managment on it
 
-![Cryto Exhange System](/assets/img/Screenshot%202024-08-06%20at%2019.29.09.png)
+![Cryto Exhange System](/assets/img/crypto-exchange-system.png)
 
 Now we answer those questions above:
 
