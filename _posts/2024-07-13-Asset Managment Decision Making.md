@@ -5,6 +5,7 @@ author: khuong
 layout: post
 categories: [Security]
 tags: [beginner]
+comments: true
 toc: true
 ---
 
@@ -132,6 +133,25 @@ Notes:
 ## Document the assets
 
 Alright now you have the services and the assets that you want to manage, now you need to create a document that standardlize the asset's information 
+
+Every company has its own standard and information that they want to put in the Asset's information but for me a good asset information should have:
+
+| Information of the Asset                                                                                      |
+| :------------------------------------------------------------------------------------------------------------ |
+| Asset type (people; information; technology; or facilities)                                                   |
+| Categorization of asset by sensitivity (generally for information assets only)                                |
+| Asset location (typically where the custodian is managing the asset)                                          |
+| Asset owners and custodians (especially if assets are external to the organization)                           |
+| Format or form of the asset (particularly for information assets that might exist on paper or electronically) |
+| Location of asset backups or duplicates (particularly for information assets)                                 |
+| Services that are dependent on the asset                                                                      |
+| Value of the asset; either qualitative or quantitative                                                        |
+| Asset protection and sustainment requirements                                                                 |
+|                                                                                                               |
+
+> I believe it takes time to determine the specific information your company needs to document for each asset. In the case of a Crypto Exchange Platform, the above details seem sufficient.
+{: .prompt-info }
+
 
 ## Manage the assets
 
