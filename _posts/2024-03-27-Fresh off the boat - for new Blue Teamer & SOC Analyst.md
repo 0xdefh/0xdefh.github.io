@@ -3,7 +3,7 @@ title: Fresh off the boat - for new Blue Teamer & SOC Analyst
 date: 2024-03-27 
 author: khuong
 layout: post
-categories: [BlueTeam, Security, SOC]
+categories: [Security]
 tags: [beginner]   
 toc: true
 ---
@@ -250,9 +250,9 @@ Vietnam's cybersecurity job market is still developing. While major players like
 ---
 ## Know the Enemy
 
-Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper. This is probably call **Threat Intelligence**
+Knowning what are the enemny (threat actor, hackers) are doing, what CVE are they using and what are the threat landscape by reading news and research paper. This is probably call **Cyber Threat Intelligence** (CTI)
 
-"Will continue this section soon"
+It is seem that event Intelligence alone is also very difficult
 
 ---
 ## Conclusion and How to to get your training
