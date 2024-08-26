@@ -134,8 +134,7 @@ Notes:
 
 Alright now you have the services and the assets that you want to manage, now you need to create a document that standardlize the asset's information 
 
-
-### Create an asset invetory
+### Create an asset inventory
 
 Every company has its own standard and information that they want to put in the Asset's information but for me a good asset information should have:
 
@@ -158,6 +157,31 @@ I don't like spreadsheet but it will you start going quite easily rather than tr
 
 While spreadsheets can be a starting point for asset information, consider using [Retool](https://retool.com/) in the long run. Retool allows you to build a self-hosted or cloud-based portal or dashboard specifically for asset management. You can easily connect your existing database or spreadsheet and build a user-friendly interface for adding assets and tracking their lifecycle.
 
+Example:
+
+| **Number of Assets** |
+| :------------------- |
+| People:              |
+| Information:         |
+| Technology:          |
+| Facilites:           |
+| **Total Assets:**    |
+
+
+| ID  | Name | Services Supported | Type | Location | Owner | Custodian | Format | Security Classification | Backup Location | Asset Value |
+| :-- | :--- | :----------------- | :--- | :------- | :---- | :-------- | :----- | :---------------------- | :-------------- | :---------- |
+|     |      |                    |      |          |       |           |        |                         |                 |             |
+
+
+Asset Value can be: 
+
+| Loss of Revenue | Additional Expenses | Legal | Customer Service | Good Will |
+| :-------------- | :------------------ | :---- | :--------------- | :-------- |
+
+On a scale of 1 to 10, how likely is it that any disruption to the asset will significantly impact its value?
+
+Refs: [CRR Implementation Guide Assets Management](https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-AM.pdf) Appendix A. Asset Profile Catalog
+
 
 ### Document the relationship between assets and critical services
 
@@ -172,3 +196,10 @@ But here a notes for you:
 ## 5. Manage the assets
 
 Organizational assets are dynamic. As assets change, their resilience requirements and protection strategies change as well. For the organization to effectively manage its assets, it must actively monitor for changes that significantly alter assets, identify new assets, or call for the retirement of assets for which there is no longer a need.
+
+> This will be another blog soon, I'll publish any SOPs that I use during my jobs and hopefully you guy could take inspration from it, or not haha
+{: .prompt-info }
+
+## 6. Use case
+
+Once you've spent 3-6 months compiling your asset inventory, consider using Retool or another tool to create a searchable interface for analysts. Integrating this inventory with your existing ticketing system can improve alert information, leading to faster and more efficient triage. Combining this with alert use cases and other relevant data can further streamline your processes
