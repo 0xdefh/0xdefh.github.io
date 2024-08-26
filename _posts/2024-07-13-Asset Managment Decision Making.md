@@ -23,9 +23,9 @@ In NIST, the first step a of Cyber Security program that is IDENTIFY. The assets
 Refs:
 - [CRR Resource Guide - CISA](https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-AM.pdf)
 - [NIST 1800-5](https://www.nccoe.nist.gov/publication/1800-5/index.html)
-- ...
+- [CSF Framework v2.0](https://csf.tools/reference/nist-cybersecurity-framework/v2-0/)
 
-## Overview
+## 0. Overview
 
 In the IDENTIFY of the NIST we'll plit it into stages:
 - Plan for asset management
@@ -36,22 +36,22 @@ In the IDENTIFY of the NIST we'll plit it into stages:
 
 Note: **A service is a set of activities that the organization carries out in the performance of a duty or in the production of a product.**
 
-## Plan for asset managment
+## 1. Plan for asset managment
 
 First step is to prepare all the necessary documents that support the Asset Managment process and getting the approval from the upper managment in order to determined the scope of the assets management.
 
 Asset management is significantly more complex for Managed Security Service Providers (MSSPs) than in-house enterprise teams. This is due to the necessity of obtaining customer agreement on asset management procedures, storage methods, and scope. Often, MSSPs manage only specific zones rather than entire sites, limiting their overall visibility.
 
 
-## Identify and prioritize the services
-
-### Why You Identify Services?
+## 2. Identify and prioritize the services
 
 Services that are critical to organization, services that if something bad happen to it will impact the organization business
 
+### Why You Identify Services?
+
 Why identified services first? from the top-down level prespective, Organizaion provide services for the customer, asset exist to support the services to run smoothly and generate capical for the organization or just keep it operational
 
-I undetstand this while I take the CISA Critical Infrastructure Course (401v) which show me how to analyze business purpose, which it is apply to ICS but we can take a page from that, here is the refs: [ICS CISA Training](https://ics-training.inl.gov/). Which this type of analysis is call **Criticality Analysis**. 
+I undetstand this while I take the CISA Critical Infrastructure Course (401v) which show me how to analyze business purpose, which it is apply to ICS but we can take a page from that, here is the refs: [ICS CISA Training](https://ics-training.inl.gov/). Which this type of analysis is call **Criticality Analysis** (You could take a look at [Risk Assessment - Criticality Analysis RA-9](https://csf.tools/reference/nist-sp-800-53/r5/ra/ra-9/)). 
 
 ### How to Identify Services
 
@@ -101,11 +101,11 @@ After these step you should have a list of
 - List of prioritized services
 - Definition of Asset
 
-## Identify the assets
+## 3. Identify the assets
 
 After you have all the necessary document, you have define the process and the definition of the asset that you want trying to manage. Now you need to break down the services in to assets
 
-Assets that support the service, such as people, technologies, informations, and facilities. 
+Assets that support the services are **people, technologies, informations, and facilities**. 
 
 > Every services has the assets that support it mission, assets that support critical services are extremely important.
 {: .prompt-info }
@@ -130,9 +130,12 @@ Notes:
 
 > I'll add the example RACI matrix soon, which it is the foundation of how we document our asset.
 {: .prompt-info }
-## Document the assets
+## 4. Document the assets
 
 Alright now you have the services and the assets that you want to manage, now you need to create a document that standardlize the asset's information 
+
+
+### Create an asset invetory
 
 Every company has its own standard and information that they want to put in the Asset's information but for me a good asset information should have:
 
@@ -147,12 +150,25 @@ Every company has its own standard and information that they want to put in the 
 | Services that are dependent on the asset                                                                      |
 | Value of the asset; either qualitative or quantitative                                                        |
 | Asset protection and sustainment requirements                                                                 |
-|                                                                                                               |
 
 > I believe it takes time to determine the specific information your company needs to document for each asset. In the case of a Crypto Exchange Platform, the above details seem sufficient.
 {: .prompt-info }
 
+I don't like spreadsheet but it will you start going quite easily rather than trying to build a database for it, for the long run you will probably need a DB.
 
-## Manage the assets
+While spreadsheets can be a starting point for asset information, consider using [Retool](https://retool.com/) in the long run. Retool allows you to build a self-hosted or cloud-based portal or dashboard specifically for asset management. You can easily connect your existing database or spreadsheet and build a user-friendly interface for adding assets and tracking their lifecycle.
+
+
+### Document the relationship between assets and critical services
+
+I read this [Specification for Asset Identification 1.1](https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7693.pdf) a document from 2011, in this document it said something that very true: `Unfortunately, neither a unified method nor a published specification for performing asset identification exists at this time` and I think till this time I can't find a unified method for it. 
+
+
+But here a notes for you:
+-  An asset could support multiple critical services.
+-  Document any protection around the asset
+-  
+
+## 5. Manage the assets
 
 Organizational assets are dynamic. As assets change, their resilience requirements and protection strategies change as well. For the organization to effectively manage its assets, it must actively monitor for changes that significantly alter assets, identify new assets, or call for the retirement of assets for which there is no longer a need.
