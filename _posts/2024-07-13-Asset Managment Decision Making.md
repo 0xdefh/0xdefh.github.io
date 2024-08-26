@@ -175,8 +175,12 @@ Example:
 
 Asset Value can be: 
 
+
 | Loss of Revenue | Additional Expenses | Legal | Customer Service | Good Will |
 | :-------------- | :------------------ | :---- | :--------------- | :-------- |
+|                 |                     |       |                  |           |
+
+
 
 On a scale of 1 to 10, how likely is it that any disruption to the asset will significantly impact its value?
 
@@ -191,7 +195,6 @@ I read this [Specification for Asset Identification 1.1](https://nvlpubs.nist.go
 But here a notes for you:
 -  An asset could support multiple critical services.
 -  Document any protection around the asset
--  
 
 ## 5. Manage the assets
 
