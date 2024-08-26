@@ -5,6 +5,8 @@ author: khuong
 layout: post
 categories: [Security]
 tags: [beginner]
+image:
+    path: /assets/img/binarysunset.jpg 
 comments: true
 toc: true
 ---
