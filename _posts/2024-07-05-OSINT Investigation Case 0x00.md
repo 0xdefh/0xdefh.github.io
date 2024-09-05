@@ -62,6 +62,9 @@ We will be using (this is the tool I prefer) you guys can check this out [Pivot 
 - [Whois](https://who.is/)
 - [DNS Checker](https://dnschecker.org)
 - [Web Archive](https://web.archive.org/)
+- Censys
+- Shodan
+- Google Search
 
 For faster time to gather this information, you should have a script to automate this porcess for you, which we do use during our investigation but for the sake of clarity we will be doing manual for this case.
 
@@ -118,7 +121,9 @@ By using who.is: https://who.is/whois/mymin.net  there are tab DNS records which
 | mymin.net | A    | 172.67.75.81           |
 
 By using VirusTotal I found TLS Cert and even more information on the domain: [VirusTotal
-s Information](https://www.virustotal.com/gui/domain/mymin.net/details) -> if you scroll down you will also find the `45.32.121.177` which is `mymin.net` true IP address
+s Information](https://www.virustotal.com/gui/domain/mymin.net/details) -> if you scroll down you will also find the `45.32.121.177` which is `mymin.net` true IP address. 
+
+We verify this information by using Censys and Shodan to check whether this IP actually host the mymin.net website
 
 Later I'll show you how to find the true IP address behind cloudflare using another technique which I find that it is very fundamental and can be apply to any case.
 
@@ -129,9 +134,83 @@ Alright after we have such information such as:
 
 #### Examinate the website 
 
->  
+> Remember keep a good OPSEC, use a VM and use a VPN or change your User-Agent or using a Proxy, to examinate the Website because all your action will leave digital footprints so in order to keep yourself safe.
+{: .prompt-info }
+
+Alright we will start examinate the website by take a look at `mymin.net`, we will inspect the login screen and look for any pivoting point. Because we still need at much information as posible
+
+Using Chrome DevTools to inspect all the element to find the Google analytics ID
+
+> Google Analytic ID usually is written as UA-XXXXXXXX or GA-XXXXXX (The lastest Google analytics 4) Refs the different between it [UA to GA4](https://support.google.com/analytics/answer/10269537?hl=en)
 {: .prompt-info }
 
 
+Inspect and search for the `UA-` or `GA-` (Because in order for Google analytics to work, it will scan your website for such code), if you have adblock extention, you should disable it because it will remove the Google analytics from the website
 
-## Conclusion
+
+Google analytics Code from the mymin.net:
+
+![Mymin Google analytics](/assets/img/google-analytic-mymin.png)
+
+
+Using [Web Archive](https://web.archive.org/) to check the historial data of `mymin.net` for any clues. 
+
+![Mymin.net Login Page](/assets/img/mymin-net-login.png)
+
+There are 29 times where web archive take a snapshot of this webpage, we will check it all the see if are there nay interesting stuffs
+
+![Web Archive Timeline](/assets/img/webarchive-timeline.png)
+
+From 2021 - 2024 this domain is puting to use to serve as as MMO login page, before that 2004-2016 this domain is belong to some Korean Highschool which is not interesting to us.
+
+But when we poking arround the function and review all the link of this webstie we found a lot of interesting stuff
+
+
+
+When we click on this USSV policies, its redirect us to another domain which call `mcare.me` where we found even more keywords and information.
+
+![USSV Policies](/assets/img/ussv-policy.png)
+
+
+`mcare.me` footer give us a lot of information and keywords (facebook, email address, another domain to look for)
+
+![mcare.me footer](/assets/img/mcare-footer.png)
+
+We also using Web Archive one more time to analyze the `mcare.me` for more information
+
+
+Here is the summary of what we has found (include keywords and findings):
+- USSV (on Register page there are a mention of USSV)
+- Ucoin
+- mcare.me 
+- www.ussv.net
+- 2014 is timestamp when USSV was created
+- Facebook: [ussvtools](https://www.facebook.com/ussvtools)
+- Google UA ID: `UA-58475948-1`
+
+
+### Pivoting from the information that we gathered
+
+These are the summary of infomation that we has found:
+
+- Email: `ilgbt.net@gmail.com`
+- Name: `Hau Nguyen`
+- Geolocation: `342A LE HONG PHONG - NHA TRANG`
+- IP Address: `45.32.121.177`
+- Domain: `mymin.net`, `mcare.me`, `www.ussv.net`, 
+- Keywords: `USSV`, `Ucoin`, 
+- Facebook:  [ussvtools](https://www.facebook.com/ussvtools)
+- Google UA ID: `UA-58475948-1`
+- TLS Cert
+- 
+
+## Conclusion & The Gap in our Analyst & Report
+
+
+
+1. What is the Google Analytics ID of this website? -> `UA-58475948-1`
+2. What is the origin hosting IP address of the website? -> `45.32.121.177`
+3. What did the website’s owner claim as the reason the website closed forever -> ``
+4. This website used to have an alternative login method. What was the login 
+method and the application ID associated with it? ->
+5. Identify a potential admin of the website or the related community -> 
