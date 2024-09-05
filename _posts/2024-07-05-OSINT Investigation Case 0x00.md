@@ -7,7 +7,6 @@ categories: [Security]
 tags: [beginner]
 toc: true
 mermaid: true
-
 ---
 
 ## Overview
@@ -58,7 +57,7 @@ Refs: [Pivot Atlas](https://gopivot.ing/)
 
 We will be using (this is the tool I prefer) you guys can check this out [Pivot Atlas Tools](https://gopivot.ing/tools/) 
 - nslookup
-- [Whois](who.is)
+- [Whois](https://who.is/)
 - [DNS Checker](https://dnschecker.org)
 - [Web Archive](http://web.archive.org/)
 - 
