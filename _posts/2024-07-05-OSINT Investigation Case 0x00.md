@@ -105,9 +105,9 @@ From this information we have more information to pivoting from:
 
 #### IP Address / Name Server / TLS Certificate
 
-This is easy but finding the true IP Address of the domain will take more time, because some domain will sit behind cloudflare or some CDN services.
+This is easy but finding the true IP Address of the domain will take more time, because some domain will sit behind cloudflare or some reverse proxy.
 
-By using who.is: https://who.is/whois/mymin.net  there are tab DNS records which has all the information such as 
+By using **who.is**: https://who.is/whois/mymin.net  there are tab DNS records which has all the information such as 
 
 - A records (which is IPv4)
 - Name server 
@@ -123,10 +123,16 @@ By using who.is: https://who.is/whois/mymin.net  there are tab DNS records which
 By using VirusTotal I found TLS Cert and even more information on the domain: [VirusTotal
 s Information](https://www.virustotal.com/gui/domain/mymin.net/details) -> if you scroll down you will also find the `45.32.121.177` which is `mymin.net` true IP address. 
 
-We verify this information by using Censys and Shodan to check whether this IP actually host the mymin.net website
+We verify this information by using **Censys** and **Shodan** to check whether this IP actually host the mymin.net website https://45.32.121.177/account/login.php -> is the mymin.net login portal
+
+- Censys query: [Censys - 45.32.121.177](https://search.censys.io/hosts/45.32.121.177)
+- Shodan: [Shodan - 45.32.121.177](https://www.shodan.io/host/45.32.121.177)
+
+> By using Censys and Shodan, we understand mymin.net infastructure, hosted on vultr and has another hostname `ussv.net`
+{: .prompt-info }
+
 
 Later I'll show you how to find the true IP address behind cloudflare using another technique which I find that it is very fundamental and can be apply to any case.
-
 
 Alright after we have such information such as:
 
@@ -165,8 +171,6 @@ From 2021 - 2024 this domain is puting to use to serve as as MMO login page, bef
 
 But when we poking arround the function and review all the link of this webstie we found a lot of interesting stuff
 
-
-
 When we click on this USSV policies, its redirect us to another domain which call `mcare.me` where we found even more keywords and information.
 
 ![USSV Policies](/assets/img/ussv-policy.png)
@@ -183,7 +187,7 @@ Here is the summary of what we has found (include keywords and findings):
 - USSV (on Register page there are a mention of USSV)
 - Ucoin
 - mcare.me 
-- www.ussv.net
+- www.ussv.net (from contact)
 - 2014 is timestamp when USSV was created
 - Facebook: [ussvtools](https://www.facebook.com/ussvtools)
 - Google UA ID: `UA-58475948-1`
@@ -202,10 +206,62 @@ These are the summary of infomation that we has found:
 - Facebook:  [ussvtools](https://www.facebook.com/ussvtools)
 - Google UA ID: `UA-58475948-1`
 - TLS Cert
-- 
+
+That's a lot of information, but now we going to see how these information related to each other and find the owner of mymin.net
+
+#### Email 
+
+This is the most important information in my opinion, you got an email you literaly have the identiy of the person, you can search the email address through multiple database such as:
+- Information Stealer database (Using commercial database or you crawl your self [Information Stealer](https://0xdefh.github.io/posts/Stealer-logs/))
+- Google Dork the the email on various platform or using tool to automate this process
+- Data Breached Database  (you have to crawl it yourself because commercial tool is expensive)
+
+
+Our checklist are:
+- Dork (google, facebook, twitter, forums,...) 
+- Search information stealer
+- Search data leaked / breached
+- Chat mentioned
+
+We start dorking for `ilgbt.net@gmail.com` -> there is only one result 
+
+![Dorking Result](/assets/img/dorking-result.png)
+
+Which it is a [youtube video](https://www.youtube.com/watch?v=XWTdndQ6Vf8) from 10 years ago from "[Cộng Đồng ILNhaTrang](https://www.youtube.com/@AdminFriendlyUSS)" (Full URL: https://www.youtube.com/@AdminFriendlyUSS) Joined Mar 2 2012, this youtube channel contains these keywords which match with the previous information that we gathered:
+- USS
+- USSV
+- Hau Nguyen
+
+By crawling all data from the youtube description, transcript and search against the information we gathered will result more information (which it is to long to listed here, I'll only listed result that matter the most)
+
+From these youtube we even found more keywords and information that I'll save for further investigation:
+- `ILGBT.net`
+- `cityuss.net`
+- `lgbtuss.com`
+- `Auto STR`
+- `FastDo`
+- ...
+
+#### Name
+
+We got a name: `Hau Nguyen`
+
+#### Geolocation 
+
+We got a Geolocation: `Nha Trang`
+
+
+#### IP Addresse
+
+#### Domains
+
+
+#### Facebook 
+
+
+#### TLS Cert
 
 ## Conclusion & The Gap in our Analyst & Report
-
 
 
 1. What is the Google Analytics ID of this website? -> `UA-58475948-1`
