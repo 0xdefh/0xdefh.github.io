@@ -59,7 +59,7 @@ We will be using (this is the tool I prefer) you guys can check this out [Pivot 
 - nslookup
 - [Whois](https://who.is/)
 - [DNS Checker](https://dnschecker.org)
-- [Web Archive](http://web.archive.org/)
+- [Web Archive](https://web.archive.org/)
 - 
 
 For faster time to gather this information, you should have a script to automate this porcess for you, which we do use during our investigation but for the sake of clarity we will be doing manual for this case.
