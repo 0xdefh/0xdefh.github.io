@@ -7,6 +7,8 @@ categories: [Security]
 tags: [beginner]
 toc: true
 mermaid: true
+image:
+    path: /assets/img/starwar-osint.jpg
 ---
 
 ## Overview
@@ -20,7 +22,7 @@ I was tasked to investigate a Vietnamese person that was doing MMO and accidencl
 method and the application ID associated with it?
 5. Identify a potential admin of the website or the related community
 
-The domain is: mymin.net
+The domain is: `mymin.net`
 
 ## My Investigation 
 
@@ -60,13 +62,12 @@ We will be using (this is the tool I prefer) you guys can check this out [Pivot 
 - [Whois](https://who.is/)
 - [DNS Checker](https://dnschecker.org)
 - [Web Archive](https://web.archive.org/)
-- 
 
 For faster time to gather this information, you should have a script to automate this porcess for you, which we do use during our investigation but for the sake of clarity we will be doing manual for this case.
 
 #### Domain Information
 
-By using who.is: https://who.is/whois/mymin.net 
+By using who.is: [mymin.net](https://who.is/whois/mymin.net)
 
 | Registrant Contact Information:        | Administrative Contact Information     | Technical Contact Information          |
 | :------------------------------------- | :------------------------------------- | :------------------------------------- |
@@ -117,7 +118,7 @@ By using who.is: https://who.is/whois/mymin.net  there are tab DNS records which
 | mymin.net | A    | 172.67.75.81           |
 
 By using VirusTotal I found TLS Cert and even more information on the domain: [VirusTotal
-s Information](https://www.virustotal.com/gui/domain/mymin.net/details) -> if you scroll down you will also find the `45.32.121.177` which is mymin.net true IP address
+s Information](https://www.virustotal.com/gui/domain/mymin.net/details) -> if you scroll down you will also find the `45.32.121.177` which is `mymin.net` true IP address
 
 Later I'll show you how to find the true IP address behind cloudflare using another technique which I find that it is very fundamental and can be apply to any case.
 
@@ -126,7 +127,11 @@ Alright after we have such information such as:
 
 - IP Address: 45.32.121.177
 
-#### Examinate 
+#### Examinate the website 
+
+>  
+{: .prompt-info }
+
 
 
 ## Conclusion
