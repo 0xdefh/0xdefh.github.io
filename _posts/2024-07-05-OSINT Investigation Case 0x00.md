@@ -11,7 +11,7 @@ image:
     path: /assets/img/startwar-osint.jpg
 ---
 
-## Overview
+# Overview
 
 I was tasked to investigate a Vietnamese person that was doing MMO and accidencly cause damage to some people. I was given a domain and nothing more, these are the question that I need to anwser:
 
@@ -24,9 +24,9 @@ method and the application ID associated with it?
 
 The domain is: `mymin.net`
 
-## My Investigation 
+# My Investigation 
 
-### Gather basic information
+## Gather basic information
 
 I was given only the domain so it is my first pivoting point, first you have to know what kind of information you can have from the domain name: `mymin.net`, you can know it by reading [Pivot Atlas](https://gopivot.ing/), for the domain: 
 
@@ -68,7 +68,7 @@ We will be using (this is the tool I prefer) you guys can check this out [Pivot 
 
 For faster time to gather this information, you should have a script to automate this porcess for you, which we do use during our investigation but for the sake of clarity we will be doing manual for this case.
 
-#### Domain Information
+### Domain Information
 
 By using who.is: [mymin.net](https://who.is/whois/mymin.net)
 
@@ -103,7 +103,7 @@ From this information we have more information to pivoting from:
 {: .prompt-info }
 
 
-#### IP Address / Name Server / TLS Certificate
+### IP Address / Name Server / TLS Certificate
 
 This is easy but finding the true IP Address of the domain will take more time, because some domain will sit behind cloudflare or some reverse proxy.
 
@@ -138,10 +138,12 @@ Alright after we have such information such as:
 
 - IP Address: 45.32.121.177
 
-#### Examinate the website 
+### Examinate the website 
 
 > Remember keep a good OPSEC, use a VM and use a VPN or change your User-Agent or using a Proxy, to examinate the Website because all your action will leave digital footprints so in order to keep yourself safe.
 {: .prompt-info }
+
+#### Gather information from mymin.net
 
 Alright we will start examinate the website by take a look at `mymin.net`, we will inspect the login screen and look for any pivoting point. Because we still need at much information as posible
 
@@ -163,7 +165,7 @@ Using [Web Archive](https://web.archive.org/) to check the historial data of `my
 
 ![Mymin.net Login Page](/assets/img/mymin-net-login.png)
 
-There are 29 times where web archive take a snapshot of this webpage, we will check it all the see if are there nay interesting stuffs
+There are 29 times where web archive take a snapshot of this webpage, we will check it all the see if are there any interesting stuffs
 
 ![Web Archive Timeline](/assets/img/webarchive-timeline.png)
 
@@ -175,6 +177,7 @@ When we click on this USSV policies, its redirect us to another domain which cal
 
 ![USSV Policies](/assets/img/ussv-policy.png)
 
+#### Gather information from mcare.me
 
 `mcare.me` footer give us a lot of information and keywords (facebook, email address, another domain to look for)
 
@@ -192,8 +195,27 @@ Here is the summary of what we has found (include keywords and findings):
 - Facebook: [ussvtools](https://www.facebook.com/ussvtools)
 - Google UA ID: `UA-58475948-1`
 
+Also in the web archive for the mymin.net, there is a capture that shows the [relation between ussv.net and mymin.net](https://web.archive.org/web/20201028194133/https://mymin.net/account/login.php)
 
-### Pivoting from the information that we gathered
+We can only access www.ussv.net through Web Archive
+
+With the same domain but a different footer (name 2020 USSV)
+
+```mermaid 
+ flowchart LR
+%% define nodes
+    USSV(ussv.net)
+    MYMIN(mymin.net)
+%% define edges
+    USSV <-- related --> MYMIN
+
+```
+#### Gather information from www.ussv.net
+
+By using Web Archive to take a look around at `www.ussv.net`
+
+
+## Pivoting and correlation from the information that we gathered
 
 These are the summary of infomation that we has found:
 
@@ -209,7 +231,10 @@ These are the summary of infomation that we has found:
 
 That's a lot of information, but now we going to see how these information related to each other and find the owner of mymin.net
 
-#### Email 
+> The investigative process is not always straightforward. We may need to revisit data multiple times to uncover crucial details or keywords that were initially overlooked
+{: .prompt-info }
+
+We got an email: `ilgbt.net@gmail.com`
 
 This is the most important information in my opinion, you got an email you literaly have the identiy of the person, you can search the email address through multiple database such as:
 - Information Stealer database (Using commercial database or you crawl your self [Information Stealer](https://0xdefh.github.io/posts/Stealer-logs/))
@@ -242,27 +267,16 @@ From these youtube we even found more keywords and information that I'll save fo
 - `FastDo`
 - ...
 
-#### Name
 
 We got a name: `Hau Nguyen`
 
-#### Geolocation 
 
 We got a Geolocation: `Nha Trang`
 
 
-#### IP Addresse
-
-#### Domains
-
-
-#### Facebook 
-
-
-#### TLS Cert
-
 ## Conclusion & The Gap in our Analyst & Report
 
+We know, we should have show a link analysis diagram, but we don't have the bugdet to 
 
 1. What is the Google Analytics ID of this website? -> `UA-58475948-1`
 2. What is the origin hosting IP address of the website? -> `45.32.121.177`
@@ -270,3 +284,9 @@ We got a Geolocation: `Nha Trang`
 4. This website used to have an alternative login method. What was the login 
 method and the application ID associated with it? ->
 5. Identify a potential admin of the website or the related community -> 
+
+### The Gap in our Analysis
+
+For every intelligence analysis there will be a gap in the analysis, aware of those gap help us
+
+### Report 
