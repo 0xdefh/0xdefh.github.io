@@ -8,7 +8,7 @@ tags: [beginner]
 toc: true
 mermaid: true
 image:
-    path: /assets/img/starwar-osint.jpg
+    path: /assets/img/startwar-osint.jpg
 ---
 
 ## Overview
