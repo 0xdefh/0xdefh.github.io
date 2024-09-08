@@ -195,9 +195,8 @@ Here is the summary of what we has found (include keywords and findings):
 - Facebook: [ussvtools](https://www.facebook.com/ussvtools)
 - Google UA ID: `UA-58475948-1`
 
-Also in the web archive for the mymin.net, there is a capture that shows the [relation between ussv.net and mymin.net](https://web.archive.org/web/20201028194133/https://mymin.net/account/login.php)
+In the web archive for the mymin.net, there is a capture that shows the [web archive that show relation between ussv.net and mymin.net](https://web.archive.org/web/20201028194133/https://mymin.net/account/login.php)
 
-We can only access www.ussv.net through Web Archive
 
 With the same domain but a different footer (name 2020 USSV)
 
@@ -207,13 +206,19 @@ With the same domain but a different footer (name 2020 USSV)
     USSV(ussv.net)
     MYMIN(mymin.net)
 %% define edges
-    USSV <-- related --> MYMIN
+    USSV <-- potential related --> MYMIN
 
 ```
+
 #### Gather information from www.ussv.net
 
-By using Web Archive to take a look around at `www.ussv.net`
+By using Web Archive to take a look around at `www.ussv.net` and its web archive, there are numerous of snapshot show `nguyehauq` at the "Người giới thiệu" field which give us more clues about who is the owner of these websites.
 
+![nguyehauq](/assets/img/nguyehauq.png)
+
+There's also a Facebook login feature that uses OAuth. I've obtained the client ID (1690686991192609), but I'm unsure if it will be helpful in this case.
+
+Using SpyOnWeb on the domain `www.ussv.net` we found that the USSV.net using the same Google Analytic ID: `UA-58475948-1` also other Google Analytic ID: `UA-2201473`
 
 ## Pivoting and correlation from the information that we gathered
 
@@ -221,6 +226,7 @@ These are the summary of infomation that we has found:
 
 - Email: `ilgbt.net@gmail.com`
 - Name: `Hau Nguyen`
+- Username: `nguyenhauq`
 - Geolocation: `342A LE HONG PHONG - NHA TRANG`
 - IP Address: `45.32.121.177`
 - Domain: `mymin.net`, `mcare.me`, `www.ussv.net`, 
@@ -234,13 +240,12 @@ That's a lot of information, but now we going to see how these information relat
 > The investigative process is not always straightforward. We may need to revisit data multiple times to uncover crucial details or keywords that were initially overlooked
 {: .prompt-info }
 
-We got an email: `ilgbt.net@gmail.com`
+We got an email: `ilgbt.net@gmail.com` and a username `nguyenhauq`
 
 This is the most important information in my opinion, you got an email you literaly have the identiy of the person, you can search the email address through multiple database such as:
 - Information Stealer database (Using commercial database or you crawl your self [Information Stealer](https://0xdefh.github.io/posts/Stealer-logs/))
 - Google Dork the the email on various platform or using tool to automate this process
 - Data Breached Database  (you have to crawl it yourself because commercial tool is expensive)
-
 
 Our checklist are:
 - Dork (google, facebook, twitter, forums,...) 
@@ -265,13 +270,70 @@ From these youtube we even found more keywords and information that I'll save fo
 - `lgbtuss.com`
 - `Auto STR`
 - `FastDo`
-- ...
+- `www.ukesemeseke.com`
+
+Our search using the keywords yielded even more information. Notably, `www.ukesemeseke.com` contained a wealth of relevant details on Hau Nguyen and LGBT USS, both of which are currently of interest. 
+
+We found `Hướng Dẫn Cách Gỡ Like, Autotag, AutoCM Facebook by Hậu` on the `Cộng Đồng ILNhaTrang` was a result from searching `www.ukesemeseke.com` -> contain a Facebook Account in the video
+
+![Hau Nguyen Facebook leak by Youtube video](/assets/img/haunguyenfb.png)
+
+The Facebook account is https://www.facebook.com/hau.nguyen.5494, the id seem has already changed so I try web archive: [Hau Nguyen Facebook WebArchive Snapshot](https://web.archive.org/web/20151030093949/https://www.facebook.com/hau.nguyen.5494)
 
 
-We got a name: `Hau Nguyen`
+Dorking for specific `nguyenhauq` by using Google show 10 results on Google Search.
+
+or you can use other tools to find username such as [Whatsmyname](https://whatsmyname.app), [Sherlock](https://github.com/sherlock-project/sherlock), and many more, I like tools but I don't know how to use it rather I like a good old WebArchive and Google Dorking
 
 
-We got a Geolocation: `Nha Trang`
+Some of the result is related to the youtube we found above `Cộng Đồng ILNhaTrang` and others are about programming forum. 
+
+Here are link analysis diagram for better visualization (I haven't found a way to mermaid look like Maltego chart so here is a sample of it):
+
+```mermaid
+    flowchart LR
+    %% define nodes
+    USSV(ussv.net)
+    MYMIN(mymin.net)
+    MCARE(mcare.me)
+    HAUNGUYEN(Hau Nguyen)
+    HAUNGUYENFB(https://www.facebook.com/hau.nguyen.5494)
+    DOMAIN(ilgbt.net@gmail.com)
+    IPADDRESS(45.32.121.177)
+    YOUTUBE(Cộng Đồng ILNhaTrang)
+    GOOGLAANLYTIC(UA-58475948-1)
+    NHATRANG(Nha Trang)
+    USERNAME(nguyenhauq)
+    UKESEME(www.ukesemeseke.com)
+    LGBTNET(ILGBT.net)
+    CITYUSSNET(cityuss.net)
+    LGBTUSSCOM(lgbtuss.com)
+    %% define edges
+    MYMIN --> USSV
+    MYMIN --> MCARE
+    MYMIN --> IPADDRESS
+    MYMIN -- using --> GOOGLAANLYTIC
+    MYMIN --> NHATRANG
+    MYMIN --> DOMAIN
+    MYMIN <--> HAUNGUYEN
+    DOMAIN --> YOUTUBE
+    IPADDRESS --> GOOGLAANLYTIC
+    YOUTUBE --> NHATRANG
+    YOUTUBE --> USSV
+    YOUTUBE --> HAUNGUYEN
+    YOUTUBE --> UKESEME
+    YOUTUBE --> LGBTNET
+    YOUTUBE --> CITYUSSNET
+    YOUTUBE --> LGBTUSSCOM
+    UKESEME --> HAUNGUYEN
+    UKESEME --> HAUNGUYENFB
+    HAUNGUYEN --> USSV
+    HAUNGUYEN --> MCARE
+    HAUNGUYENFB --> HAUNGUYEN
+    USSV <-- using --> GOOGLAANLYTIC
+    USSV --> USERNAME
+    USERNAME --> HAUNGUYEN
+```
 
 
 ## Conclusion & The Gap in our Analyst & Report
