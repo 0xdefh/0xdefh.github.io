@@ -6,6 +6,8 @@ layout: post
 categories: [Security]
 tags: [beginner]   
 toc: true
+image:
+    path: /assets/img/warhammer-fresh.jpeg
 ---
 
 
