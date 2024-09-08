@@ -220,6 +220,7 @@ There's also a Facebook login feature that uses OAuth. I've obtained the client 
 
 Using SpyOnWeb on the domain `www.ussv.net` we found that the USSV.net using the same Google Analytic ID: `UA-58475948-1` also other Google Analytic ID: `UA-2201473`
 
+
 ## Pivoting and correlation from the information that we gathered
 
 These are the summary of infomation that we has found:
@@ -280,13 +281,39 @@ We found `Hướng Dẫn Cách Gỡ Like, Autotag, AutoCM Facebook by Hậu` on 
 
 The Facebook account is https://www.facebook.com/hau.nguyen.5494, the id seem has already changed so I try web archive: [Hau Nguyen Facebook WebArchive Snapshot](https://web.archive.org/web/20151030093949/https://www.facebook.com/hau.nguyen.5494)
 
+There are also a lot of information:
+- [Forum Viet Designer that mention the keyword](https://forum.vietdesigner.net/threads/can-tuyen-nhan-vien-lam-anh-photo-quote-typography-cho-fanpage-tam-trang-lien-minh-hai.105162/) -> Found email and phone number `ukesemeseke@gmail.com` and `01227697512`
+- From the email we discover [The ukesemeseke MMO4ME User](https://mmo4me.com/members/ukesemeseke.56280/) that has the email address also has the avator has the text Hau Nguyen
+- From the MMO4ME forum we found `sellvasell@yahoo.com` which belong to Hau Nguyen
+
 
 Dorking for specific `nguyenhauq` by using Google show 10 results on Google Search.
 
 or you can use other tools to find username such as [Whatsmyname](https://whatsmyname.app), [Sherlock](https://github.com/sherlock-project/sherlock), and many more, I like tools but I don't know how to use it rather I like a good old WebArchive and Google Dorking
 
+Some of the result is related to the youtube we found above `Cộng Đồng ILNhaTrang` and others are about programming forum such as [DevBest](https://devbest.com/members/nguyenhauq.43149/) which has the person avatar, I could conduct for investigate on this person but I'll stop right here. 
 
-Some of the result is related to the youtube we found above `Cộng Đồng ILNhaTrang` and others are about programming forum. 
+### Hau Nguyen
+
+
+| Information            | Value                                                                                 |
+| :--------------------- | :------------------------------------------------------------------------------------ |
+| Person                 | Hau Nguyen                                                                            |
+| Email                  | ukesemeseke@gmail.com;  sellvasell@yahoo.com                                          |
+| Potential Phone Number | 01227697512 -> 0777697512 (Because VN change phone number from 11 to 10 numbers)      |
+| Alias or Nickname      | nguyenhauq; ukesemeske; sellandsell                                                   |
+| Facebook               | https://www.facebook.com/hau.nguyen.5494                                              |
+| MMO4me account         | https://mmo4me.com/members/ukesemeseke.56280/                                         |
+| Youtube Channel        | https://www.youtube.com/@AdminFriendlyUSS/ and https://www.youtube.com/@jessesharp44/ |
+| Potential Geolocation  | Khanh Hoa; Nha Trang                                                                  |
+| Owner of               | USSV and MCARE                                                                        |
+
+
+**News Related:**
+
+- [Bị khóa Facebook vì ‘nuôi nick ảo’](https://vnexpress.net/bi-khoa-facebook-vi-nuoi-nick-ao-4034994.html) Related to Hau Nguyen back in 2019 (USSV/MCARE)
+
+## Conclusion & The Gap in our Analyst
 
 Here are link analysis diagram for better visualization (I haven't found a way to mermaid look like Maltego chart so here is a sample of it):
 
@@ -298,6 +325,7 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     MCARE(mcare.me)
     HAUNGUYEN(Hau Nguyen)
     HAUNGUYENFB(https://www.facebook.com/hau.nguyen.5494)
+    HAUNGUYENYAHOO(sellvasell@yahoo.com)
     DOMAIN(ilgbt.net@gmail.com)
     IPADDRESS(45.32.121.177)
     YOUTUBE(Cộng Đồng ILNhaTrang)
@@ -305,6 +333,8 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     NHATRANG(Nha Trang)
     USERNAME(nguyenhauq)
     UKESEME(www.ukesemeseke.com)
+    UKESEMEEMAIL(ukesemeseke@gmail.com)
+    UKESEMEUSER(https://mmo4me.com/members/ukesemeseke.56280/)
     LGBTNET(ILGBT.net)
     CITYUSSNET(cityuss.net)
     LGBTUSSCOM(lgbtuss.com)
@@ -327,28 +357,29 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     YOUTUBE --> LGBTUSSCOM
     UKESEME --> HAUNGUYEN
     UKESEME --> HAUNGUYENFB
+    UKESEME --> UKESEMEEMAIL
+    UKESEMEEMAIL --> UKESEMEUSER
+    UKESEMEUSER --> HAUNGUYEN
+    UKESEMEUSER --> HAUNGUYENYAHOO
     HAUNGUYEN --> USSV
     HAUNGUYEN --> MCARE
     HAUNGUYENFB --> HAUNGUYEN
+    HAUNGUYENYAHOO --> HAUNGUYEN
     USSV <-- using --> GOOGLAANLYTIC
     USSV --> USERNAME
     USERNAME --> HAUNGUYEN
 ```
 
 
-## Conclusion & The Gap in our Analyst & Report
-
 We know, we should have show a link analysis diagram, but we don't have the bugdet to 
 
 1. What is the Google Analytics ID of this website? -> `UA-58475948-1`
 2. What is the origin hosting IP address of the website? -> `45.32.121.177`
-3. What did the website’s owner claim as the reason the website closed forever -> ``
+3. What did the website’s owner claim as the reason the website closed forever -> `The owner shut down on his own, to comply with the Facebook Policy`
 4. This website used to have an alternative login method. What was the login 
-method and the application ID associated with it? ->
-5. Identify a potential admin of the website or the related community -> 
+method and the application ID associated with it? -> `Facebook Oauth 2.0 and Client ID: 1690686991192609`
+5. Identify a potential admin of the website or the related community -> `Hau Nguyen`
 
 ### The Gap in our Analysis
 
-For every intelligence analysis there will be a gap in the analysis, aware of those gap help us
-
-### Report 
+For every intelligence analysis there will be a gap in the analysis, aware of those gap help us realize
