@@ -1,5 +1,5 @@
 ---
-title: ENG - Investigation using OSINT Case 0x00 - One of the Viet Nam MMO 
+title: ENG - Investigation using OSINT | Case 0x00 A Vietnamese MMO 
 date: 2024-07-05
 author: khuong
 layout: post
