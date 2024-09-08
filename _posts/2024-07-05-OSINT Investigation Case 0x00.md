@@ -312,8 +312,10 @@ Some of the result is related to the youtube we found above `Cộng Đồng ILNh
 **News Related:**
 
 - [Bị khóa Facebook vì ‘nuôi nick ảo’](https://vnexpress.net/bi-khoa-facebook-vi-nuoi-nick-ao-4034994.html) Related to Hau Nguyen back in 2019 (USSV/MCARE)
+- [What is USSV and MCARE](https://www.facebook.com/groups/351880678587219/posts/823164858125463/?paipv=0&eav=AfaZds7NGyLeOIIG1XOJ03sNp4grjvR_TvcbraxXwMvyFYIGK5__CYZXc5dIattjrcE&_rdr)  
 
 ## Conclusion & The Gap in our Analyst
+
 
 Here are link analysis diagram for better visualization (I haven't found a way to mermaid look like Maltego chart so here is a sample of it):
 
@@ -324,7 +326,7 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     MYMIN(mymin.net)
     MCARE(mcare.me)
     HAUNGUYEN(Hau Nguyen)
-    HAUNGUYENFB(https://www.facebook.com/hau.nguyen.5494)
+    HAUNGUYENFB(FB: hau.nguyen.5494)
     HAUNGUYENYAHOO(sellvasell@yahoo.com)
     DOMAIN(ilgbt.net@gmail.com)
     IPADDRESS(45.32.121.177)
@@ -334,10 +336,7 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     USERNAME(nguyenhauq)
     UKESEME(www.ukesemeseke.com)
     UKESEMEEMAIL(ukesemeseke@gmail.com)
-    UKESEMEUSER(https://mmo4me.com/members/ukesemeseke.56280/)
-    LGBTNET(ILGBT.net)
-    CITYUSSNET(cityuss.net)
-    LGBTUSSCOM(lgbtuss.com)
+    UKESEMEUSER(MMO4ME: ukesemeseke.56280)
     %% define edges
     MYMIN --> USSV
     MYMIN --> MCARE
@@ -352,15 +351,13 @@ Here are link analysis diagram for better visualization (I haven't found a way t
     YOUTUBE --> USSV
     YOUTUBE --> HAUNGUYEN
     YOUTUBE --> UKESEME
-    YOUTUBE --> LGBTNET
-    YOUTUBE --> CITYUSSNET
-    YOUTUBE --> LGBTUSSCOM
     UKESEME --> HAUNGUYEN
     UKESEME --> HAUNGUYENFB
     UKESEME --> UKESEMEEMAIL
     UKESEMEEMAIL --> UKESEMEUSER
     UKESEMEUSER --> HAUNGUYEN
     UKESEMEUSER --> HAUNGUYENYAHOO
+    NHATRANG --> HAUNGUYEN
     HAUNGUYEN --> USSV
     HAUNGUYEN --> MCARE
     HAUNGUYENFB --> HAUNGUYEN
@@ -371,15 +368,19 @@ Here are link analysis diagram for better visualization (I haven't found a way t
 ```
 
 
-We know, we should have show a link analysis diagram, but we don't have the bugdet to 
-
 1. What is the Google Analytics ID of this website? -> `UA-58475948-1`
 2. What is the origin hosting IP address of the website? -> `45.32.121.177`
 3. What did the website’s owner claim as the reason the website closed forever -> `The owner shut down on his own, to comply with the Facebook Policy`
 4. This website used to have an alternative login method. What was the login 
 method and the application ID associated with it? -> `Facebook Oauth 2.0 and Client ID: 1690686991192609`
-5. Identify a potential admin of the website or the related community -> `Hau Nguyen`
+5. Identify a potential admin of the website or the related community -> `Hau Nguyen` the guy conduct MMO for a long time
 
 ### The Gap in our Analysis
 
-For every intelligence analysis there will be a gap in the analysis, aware of those gap help us realize
+For every intelligence analysis there will be a gap in the analysis, aware of those gap help us realize what are missing and what are we not dig deep enough
+- We do not investigate all the keywords and website that are mention in this report such as: `cityuss.net`, `lgbtuss.com`, and `ilgbt.net` it could add more context to who is Hau Nguyen.
+- We haven’t conducted a deep dive into USSV and MCARE to understand their operations or current relevance. While we know they're Facebook MMO tools, we're unsure if they're still actively used or managed.
+- Not using any leak data or breached data or mooncloud type of services to conduct investigate
+
+We understand that this type of investigation isn't as thorough as a comprehensive OSINT report, which can take months or even years to complete. To facilitate future investigations, we're developing a tool that can monitor and gather information across the Vietnamese cyberspace. 
+
