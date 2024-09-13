@@ -9,7 +9,7 @@ toc: true
 mermaid: true
 description: Our investigation into a customer's suspected scam or blackmail revealed a phishing operation, providing us with an opportunity to learn about cryptocurrency forensics.
 image:
-    path: /assets/img/startwar-osint.jpg
+    path: /assets/img/star-wars-episode-vii.jpg
 ---
 
 
@@ -56,7 +56,7 @@ SPF --> IP(IP Address)
 
 The Email Header: 
 
-```txt
+```email
 Delivered-To: [REDACTED]@gmail.com
 Received: by 2002:a05:7412:b715:b0:10c:5230:32a5 with SMTP id iu21csp1474233rdb;
         Mon, 9 Sep 2024 04:48:14 -0700 (PDT)
@@ -174,9 +174,10 @@ Let's take a look at this PDF (I have redacted the customer information from the
 
 From this PDF I could extract a lot of unique information that could help us pivoting such as:
 - `it's peanuts for your tranquility.` 
+- `I've a unique pixel within this mail`
 - `RDP (Remote Control)`
 - Metadata from the file (`Producer: Qt 5.5.1` and `Create Date: 2024:09:09 11:47:53`) by using exiftool
-- 
+- Bitcoin address: `1BrtZRb99ctoL9kqb7jrowGTjVpydSzvrT`
 
 ### Fomulate Pivoting 
 
