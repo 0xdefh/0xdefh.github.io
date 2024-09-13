@@ -30,7 +30,7 @@ The artifact I was given were:
 
 ## My investigation
 
-### Understand The Requirment 
+### Understand The Requirement 
 
 When the customer approach me, their question was very emotional and it is very hard for you to understand what are they 
 
@@ -201,7 +201,7 @@ It looks like a lot of people also receive this type of blackmail, after reading
 Which on the last refs link, PCRisk already has confirm this email was a scam and people shouldn't be worry about.
 
 
-# Conclusion
+## Conclusion
 
 - Does this email is malicious? `It is a scam type of email`
 - Does my phone or devices is compromised? `No it doesn't`
