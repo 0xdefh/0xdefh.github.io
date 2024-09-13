@@ -13,7 +13,7 @@ image:
 ---
 
 
-# Overview
+## Overview
 
 I was tasked to background checking for this email which is trying to black mail the user, phishing and these type of blackmail campain are not so familiar with end user, so a few people panic and then start sending the blackmailer what are they asking for which is money
 
@@ -28,17 +28,17 @@ The artifact I was given were:
 - `A black mail email`
 - `A PDF contain black mail information` 
 
-# My investigation
+## My investigation
 
-## Understand The Requirment 
+### Understand The Requirment 
 
 When the customer approach me, their question was very emotional and it is very hard for you to understand what are they 
 
-## Gathering Information
+### Gathering Information
 
 I know this step is very tedius and sometime boring but when you understand what kind of information that you can extract from the artifact,but I think in the future the AI will soon replace us when doing this task, we just verify these information is correct or not.  
 
-### Checking Email Headers
+#### Checking Email Headers
 
 From the email header we can extract useful information such as:
 - SPF
@@ -166,7 +166,7 @@ Here are the artifact that we gather from the Email Metadata:
 - Sender Email Address: `alfredoqz8billups@gmail.com`
 - Sender Name: `Alfredo Billups` 
 
-### Checking the PDF 
+#### Checking the PDF 
 
 Let's take a look at this PDF (I have redacted the customer information from the PDF)
 
