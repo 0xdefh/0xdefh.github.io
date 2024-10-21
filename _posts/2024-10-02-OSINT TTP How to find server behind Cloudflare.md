@@ -39,7 +39,7 @@ So when identify which server is have that Favicon hash is the easiest way to id
 
 Script to caculate the favicon hash, you win will input the URL of the favicon hash, for example: `python3 script.py www.example.com/favicon.icc`
 
-```python3
+```python
 #!/usr/bin/env python3
 import mmh3
 import requests
