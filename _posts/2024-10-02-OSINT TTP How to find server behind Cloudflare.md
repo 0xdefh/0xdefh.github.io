@@ -117,7 +117,7 @@ Same fundamental techniques as the Favicon hash. Banner and Title hash also got 
 
 
 
-## Verify Information using Curl
+## Verify IP Address - Domain using Curl
 
 I learn how to use verify the origin server is owner of the domain or not by reading this blog: [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
 
@@ -127,13 +127,13 @@ For a single IP address host a single domain
 curl "IP Address" -H "Host: "
 ```
 
-For an IP address that server multiple domain (shared IP address)
+For an IP address that server multiple domain (shared IP address) this TTP call [**Server Name Indication (SNI)**](https://www.cloudflare.com/learning/ssl/what-is-sni/) to run multiple **HTTPS** websites on a single IP address. 
 
 ```shell
 curl -k --resolve domain:port:ip_address https://<domain name>
 ```
 
-The reason why you use the `--resolve` because of
+cURL offers a --resolve argument to explicitly map a domain name and port to an IP address instead of using the traditional DNS lookup. It must include the port and full domain name.
 
 
 ## How can you make it harder for the OSINT guys.
