@@ -32,7 +32,7 @@ Just like you already have all the IP address getting profile and already has al
 
 I'll show you a few way to do it.
 
-This is nothing new and nothing magical about it. Just thank for the the services and how the Internet work. 
+This is nothing new and nothing magical about it. Just thank for the services and how the Internet work. 
 
 
 ```mermaid
@@ -119,9 +119,22 @@ Same fundamental techniques as the Favicon hash. Banner and Title hash also got 
 
 ## Verify Information using Curl
 
+I learn how to use verify the origin server is owner of the domain or not by reading this blog: [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
+
+For a single IP address host a single domain
+
 ```shell
 curl "IP Address" -H "Host: "
 ```
+
+For an IP address that server multiple domain (shared IP address)
+
+```shell
+curl -k --resolve domain:port:ip_address https://<domain name>
+```
+
+The reason why you use the `--resolve` because of
+
 
 ## How can you make it harder for the OSINT guys.
 
@@ -131,4 +144,6 @@ I think you can't, just like your footprint of your C2 or anything of your serve
 
 - [How To Bypass Cloudflare and How To Defend by Kerkour](https://kerkour.com/how-to-bypass-cloudflare-and-how-to-defend)
 - [How to Bypass Cloudflare in 2024](https://scrapeops.io/web-scraping-playbook/how-to-bypass-cloudflare/)
+- [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
+
 
