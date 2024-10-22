@@ -128,8 +128,10 @@ The command look like this
 python3 cloudflair.py example.com
 ```
 
+The result would look like this
+
 ```javascript
-{'hosts': ['X.X.X.X'', 'X.X.X.X', 'X.X.X.X''], 'origins': [('X.X.X.X'', 'Unexpected HTTP status code 404'), ('X.X.X.X'', 'HTML content identical to example.com'), ('X.X.X.X'', 'HTML content identical to example.com')]}
+{'hosts': ['X.X.X.X', 'X.X.X.X', 'X.X.X.X'], 'origins': [('X.X.X.X', 'Unexpected HTTP status code 404'), ('X.X.X.X', 'HTML content identical to example.com'), ('X.X.X.X', 'HTML content identical to example.com')]}
 ```
 
 ## Weird Case: You can use Google Search to find the orogin IP address
