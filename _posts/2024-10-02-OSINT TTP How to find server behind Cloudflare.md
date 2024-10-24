@@ -18,6 +18,8 @@ During my day doing OSINT investigation. I has encounter numerous of Website tha
 
 ## The Big Picture and the Fundamental
 
+### Internet Scanner
+
 Internet with its **3,706,452,992 Public IPv4 addresses** is scanned everyday by various services such as Censys, Shodan, Fofa,... and include all the Pentester self-hosted Internet Scanner, all the threat hunter, all the SSH bruteforce attempts, all the Mirai Bot, and many more. So basically, Internet scanning isn't something new. 
 
 Finding a server behind Cloudflare is all about finding something unique about their website that hosted on that server and then hopefully those internet scanner services pick up the server right at the momment the unique thing is there.
@@ -38,26 +40,31 @@ This is nothing new and nothing magical about it. Just thank for the services an
 ```mermaid
 flowchart LR
     %% define nodes
-    USER(User)
-    CLOUDFLARE(Cloudflare CDN)
-    TRUESERVER(Origin Server)
-    INTERNETSCANNER(Internet Scanner - Censys, Shodan,...)
-    IP(IP Address)
-    HTML(HTML)
-    FAV(Favicon)
-    OTHERS(Other Information)
+    USER[User]
+    CLOUDFLARE[Cloudflare global network]
+    TRUESERVER[Origin Server]
+    INTERNETSCANNER[Internet Scanner - Censys, Shodan,...]
+    IP[IP Address]
+    HTML[HTML]
+    FAV[Favicon]
+    OTHERS[Other Information]
 
     %% define edges    
-    USER -- 1 - Access --> CLOUDFLARE
-    CLOUDFLARE -- 2 - Serve Origin Server Content --> USER
-    CLOUDFLARE -- 3 - Redirect --> TRUESERVER
-    TRUESERVER -- 4 - Send Data --> CLOUDFLARE
+    USER <-- Connection --> CLOUDFLARE
+    CLOUDFLARE <-- Connection --> TRUESERVER
     INTERNETSCANNER -- Scan --> TRUESERVER
     TRUESERVER -- Has --> IP
     TRUESERVER -- Has --> HTML
     TRUESERVER -- Has --> FAV
     TRUESERVER -- Has --> OTHERS
 ```
+
+### Cloudflare DNS Proxy
+
+Here you can find information on how Cloudflare hide you IP address: [Proxied DNS Record](https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records/)
+
+`When you proxy specific DNS records through Cloudflare - specifically A, AAAA, or CNAME records — DNS queries for these will resolve to Cloudflare anycast IPs instead of their original DNS target. This means that all requests intended for proxied hostnames will go to Cloudflare first and then be forwarded to your origin server.`
+
 
 ## Easy: Favicon Hash
 
@@ -110,12 +117,11 @@ After you got this information you go to shodan and search.
 
 Same fundamental techniques as the Favicon hash. Banner and Title hash also got index and scan by the these Internet Scanner. In HTML Page, there are always a title and a banner which you can pivoting from
 
+## Medium: SSL Certificate 
 
+You can use SSL Certificate to search for that origin server, why SSL Certificate? Because each SSL Certiticate is unique and has it own fingerprint. You can find all the SSL certificate that associate with the domain using [crt.sh](https://crt.sh/) which can show a previous SSL certificates of the domain. 
 
-
-## Medium: TLS Certificate 
-
-You can use TLS Certificate to search for that origin server, why TLS Certificate, what if it use Let's Encrypt and other
+After you obtain the SSL certificate, you search in Censys, Fofa, ZoomEye or Shodan.
 
 
 ## Medium: Using CloudFlair (Which has a lot of script to find the origin server)
@@ -167,5 +173,5 @@ I think you can't, just like your footprint of your C2 or anything of your serve
 - [How To Bypass Cloudflare and How To Defend by Kerkour](https://kerkour.com/how-to-bypass-cloudflare-and-how-to-defend)
 - [How to Bypass Cloudflare in 2024](https://scrapeops.io/web-scraping-playbook/how-to-bypass-cloudflare/)
 - [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
-
+- [Finding Fraudsters Who Hide Behind Cloudflare](https://www.youtube.com/watch?v=UBZBL65Dv1w)
 
