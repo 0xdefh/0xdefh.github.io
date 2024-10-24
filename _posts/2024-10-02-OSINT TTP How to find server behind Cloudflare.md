@@ -66,7 +66,7 @@ Here you can find information on how Cloudflare hide you IP address: [Proxied DN
 `When you proxy specific DNS records through Cloudflare - specifically A, AAAA, or CNAME records — DNS queries for these will resolve to Cloudflare anycast IPs instead of their original DNS target. This means that all requests intended for proxied hostnames will go to Cloudflare first and then be forwarded to your origin server.`
 
 
-## Easy: Favicon Hash
+## 1. Favicon Hash
 
 **What is Favicon?** Favicon is a logo of the browser tab that you see everyday, this was the first unique thing about the Website because people create their logo, trademarks
 and put 
@@ -113,17 +113,21 @@ if __name__ == '__main__':
 
 After you got this information you go to shodan and search.
 
-## Easy: Banner or Title Hash
+## 2. Banner or Title Hash
 
-Same fundamental techniques as the Favicon hash. Banner and Title hash also got index and scan by the these Internet Scanner. In HTML Page, there are always a title and a banner which you can pivoting from
+Same fundamental techniques as the Favicon hash. Banner and Title hash also got index and scan by the these Internet Scanner. In HTML Page, there are always a title and a banner which you can pivoting from. 
 
-## Medium: SSL Certificate 
+For example the title of nginx default title by using this command in Censys: `services.http.response.html_title: "Welcome to nginx!"`
+
+![Censys Search for Welcome to nginx!](/assets/img/censys_title.png)
+
+## 3. SSL Certificate 
 
 You can use SSL Certificate to search for that origin server, why SSL Certificate? Because each SSL Certiticate is unique and has it own fingerprint. You can find all the SSL certificate that associate with the domain using [crt.sh](https://crt.sh/) which can show a previous SSL certificates of the domain. 
 
 After you obtain the SSL certificate, you search in Censys, Fofa, ZoomEye or Shodan. It will result you the server which has that SSL certificate
 
-## Historical DNS record
+## 4. Historical DNS record
 
 As you now know, Cloudflare functions as a DNS proxy. Sometimes, when a site first appears on the Internet, it may not initially use Cloudflare as its DNS proxy. Therefore, older DNS records could still be present somewhere on the Internet that still point to the origin server (IP address). 
 
@@ -132,13 +136,13 @@ You can use such tool such as [Security Trail](https://securitytrails.com/) to l
 > Notes: They may change the original IP address after setting up Cloudflare, so even if you've found a historical IP address that matches the domain, you might still be unable to verify it.
 {: .prompt-info }
 
-## Subdomain could point to the Origin Server IP Address
+## 5. Subdomain could point to the Origin Server IP Address
 
 Sometimes the subdomain could point to the origin server ip address. Well in OSINT you has already recon the whole domain by using tool such as dnsreccon 
 
-## Content Security Policy Header Analysis show the Origin Server IP Address
+## 6. Content Security Policy Header Analysis show the Origin Server IP Address
 
-## Medium: Using CloudFlair (Which has a lot of script to find the origin server)
+## 7. Medium: Using CloudFlair (Which has a lot of script to find the origin server)
 
 You go Censys or Shodan to register an account and then obtain an API key and API secret, and the just start the script and then CloudFlair will run a bunch of script 
 
@@ -154,11 +158,11 @@ The result would look like this
 {'hosts': ['X.X.X.X', 'X.X.X.X', 'X.X.X.X'], 'origins': [('X.X.X.X', 'Unexpected HTTP status code 404'), ('X.X.X.X', 'HTML content identical to example.com'), ('X.X.X.X', 'HTML content identical to example.com')]}
 ```
 
-## Weird Case: You can use Google Search to find the orogin IP address
+## 8. Weird Case: You can use Google Search to find the orogin IP address
 
 In the past, sometimes I just search the domain on Google, which is something just like this: `"example.com"` and then sometimes the IP address appear in the search result. 
  
-## Verify IP Address - Domain using Curl
+## 9. Verify IP Address - Domain using Curl
 
 I learn how to use verify the origin server is owner of the domain or not by reading this blog: [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
 
