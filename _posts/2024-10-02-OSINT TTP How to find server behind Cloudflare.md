@@ -121,8 +121,22 @@ Same fundamental techniques as the Favicon hash. Banner and Title hash also got 
 
 You can use SSL Certificate to search for that origin server, why SSL Certificate? Because each SSL Certiticate is unique and has it own fingerprint. You can find all the SSL certificate that associate with the domain using [crt.sh](https://crt.sh/) which can show a previous SSL certificates of the domain. 
 
-After you obtain the SSL certificate, you search in Censys, Fofa, ZoomEye or Shodan.
+After you obtain the SSL certificate, you search in Censys, Fofa, ZoomEye or Shodan. It will result you the server which has that SSL certificate
 
+## Historical DNS record
+
+As you now know, Cloudflare functions as a DNS proxy. Sometimes, when a site first appears on the Internet, it may not initially use Cloudflare as its DNS proxy. Therefore, older DNS records could still be present somewhere on the Internet that still point to the origin server (IP address). 
+
+You can use such tool such as [Security Trail](https://securitytrails.com/) to look for historical DNS, they store and crawl all DNS all over the Internet. 
+
+> Notes: They may change the original IP address after setting up Cloudflare, so even if you've found a historical IP address that matches the domain, you might still be unable to verify it.
+{: .prompt-info }
+
+## Subdomain could point to the Origin Server IP Address
+
+Sometimes the subdomain could point to the origin server ip address. Well in OSINT you has already recon the whole domain by using tool such as dnsreccon 
+
+## Content Security Policy Header Analysis show the Origin Server IP Address
 
 ## Medium: Using CloudFlair (Which has a lot of script to find the origin server)
 
@@ -163,6 +177,8 @@ curl -k --resolve domain:port:ip_address https://<domain name>
 ```
 
 cURL offers a --resolve argument to explicitly map a domain name and port to an IP address instead of using the traditional DNS lookup. It must include the port and full domain name.
+
+**If the site is still host on that server, it will return the content of the website.**
 
 ## How can you make it harder for the OSINT guys.
 
