@@ -20,14 +20,9 @@ During my day doing OSINT investigation. I has encounter numerous of Website tha
 
 ### Internet Scanner
 
-Internet with its **3,706,452,992 Public IPv4 addresses** is scanned everyday by various services such as Censys, Shodan, Fofa,... and include all the Pentester self-hosted Internet Scanner, all the threat hunter, all the SSH bruteforce attempts, all the Mirai Bot, and many more. So basically, Internet scanning isn't something new. 
+Internet with its **3,706,452,992 Public IPv4 addresses**, a inite pool of public IP addresses, is constantly scanned by various tools and services. This includes security researchers, threat actors, and automated systems. To identify a server hidden behind Cloudflare, we must find a unique characteristic of its hosted website. This unique identifier can then be used to trigger internet scanners to detect the server's IP address. It's akin to searching for a specific needle in a vast haystack, where we already know the haystack's contents but need a precise starting point.
 
-Finding a server behind Cloudflare is all about finding something unique about their website that hosted on that server and then hopefully those internet scanner services pick up the server right at the momment the unique thing is there.
-
-Just like you already have all the IP address getting profile and already has all the information you just need a pivoting point to find they needle in the haystack.
-
-
-> Notes: But still there are some thing you can do to hide your server behind Cloudflare by reading this blog you will see with proper Cloudflare configuration you can securely hide you server
+> Notes: But still there are something you can do to hide your server behind Cloudflare by reading this blog you will see with proper Cloudflare configuration you can securely hide you server
 > [How To Bypass Cloudflare and How To Defend by Kerkour](https://kerkour.com/how-to-bypass-cloudflare-and-how-to-defend)
 {: .prompt-info }
 
@@ -68,12 +63,13 @@ Here you can find information on how Cloudflare hide you IP address: [Proxied DN
 
 ## 1. Favicon Hash
 
-**What is Favicon?** Favicon is a logo of the browser tab that you see everyday, this was the first unique thing about the Website because people create their logo, trademarks
-and put 
+Ever wondered how to identify the server behind Cloudflare's protection? Favicons, those tiny website logos in your browser tabs, hold the key. Websites often use unique favicons, making them a valuable fingerprint for identification.
 
-So when identify which server is have that Favicon hash is the easiest way to identify the server behind Cloudflare. Censys and Shodan 
+Here's the trick: by calculating the favicon hash (a unique code derived from the favicon's content), tools like Censys and Shodan can help you locate servers sharing that same favicon. This technique bypasses Cloudflare's masking and reveals the origin server.
 
-Script to caculate the favicon hash, you win will input the URL of the favicon hash, for example: `python3 script.py www.example.com/favicon.ico`
+```shell
+pip3 install requests mmh3 codecs fake-useragent
+```
 
 ```python
 #!/usr/bin/env python3
@@ -81,66 +77,74 @@ import mmh3
 import requests
 import codecs
 import sys
-from termcolor import colored
+from fake_useragent import UserAgent
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-if len(sys.argv) < 2:
-	print("[!] Error!")
-	print(f"[-] Use: python3 {sys.argv[0]} http://example.com/favicon.ico")
-	sys.exit()
-
-def main():
+def main(favicon_url):
 
     try:
-        response = requests.get(sys.argv[1], verify=False)
+        headers = {'User-Agent': UserAgent().chrome}
+        response = requests.get(favicon_url,headers=headers,verify=False)
         if (response.status_code != 404):
             favicon = codecs.encode(response.content,"base64")
             hash_favicon = mmh3.hash(favicon)
-
-            print(colored(f'http.favicon.hash:{hash_favicon}', "yellow"))
-            print(colored(f'https://www.shodan.io/search?query=http.favicon.hash%3A'+str(hash_favicon), "green"))
-            print(colored('http:s//www.censys.io/search/query'))
-        else:
-            print(colored(f'http.favicon.hash: not found', "red"))
+            return {"http.favicon.hash":hash_favicon, "refs":f"https://www.shodan.io/search?query=http.favicon.hash%3A'{hash_favicon}'"}
+        return {"http.favicon.hash":None}
 
     except Exception as e:
-        print(colored(e, "red"))
+        return {"http.favicon.hash":e}
 
 if __name__ == '__main__':
-	main()
+	print(main(sys.argv[1]))
 ```
 
-After you got this information you go to shodan and search.
+Use this information to search for the server on Shodan using its unique favicon.
 
 ## 2. Banner or Title Hash
 
-Same fundamental techniques as the Favicon hash. Banner and Title hash also got index and scan by the these Internet Scanner. In HTML Page, there are always a title and a banner which you can pivoting from. 
+Similar to Favicon hashes, Banner and Title hashes can be indexed and scanned by internet search engines. HTML pages invariably include a title and a banner, providing potential entry points for identification.
 
-For example the title of nginx default title by using this command in Censys: `services.http.response.html_title: "Welcome to nginx!"`
+For instance, Nginx servers often display a default title. To identify these servers using Censys, you can employ the following query:
+
+```js
+services.http.response.html_title: "Welcome to nginx!"
+```
 
 ![Censys Search for Welcome to nginx!](/assets/img/censys_title.png)
 
-## 3. SSL Certificate 
+## 3. TLS Certificate 
 
-You can use SSL Certificate to search for that origin server, why SSL Certificate? Because each SSL Certiticate is unique and has it own fingerprint. You can find all the SSL certificate that associate with the domain using [crt.sh](https://crt.sh/) which can show a previous SSL certificates of the domain. 
+TLS certificates act like digital fingerprints for servers. Each one is unique, making them a powerful tool for identifying the origin server you're looking for. Websites use TLS to secure connections, and tools like crt.sh can reveal past and present certificates associated with a specific domain.
 
-After you obtain the SSL certificate, you search in Censys, Fofa, ZoomEye or Shodan. It will result you the server which has that SSL certificate
+Once you have the TLS certificate fingerprint, you can leverage search engines like Censys, Fofa, ZoomEye, or Shodan. These platforms can identify servers that share the same TLS certificate, potentially leading you to your target.
+
+But the journey doesn't end there. TLS certificates sometimes contain "hardcoded values" - bits of data embedded within the certificate. These values are often reused across different servers, allowing you to pivot your search and potentially discover related systems.
+
+Such as these queries from [Matthew](https://www.embeeresearch.io/)
+
+- `services.tls.certificates.leaf_data.subject_dn`
+- `services.tls.certificates.leaf_data.issuer_dn`
+- `services.tls.certificates.leaf_data.issuer.common_name`
+
+Here is the blog that I read [A Beginner’s Guide to Tracking Malware Infrastructure](https://censys.com/a-beginners-guide-to-tracking-malware-infrastructure/)
 
 ## 4. Historical DNS record
 
 As you now know, Cloudflare functions as a DNS proxy. Sometimes, when a site first appears on the Internet, it may not initially use Cloudflare as its DNS proxy. Therefore, older DNS records could still be present somewhere on the Internet that still point to the origin server (IP address). 
 
-You can use such tool such as [Security Trail](https://securitytrails.com/) to look for historical DNS, they store and crawl all DNS all over the Internet. 
+You can use such tool such as [Security Trail](https://securitytrails.com/) to look for historical DNS, they store and crawl all DNS all over the Internet.
 
 > Notes: They may change the original IP address after setting up Cloudflare, so even if you've found a historical IP address that matches the domain, you might still be unable to verify it.
 {: .prompt-info }
 
 ## 5. Subdomain could point to the Origin Server IP Address
 
-Sometimes the subdomain could point to the origin server ip address. Well in OSINT you has already recon the whole domain by using tool such as dnsreccon 
+Sometimes the subdomain could point to the origin server ip address. Well in OSINT you has already recon the whole domain by using tool such as dnsreccon,
 
 ## 6. Content Security Policy Header Analysis show the Origin Server IP Address
+
+`services.http.response.header.content_security_policy: "example.com"` 
 
 ## 7. Medium: Using CloudFlair (Which has a lot of script to find the origin server)
 
@@ -176,17 +180,15 @@ For an IP address that server multiple domain (shared IP address) this TTP call 
 
 `SNI means you can have unique certificates for each domain (i.e. many certificates) while those domains share the same IP. Multi-Domain Certificates, on the other hand, simply use one certificate for many domains, which in return also means one IP for many domains.`
 
-```shell
-curl -k --resolve domain:port:ip_address https://<domain name>
-```
-
 cURL offers a --resolve argument to explicitly map a domain name and port to an IP address instead of using the traditional DNS lookup. It must include the port and full domain name.
 
 **If the site is still host on that server, it will return the content of the website.**
 
-## How can you make it harder for the OSINT guys.
 
-I think you can't, just like your footprint of your C2 or anything of your server will get scan
+## Conclusion
+
+Honestly, there are a ton of ways to do anything. It really depends on how creative you are and how well you understand the basics. These tips and tricks have been a huge help for me.
+
 
 ## Refs
 
@@ -194,4 +196,6 @@ I think you can't, just like your footprint of your C2 or anything of your serve
 - [How to Bypass Cloudflare in 2024](https://scrapeops.io/web-scraping-playbook/how-to-bypass-cloudflare/)
 - [Discovering the IP address of a Wordpress site hidden behind Cloudflare](https://blog.nem.ec/2020/01/22/discover-cloudflare-wordpress-ip/)
 - [Finding Fraudsters Who Hide Behind Cloudflare](https://www.youtube.com/watch?v=UBZBL65Dv1w)
-
+- [A Beginner’s Guide to Tracking Malware Infrastructure](https://censys.com/a-beginners-guide-to-tracking-malware-infrastructure/)
+- [Bypassing Cloudflare WAF with the origin server IP address](https://blog.detectify.com/industry-insights/bypassing-cloudflare-waf-with-the-origin-server-ip-address/)
+- []()
