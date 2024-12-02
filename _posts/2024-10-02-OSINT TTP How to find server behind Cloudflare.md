@@ -198,4 +198,3 @@ Honestly, there are a ton of ways to do anything. It really depends on how creat
 - [Finding Fraudsters Who Hide Behind Cloudflare](https://www.youtube.com/watch?v=UBZBL65Dv1w)
 - [A Beginner’s Guide to Tracking Malware Infrastructure](https://censys.com/a-beginners-guide-to-tracking-malware-infrastructure/)
 - [Bypassing Cloudflare WAF with the origin server IP address](https://blog.detectify.com/industry-insights/bypassing-cloudflare-waf-with-the-origin-server-ip-address/)
-- []()
