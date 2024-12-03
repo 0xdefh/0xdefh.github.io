@@ -3,10 +3,12 @@ title: OSINT - Keywords Monitoring
 date: 2024-08-27
 author: khuong
 layout: post
-categories: [OSINT]
-tags: [OSINT]
+categories: [Security]
+tags: [osint,ttp]
 comments: true
 toc: true
+image:
+    path: /assets/img/mando.jpg
 ---
 
 ## Introduction
