@@ -63,7 +63,7 @@ So I'll use a free internet scanner tools (hmm probably some day I'll build my o
 - [Virustotal](https://virustotal.com/)
 - [Hybrid Analysis](https://www.hybrid-analysis.com/)
 - [AnyRun](https://any.run/)
-- [Whois Database]()
+- Whois Database
 - [Threat Fox](https://threatfox.abuse.ch/)
 - Python 
 
