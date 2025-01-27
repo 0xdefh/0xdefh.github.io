@@ -1,5 +1,5 @@
 ---
-title: [OSINT TTPs] Impersonate Website
+title: OSINT TTPs - How to Find Impersonate Website
 date: 2025-01-25
 author: khuong
 layout: post
