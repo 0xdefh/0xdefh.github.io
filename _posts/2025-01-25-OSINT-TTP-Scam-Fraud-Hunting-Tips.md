@@ -21,7 +21,7 @@ Most of these TTPs is refer to finding an unique identifer label (UIL) which is 
 So let's start with a study case rather than a showing all the tools and theoratical cases. OSINT is a mindest not the tools. 
 
 
-## General Knowledge | Finding the seed information | Asking questions
+## General Knowledge | Finding the seed information | Phishing
 
 I've always said this quotes so many time, master youself master the enemy. 
 
@@ -42,9 +42,9 @@ Let's understand how attacker can spread (distubution) these type of impersonate
 - SMS Phishing
 - Google / Youtube / Facebook Ads or Ads in General 
 
--> These are the cases that know about 
+-> These are the cases that know about, these most likely is a product of what's known to be phishing kit 
 
-So in order to tracking these type of stuff we need to find where can information told 
+So in order to tracking these type of stuff we need to find where can information will store 
 
 ## Study Case 1: Telegram Login Panel 
 
@@ -64,15 +64,71 @@ So I'll use a free internet scanner tools (hmm probably some day I'll build my o
 - [Hybrid Analysis](https://www.hybrid-analysis.com/)
 - [AnyRun](https://any.run/)
 - Whois Database
-- [Threat Fox](https://threatfox.abuse.ch/)
+- [URLHaus](https://urlhaus.abuse.ch/)
 - Python 
+- Google Dorking 
+- PhishTank 
+- [PhishStat](https://phishstats.info/)
+- StalkPhish OSS
 
-Notable Mention: Validin, 
+Notable Mention: Validin 
 
-I know, I know, a bunch of tools, remember the first step of CTI or Intelligence is COLLECTION, we must collect information. So those are sources of information. 
-
+I know, I know, a bunch of tools, remember the first step of CTI or Intelligence is COLLECTION, we must collect information. So those are sources of information.
 These tools allow me to search for those information (but with some limitation but that's okay)
 
+Alright we got ourself a bunch of data source that can look for
+
+Let's take a look at the real Telegram Login page to understand what is normal and use that to pivoting and make searches
+
+![Telegram QR Code Login](/assets/img/teleqrlogin.png)
+
+![Telegram Phone Number Login](/assets/img/telephonelogin.png)
+
+![Telegram Title](/assets/img/teletitle.png)
+
+
+Let's begin and start with a simple keywords list and Google dorks 
+
+**Keyword List:**
+
+* Telegram 
+* Please confirm your country code and enter your phone number
+
+**Google Dork:**
+
+This dork will list out all the domain 
+
+```shell
+intext:"Please confirm your country code and enter your phone number" -site:*.telegram.org telegram
+intext:"Log in to Telegram by QR code" -site:*.telegram.org telegram
+intext:"Open Telegram on your phone" -site:*.telegram.org
+```
+
+This could be sometimes useful for us, just to check if are there any Fake website that has already index by our beloved Google. This could apply to others website as well
+for me I'll just use a Google Alert just to monitor these stuff if any new website that show up
+
+Here you can see just a few search we could find a few potential fake website (which there is a bias here not every impersonate is malicous and not)
+
+![Telegram Potential Fake Website](/assets/img/telefakeweb.png)
+
+We could take a look at every website or you write google dork type of automation and crawl all the content of the search result. and then extract interesting javascript or weird html content, for me I just pick a random and start using URLScan to find if are there any similar.
+
+Well if you not sure if the domain is legit or not or want to gain more information you could check for more information such as whois records, html content, javascript or just use a burpsuite intercept request just to be sure if are there anything interesting.
+
+Or maybe conduct a vul scan on that. It depends.w
+
+**URLScan.io search query: **
+
+Search for the domain first whether if it has been submited before, and then scan it
+
+```shell
+page.url
+```
+
+This for to check if any malicious side has been indexed by the Google. 
+
+
+Using a tool to gather all information from all those sources (API), Well you have to registered their services and use their free API. Or you can just use MISP to have the data flow in every day 
 
 
 ## Study Case 2: Gmail or Microsoft
@@ -81,3 +137,10 @@ These tools allow me to search for those information (but with some limitation b
 ## Study Case 3: General Caess
 
 
+## Refs for Hunting Impersonate Website or Phishing
+
+These are the article that I read in order to obtain this knowledge also inspired by it and in the end create this blog, to show case the action that I took upon this information.
+
+* [StalkPhish - Use Case Hunting for Phishing 2022](https://stalkphish.com/2022/09/05/use-case-hunting-for-phishing/)
+* [Cisco Talos - New Phishing as a Services Tool Greatness](https://blog.talosintelligence.com/new-phishing-as-a-service-tool-greatness-already-seen-in-the-wild/)
+* [Brand Protection Hunting for Phishing Kit](https://loungefly84.medium.com/brand-protection-hunting-for-phishing-kits-34df8740989a)
