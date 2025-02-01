@@ -137,12 +137,13 @@ Or maybe conduct a vuls scan on that server. It depends.
 
 After the dorking you can try other data source. In this cases I'll try URLScan.Io and any free and open reported phishing data (such as phish tank and phish stat)
 
-### Phish Tank & Phish Stats 
+### Phish Tank & Phish Stats
 
+By using PhishStat.info API, which you can take a look at it right here: [API Documentation](https://phishstats.info/#apidoc) by default it will return 20 results, but I'll but the _size=100
 
-This command will use the api from the phishstats to get
+This command will use the api from the phishstats to get some phising site that has reported as impersonate Telegram and we will pivoting from that
 ```shell
-curl --insecure -XGET -H "Content-type: application/json" 'https://phishstats.info:2096/api/phishing?_where=(title,like,~Telegram~)&_sort=-id' | jq
+curl --insecure -XGET -H "Content-type: application/json" 'https://phishstats.info:2096/api/phishing?_where=(title,like,~Telegram~)&_sort=-id&_size=100' | jq
 ```
 
 Example output:
@@ -197,9 +198,16 @@ Example output:
     "page_text": null
 }
 ```
-> Notes: For this cases, I'm be able to use 
 
 The website that we found in the phishstats and still active is **hxxps://www.guzi945[.]top/**
+
+**Addtional Information:**
+
+* 40 days old
+* Created on 2024-12-23
+* Expires on 2025-12-23
+* Updated on 2025-01-15
+* Registrar WHOIS Server: www.gname.com
 
 The search result from URLScan.io: [https://urlscan.io/result/59f0bf0e-a8ea-4d5b-8a16-8edfd8527b36/](https://urlscan.io/result/59f0bf0e-a8ea-4d5b-8a16-8edfd8527b36/)
 
@@ -215,15 +223,6 @@ page.url: guz*.top
 ```
 
 These search query aim to find more domain that potential using this techniques call , you can read more about that at here: [Mass Telegram account hijacking via supply-chain phishing campaign](https://izoologic.com/threat-advisory/mass-telegram-account-hijacking-via-supply-chain-phishing-campaign/)
-
-
-**PhishStat API**
-```python
-import requets
-
-# GET Request to PhishStat API to filter out the
-res = requests.get("")
-```
 
 
 This for to check if any malicious side has been indexed by the Google. 
