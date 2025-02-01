@@ -1,5 +1,5 @@
 ---
-title: OSINT TTPs - How to Find Impersonate Website
+title: ENG - OSINT Techniques | How to find impersonate website
 date: 2025-01-25
 author: khuong
 layout: post
