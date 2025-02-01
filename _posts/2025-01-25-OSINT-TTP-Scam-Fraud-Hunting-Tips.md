@@ -6,6 +6,8 @@ layout: post
 categories: [Security]
 tags: [beginner,threatintelligence]   
 toc: true
+image:
+    path: /assets/img/arctrooper.jpg
 ---
 
 ## Overview
@@ -47,6 +49,13 @@ Let's understand how attacker can spread (distubution) these type of impersonate
 So in order to tracking these type of stuff we need to find where can information will store 
 
 ## Study Case 1: Telegram Login Panel 
+
+### Requirement or Investigation Objective
+
+* Find any Impersonate Telegram Login Page
+* Check if those website belong to a mass phishing campain or not
+* 
+
 
 ### Collection 
 
@@ -188,6 +197,7 @@ Example output:
     "page_text": null
 }
 ```
+> Notes: For this cases, I'm be able to use 
 
 The website that we found in the phishstats and still active is **hxxps://www.guzi945[.]top/**
 
