@@ -82,11 +82,17 @@ Let's take a look at the real Telegram Login page to understand what is normal a
 
 ![Telegram QR Code Login](/assets/img/teleqrlogin.png)
 
+Telegram Legit QR Code Login
+
 ![Telegram Phone Number Login](/assets/img/telephonelogin.png)
+
+Telegram Phone Number Login 
 
 ![Telegram Title](/assets/img/teletitle.png)
 
+Telegram Title
 
+### Google Dork 
 Let's begin and start with a simple keywords list and Google dorks 
 
 **Keyword List:**
@@ -104,26 +110,111 @@ intext:"Log in to Telegram by QR code" -site:*.telegram.org telegram
 intext:"Open Telegram on your phone" -site:*.telegram.org
 ```
 
-This could be sometimes useful for us, just to check if are there any Fake website that has already index by our beloved Google. This could apply to others website as well
+> This could be sometimes useful for us, just to check if are there any Fake website that has already index by our beloved Google. This could apply to others website as well
 for me I'll just use a Google Alert just to monitor these stuff if any new website that show up
+{: .prompt-info } 
 
-Here you can see just a few search we could find a few potential fake website (which there is a bias here not every impersonate is malicous and not)
+Here you can see just a few search we could find a few potential fake website (which there is a bias here not every impersonate is malicous and not) most impersonate website has a short time to live
+so probably it will not gonna be indexed
 
 ![Telegram Potential Fake Website](/assets/img/telefakeweb.png)
 
-We could take a look at every website or you write google dork type of automation and crawl all the content of the search result. and then extract interesting javascript or weird html content, for me I just pick a random and start using URLScan to find if are there any similar.
+We could take a look at every website or you write google dork type of automation and crawl all the content of the search result. and then extract interesting javascript or weird html content, for me I just pick a random and **start using URLScan to find if are there any similar.**
 
 Well if you not sure if the domain is legit or not or want to gain more information you could check for more information such as whois records, html content, javascript or just use a burpsuite intercept request just to be sure if are there anything interesting.
 
-Or maybe conduct a vul scan on that. It depends.w
+Or maybe conduct a vuls scan on that server. It depends.
 
-**URLScan.io search query: **
 
-Search for the domain first whether if it has been submited before, and then scan it
+After the dorking you can try other data source. In this cases I'll try URLScan.Io and any free and open reported phishing data (such as phish tank and phish stat)
+
+### Phish Tank & Phish Stats 
+
+
+This command will use the api from the phishstats to get
+```shell
+curl --insecure -XGET -H "Content-type: application/json" 'https://phishstats.info:2096/api/phishing?_where=(title,like,~Telegram~)&_sort=-id' | jq
+```
+
+Example output:
+
+```json
+{
+    "id": 11228739,
+    "url": "http://www.guzi945.top/",
+    "ip": "104.21.1.88",
+    "countrycode": "",
+    "countryname": "",
+    "regioncode": "",
+    "regionname": "",
+    "city": "",
+    "zipcode": "",
+    "latitude": "0.0000",
+    "longitude": "0.0000",
+    "asn": "AS13335",
+    "bgp": "104.16.0.0/12",
+    "isp": "CLOUDFLARENET, US",
+    "title": "Telegram",
+    "date": "2025-01-21T02:29:27.000Z",
+    "date_update": "2025-01-21T05:39:39.000Z",
+    "hash": "1482c96533fdc5ce06952c36d55af966218da8919f75e523025f4abec64a559f",
+    "score": 6.3,
+    "host": "www.guzi945.top",
+    "domain": "guzi945.top",
+    "tld": "top",
+    "domain_registered_n_days_ago": null,
+    "screenshot": null,
+    "abuse_contact": "abuse@guzi945.top",
+    "ssl_issuer": null,
+    "ssl_subject": null,
+    "alexa_rank_host": null,
+    "alexa_rank_domain": null,
+    "n_times_seen_ip": 1,
+    "n_times_seen_host": 1,
+    "n_times_seen_domain": 1,
+    "http_code": 403,
+    "http_server": "cloudflare",
+    "google_safebrowsing": "No",
+    "virus_total": "Yes",
+    "abuse_ch_malware": "No",
+    "threat_crowd": null,
+    "threat_crowd_subdomain_count": null,
+    "threat_crowd_votes": null,
+    "vulns": null,
+    "ports": "80, 443, 2082, 2083, 2086, 2087, 2096, 8080, 8443",
+    "os": null,
+    "tags": "cdn",
+    "technology": null,
+    "page_text": null
+}
+```
+
+The website that we found in the phishstats and still active is **hxxps://www.guzi945[.]top/**
+
+The search result from URLScan.io: [https://urlscan.io/result/59f0bf0e-a8ea-4d5b-8a16-8edfd8527b36/](https://urlscan.io/result/59f0bf0e-a8ea-4d5b-8a16-8edfd8527b36/)
+
+**URLScan.io search query:**
+
+The search query syntax is [here](https://urlscan.io/docs/search/).
 
 ```shell
-page.url
+page.url: guzi945.top
+page.url: guzi*.top
+page.url: *945.top
+page.url: guz*.top
 ```
+
+These search query aim to find more domain that potential using this techniques call , you can read more about that at here: [Mass Telegram account hijacking via supply-chain phishing campaign](https://izoologic.com/threat-advisory/mass-telegram-account-hijacking-via-supply-chain-phishing-campaign/)
+
+
+**PhishStat API**
+```python
+import requets
+
+# GET Request to PhishStat API to filter out the
+res = requests.get("")
+```
+
 
 This for to check if any malicious side has been indexed by the Google. 
 
