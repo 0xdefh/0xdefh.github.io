@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-# 0xdef - Dịch vụ tìm thông tin và điều tra mạng [VN]
+##  0xdef - Dịch vụ tìm thông tin và điều tra mạng [VN]
 
-Bọn tôi là những người hứng thú và đam mê với việc điều tra 
+Bọn tôi là những người hứng thú và đam mê với việc điều tra thông tin.
 
 Cung cấp một điểm truy cập đến dữ liệu OSINT và một phương pháp xử lý dữ liệu đó để họ có thể cải thiện thế giới bằng cách đưa ra những lựa chọn thông minh. Chúng tôi muốn bảo vệ mọi người khỏi bị dẫn dắt vào con đường của thông tin sai lệch, thông tin sai sự thật hoặc những lời nói dối trắng trợn.
 
@@ -18,17 +18,24 @@ Cung cấp các loại điều tra TI và OSINT cho các doanh nghiệp và khá
 
 0xdef là tên đại diện của chúng tôi. Sau đây là những dịch vụ là lợi ích chúng tôi có thể mang lại cho mọi người:
 
-## Điều tra lý lịch cá nhân/ công ty 
+### Điều tra lý lịch cá nhân/ công ty 
 
 Với lượng thông tin ngày càng nhiều và việc doanh nghiệp cần phải nghiên cứu để biết thông tin sơ bộ về 1 ai đó hoặc công ty nào đó trước khi thực hiện giao dịch, làm ăn hoặc là chỉ muốn biết thêm thông tin về đối phương. 
 
-0xdef nhận điều tra về lý lịch cá nhân/ công ty trong khuôn khổ cho phép của pháp luật VN. Thu thập và tìm kiếm thông tin có trên Internet hoặc thông qua những nghiệp vụ phỏng vấn và điều tra 
+0xdef nhận điều tra về lý lịch cá nhân/ công ty trong khuôn khổ cho phép của pháp luật VN. Thu thập và tìm kiếm thông tin có trên Internet hoặc thông qua những nghiệp vụ phỏng vấn và điều tra. 
 
-## Điều tra và tìm kiếm thông tin theo yêu cầu
+### Điều tra và tìm kiếm thông tin theo yêu cầu
 
-## Giám giát thông tin trên mạng và group chat theo yêu cầu
+Bạn có nhiều câu hỏi và bạn không tài nào kiếm được thông tin cần thiết để hổ trợ bạn, chúng tôi thực hiện nghiên cứu và điều tra thông tin giúp.
 
-## Điều tra về thông tin cạnh tranh doanh nghiệp
+### Giám giát thông tin trên mạng và group chat theo yêu cầu bao gồm darkweb, clearnet
 
-## Tình báo không gian mạng (Cyber Threat Intelligence) *Khong phải dạng IoC matching ... 
+
+### Tình báo không gian mạng (Cyber Threat Intelligence)
+
+- Điều tra nhân dạng/ thông tin của theat actor theo yêu cầu
+- Phân tích và tracking mã độc theo yêu cầu
+
+
+
 
