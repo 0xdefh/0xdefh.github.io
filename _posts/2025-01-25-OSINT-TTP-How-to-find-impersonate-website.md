@@ -226,7 +226,16 @@ These search query aim to find more domain that potential using this techniques 
 
 Sadly we didn't find any related domain to this guzi945[.]top
 
-So we will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use. 
+So we will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use. At the time I wrote this, I'don't
+have a lot of knowledge about Phishing Kit but I do know that when the Telegram Web is on the Github and the Threat Actor could modify and make their own
+immpersonate website pretty easy
+
+Here are some repository for you, you can take a look and understand more about the Telegram Web
+
+* [Telegram Web K](https://github.com/morethanwords/tweb)
+* [Telegram Web A](https://github.com/Ajaxy/telegram-tt)
+
+
 ## Study Case 2: Gmail or Microsoft Outlook
 
 ### Collection
