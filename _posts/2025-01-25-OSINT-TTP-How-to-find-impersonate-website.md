@@ -83,11 +83,11 @@ Now that we’ve got a solid set of data sources to work with, let’s dive in.
 
 We’ll start by examining the legitimate Telegram login page to understand what *normal* looks like. This will help us pivot and refine our searches effectively.
 
-![Telegram QR Code Login](/assets/img/teleqrlogin.png)
+![Telegram QR Code Login](/assets/img/teleqrlogin.png){: w="400" h="200" }
 
 Telegram Legit QR Code Login
 
-![Telegram Phone Number Login](/assets/img/telephonelogin.png)
+![Telegram Phone Number Login](/assets/img/telephonelogin.png){: w="400" h="200" }
 
 Telegram Phone Number Login 
 
