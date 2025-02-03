@@ -39,7 +39,8 @@ Next, let’s explore how attackers distribute these impersonation websites:
 - Direct message phishing
 - SMS phishing
 - Google, YouTube, Facebook ads—or online ads in general
-- These methods are typically linked to what's known as phishing kits.
+
+These methods are typically linked to what's known as phishing kits.
 
 To effectively track these types of threats, we need to identify where information related to them is stored.
 
@@ -101,6 +102,10 @@ Let's begin and start with a simple keywords list and Google dorks
 
 * Telegram 
 * Please confirm your country code and enter your phone number
+* Open Telegram on your phone"
+* Log in to Telegram by QR code
+
+These are UILs in the Telegram legit website.
 
 **Google Dork:**
 
@@ -221,11 +226,7 @@ These search query aim to find more domain that potential using this techniques 
 
 Sadly we didn't find any related domain to this guzi945[.]top
 
-So we will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use
-
-Using a tool to gather all information from all those sources (API), Well you have to registered their services and use their free API. Or you can just use MISP to have the data flow in every day 
-
-
+So we will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use. 
 ## Study Case 2: Gmail or Microsoft Outlook
 
 ### Collection
