@@ -41,7 +41,6 @@ social:
     - https://twitter.com/Zroska # change to your twitter homepage
     - https://github.com/username # change to your github homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/Zeroska23
     - https://www.linkedin.com/in/nguyen-dang-khuong-2a7a58168/
 
 google_site_verification: # fill in to your verification string
@@ -76,7 +75,7 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 
+avatar:
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -86,7 +85,7 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-  active: disqus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -96,10 +95,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: 0xdefh/0xdefh.github.io
+    repo_id: R_kgDOLllFkw
+    category: General
+    category_id: DIC_kwDOLllFk84Cmmiu
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`

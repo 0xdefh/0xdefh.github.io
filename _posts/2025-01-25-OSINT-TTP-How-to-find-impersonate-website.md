@@ -4,6 +4,7 @@ date: 2025-01-25
 author: khuong
 layout: post
 categories: [Security]
+comment: true
 tags: [beginner,threatintelligence]   
 toc: true
 image:
@@ -50,7 +51,7 @@ To effectively track these types of threats, we need to identify where informati
 
 * Find any Impersonate Telegram Login Page
 * Check if those website belong to a mass phishing campain or not
-*  
+* Find the person behind the impersonate website if possible 
 
 
 ### Collection 
@@ -224,16 +225,19 @@ page.url: guz*.top
 
 These search query aim to find more domain that potential using this techniques call , you can read more about that at here: [Mass Telegram account hijacking via supply-chain phishing campaign](https://izoologic.com/threat-advisory/mass-telegram-account-hijacking-via-supply-chain-phishing-campaign/)
 
-Sadly we didn't find any related domain to this guzi945[.]top
+Sadly I didn't find any related domain to this guzi945[.]top
 
-So we will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use. At the time I wrote this, I'don't
+So I will inspect HTML & Javascript that this page loaded, to see if there are any pivoting point we could use. At the time I wrote this, I'don't
 have a lot of knowledge about Phishing Kit but I do know that when the Telegram Web is on the Github and the Threat Actor could modify and make their own
-immpersonate website pretty easy
+immpersonate website pretty easy.
 
 Here are some repository for you, you can take a look and understand more about the Telegram Web
 
 * [Telegram Web K](https://github.com/morethanwords/tweb)
 * [Telegram Web A](https://github.com/Ajaxy/telegram-tt)
+
+Here at the **guzi945[.]top** I've checked all the javascript that loaded by the website as such:
+
 
 
 ## Study Case 2: Gmail or Microsoft Outlook
