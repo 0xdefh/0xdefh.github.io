@@ -100,9 +100,9 @@ Telegram Title
 
 Javascript & HTML & CSS content loaded
 
-> When inspecting the JS,HTML and CSS I've just scim thought to understand what kind of script that loaded, nothing fancy, but it should give you
-understanding of what should be loaded and what should not.
-{: .info-prompt }
+> When inspecting the JS,HTML and CSS I've just scim thought to understand what kind of script that loaded, nothing fancy, but it should give you 
+> understanding of what should be loaded and what should not.
+{: .prompt-info }
 
 ### Google Dork 
 Let's begin and start with a simple keywords list and Google dorks 
@@ -127,9 +127,8 @@ intext:"Open Telegram on your phone" -site:*.telegram.org
 ```
 
 > This can sometimes be useful for us—to check if any fake websites have already been indexed by our good old Google. The same approach can be applied to other websites as well.
-
-Personally, I set up Google Alerts to monitor this. That way, I’ll get notified whenever a new suspicious site pops up.
-{: .prompt-info } 
+>Personally, I set up Google Alerts to monitor this. That way, I’ll get notified whenever a new suspicious site pops up.
+{: .prompt-info }
 
 As you can see, with just a few searches, we’ve already identified some potential fake websites. However, keep in mind there’s some bias here—not every impersonation site is necessarily malicious.
 
@@ -259,7 +258,7 @@ We use the name of javascript that loaded to pivot more impersonate Telegram Log
 use by mutiple threat actor or it could be just a file that telegram source code has, so indicate of using a same file name is not a strong edvidence of the same Threat Actor.
 
 > In this case: 
-{: .info-prompt}
+{: .prompt-info }
 
 
 ## Study Case 2: Gmail or Microsoft Outlook
