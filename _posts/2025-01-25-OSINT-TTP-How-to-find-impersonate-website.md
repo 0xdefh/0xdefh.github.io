@@ -150,6 +150,11 @@ If you’re unsure whether a domain is legitimate or want to dig deeper, you can
 You might even consider running a vulnerability scan on the server—it really depends on the situation.
 
 After the dorking phase, you can explore other data sources. In this case, I’ll use URLScan.io along with free, open phishing databases like PhishTank and PhishStats.
+
+> 2025/02/11 Updated: while noindex and no follow could be use but several search engine probably will ignore it such as **Yandex**, **Bing**, or other search engine, so you search using other search engine to find impersonate website
+{: .prompt-info }
+
+
 ### Phish Tank & Phish Stats
 
 By using PhishStat.info API, which you can take a look at it right here: [API Documentation](https://phishstats.info/#apidoc) by default it will return 20 results, but I'll but the _size=100
