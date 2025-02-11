@@ -21,6 +21,8 @@ say [How to find impersonate website](https://0xdefh.github.io/posts/OSINT-TTP-H
 In that blog, I show how to track or find a impersonate website using pivoting from various thing from the legit website & and some HTML content, javascript, and UIL.
 
 
+
+
 ## Undertand What is ClickFix/ClearFake
 
 ClickFix is nothing new, it is
