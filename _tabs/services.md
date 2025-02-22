@@ -2,6 +2,8 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 5
+image:
+  path: /assets/img/0xdef_logo.png
 ---
 
 ## 0xdef. - Intelligence Services
