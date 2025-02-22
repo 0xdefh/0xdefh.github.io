@@ -13,26 +13,72 @@ image:
 
 ## Overview
 
-I'm pretty late on this one tbh.
-
 From reading a bunch of TI reports & news related to phishing & social engineering, there is somewhat new phishing technique in 2024 - 2025, which is ClickFix. I've done a blog post about Telegram Impersonate or you could
 say [How to find impersonate website](https://0xdefh.github.io/posts/OSINT-TTP-How-to-find-impersonate-website/).
 
-In that blog, I show how to track or find a impersonate website using pivoting from various thing from the legit website & and some HTML content, javascript, and UIL.
+In that blog, I show how to track or find a impersonate website using pivoting from various thing from the legit website & and some HTML content, javascript, and UIL. In thise blog, from thoes core concept we will applied it for
+different case. 
 
-
-
+`I hope you feel inspired by the ideas and techniques to start hunting on your own, just as I have drawn inspiration from those who came before me`
 
 ## Undertand What is ClickFix/ClearFake
 
-ClickFix is nothing new, it is
+ClickFix is not a new tactic. In **July 2023**, it was reported that a Threat Actor (TA) used it to execute a social engineering phishing scheme, tricking users into copying and running a command under the guide of fixing an issue. 
+Specifically, the TA would send an email or attachment that, when opened, displays an error—often mimicking a familiar file type—to lure the user into following the provided instructions. But this was the beginning of it 
 
+After a year, ClickFix has evolved, I would say, but in my opinion, it has merely experimented with existing methods using different legitimate services that were already available.
+
+Here is the general concept of a 
+
+
+**By the end of 2024**, The term **DeceptionAds** was a thing, which(you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
+and use it to spread infection 
+
+
+### Ads-Networks 
+
+Threat Actor leverage these ads-network in order to maximize their infection, most of the
+
+This is how the ads-network suppose to work 
+
+![Ads-Network](/assets/img/Ad-networks.png)
+
+From the above picture you can see that it is 
 
 ## Hunting for ClickFix/ ClearFake Website 
 
-### Obtain intial lead or seed information
+### Specific tool used
+
+For this type of job I'll used tool & information that related to URL, Domain, and mostly Scanner Database (because it will have all the HTML content that you can search on) these tool & and data sources are:
+
+- [Validin](https://www.validin.com/)
+- [URLScan.io](https://urlscan.io/)
 
 
+### Obtain intial lead or seed information - Collection
+
+I’m not sure why, but when it comes to the collection phase, I always get goosebumps. It’s the stage where I consistently learn something new, take notes, and track that knowledge. It’s a thrill whether it's discovery or rediscovery and I absolutely love it.
+
+So, let’s dive into the collection phase, where we gather information from various sources. For this, I want to highlight one of my favorite platforms: X (formerly Twitter). It’s a hub of talented individuals sharing valuable information and intelligence on social media.
+
+
+Here are the list of X / Twitter Account that publish and sharing information & intelligence: 
+
+
+From these X / Twitter account I advise you to follow even more accounts.
+
+
+> Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
+> to look in to it, probably 2025 will be the year I start to bring back those tool. If you curios what's tool I used today, I use [MISP](https://www.misp-project.org/) 
+
+### Start Pivoting & Investigate 
+
+
+### Take Action upon it 
+
+
+
+## Conclusion & Biaes
 
 ## Refs
 
@@ -44,3 +90,5 @@ ClickFix is nothing new, it is
 * [HHS - ClickFix Attacks Sector Alert TLP CLEAR](https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf)
 * [McAfee Labs - ClickFix Deception a Social Engineering Tactic to Deploy Malware](https://www.mcafee.com/blogs/other-blogs/mcafee-labs/clickfix-deception-a-social-engineering-tactic-to-deploy-malware/)
 * [Criminal IP - ClickFix Fake Error Messags](https://blog.criminalip.io/2024/10/07/clickfix-fake-error-messages/)
+* [Malicious Ads Push Lumma Information Stealer via Fake Captcha Pages](https://www.bleepingcomputer.com/news/security/malicious-ads-push-lumma-infostealer-via-fake-captcha-pages/)
+* [DeceptionAds - Fake Captcha](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)

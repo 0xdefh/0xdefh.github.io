@@ -47,4 +47,3 @@ The main point of phishing is that domain it has to stay as long as it can in or
 
 - [Imperva 2018 - Our Analysis of 1019 Phishing Kits](https://www.imperva.com/blog/archive/our-analysis-of-1019-phishing-kits/)
 - [Phish Report 2023 - Harvesting Phishing Kit](https://phish.report/blog/harvesting-phishing-kits)
-- []()
