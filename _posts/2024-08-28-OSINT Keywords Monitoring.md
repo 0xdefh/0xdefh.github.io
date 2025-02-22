@@ -1,5 +1,5 @@
 ---
-title: OSINT - Keywords Monitoring
+title: ENG - OSINT Techniques | Keywords Monitoring
 date: 2024-08-27
 author: khuong
 layout: post
@@ -13,7 +13,7 @@ image:
 
 ## Introduction
 
-In the world of Cyber Intelligence, monitoring specific keywords that on the Internet is very important. Just like in time of war you need to understand what are the thing that other country or enemny is talking about and 
+In the world of Cyber Intelligence, monitoring specific keywords that on the Internet is very important. Just like in time of war you need to understand what are the thing that other country or enemny is talking about and be able to make sense and act upon it. 
 
 ## Overview
 
@@ -46,7 +46,7 @@ We track:
 
 ### OSINT Investigation
 
-We collect a huge data pool which we can arrchive and turn it into historical data, which will be use in other operation / investigation if needed
+We amass a vast data pool that can be archived and used for historical reference or future investigations
 
 
 ### Control Over The World (Just kidding)
