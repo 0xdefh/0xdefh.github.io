@@ -55,7 +55,7 @@ For this type of job I'll used tool & information that related to URL, Domain, a
 
 - [Validin](https://www.validin.com/)
 - [URLScan.io](https://urlscan.io/)
-- [AnyRun](http://any.run/)
+- [AnyRun](https://any.run/)
 
 ### Obtain intial lead or seed information - Collection
 
