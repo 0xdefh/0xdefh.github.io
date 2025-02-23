@@ -10,9 +10,9 @@ image:
 
 ![0xdef_logo](/assets/img/0xdef_logo.png)
 
-Cybercrime isn't just an individual threat—it impacts Vietnam’s entire economy. With extensive experience in cybercrime investigations, we are committed to making Vietnam safer by exposing fraud, phishing, and scams that harm our people and businesses.
+Cybercrime isn't just an individual threat—it impacts Vietnam’s entire economy. With extensive experience in cybercrime investigations, I'm committed to making Vietnam safer by exposing fraud, phishing, and scams that harm our people and businesses.
 
-Our services go beyond investigations. We proactively monitor the dark web, social media, and online threats, tracking data leaks and criminal activity to prevent financial and reputational damage. By fighting cybercrime, we help protect Vietnam’s digital future.
+Our services go beyond investigations. I proactively monitor the dark web, social media, and online threats, tracking data leaks and criminal activity to prevent financial and reputational damage. By fighting cybercrime, will help protect Vietnam’s digital future.
 
 ### Cybercrime Investigation Services
 
