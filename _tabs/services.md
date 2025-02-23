@@ -14,7 +14,7 @@ Cybercrime isn't just an individual threat, it impacts Vietnam’s entire econom
 
 Our services go beyond investigations. We proactively monitor the dark web, social media, and online threats, tracking data leaks and criminal activity to prevent financial and reputational damage. By fighting cybercrime, We will help protect Vietnam’s digital future.
 
-We provide below services 
+0xdef is an intelligence agency specializing in Vietnam and the APAC region, providing intelligence to combat cybercrime.
 
 ## Our Services
 
@@ -40,6 +40,7 @@ We offer continuous monitoring and tracking of:
 ## Contact Us
 
 For more information about our services, please contact us at:
+
 📧 Email: zeroska.dev@gmail.com
  
 
