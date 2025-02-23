@@ -30,8 +30,6 @@ After a year, ClickFix has evolved, I would say, but in my opinion, it has merel
 
 Here is the general concept of a ClickFix or ClearFake and some example of it: 
 
-![ClickFix General Concept]()
-
 
 **By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
 and use it to spread the Malware
@@ -79,7 +77,7 @@ Or you can searach on Twitter on these hashtag: **#ClickFix**, **#FakeCapcha**, 
 
 Here are some example about the information that present on these accounts
 
-![Example X Information](/assets/img/example_x_intel.png){: w="400" h="200" }
+![Example X Information](/assets/img/example_x_intel.png)
 
 
 > Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
@@ -112,7 +110,7 @@ From my perspective, how would I take action against it based on the context tha
 
 - Who am I?
 - What am I capable of?
-- When do I want to take actio?n
+- When do I want to take action/
 - Where do I want to take these action?
 - How long does it take for these action to come in to play?
 
