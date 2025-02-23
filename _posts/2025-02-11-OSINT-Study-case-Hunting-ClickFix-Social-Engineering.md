@@ -77,7 +77,7 @@ Or you can searach on Twitter on these hashtag: **#ClickFix**, **#FakeCapcha**, 
 
 Here are some example about the information that present on these accounts
 
-![Example X Information](/assets/img/example_x_intel.png)
+![Example X Information](/assets/img/example_x_intel.png){: w="500" h="300" }
 
 
 > Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
