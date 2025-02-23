@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 2
 ---
 
 >  Always read this [Giam sat an ninh mang](https://vnhacker.blogspot.com/2009/12/giam-sat-ninh-mang-hay-la-lam-nao-e.html) and [RFC3552](https://www.rfc-editor.org/rfc/rfc3552)

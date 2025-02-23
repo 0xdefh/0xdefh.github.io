@@ -1,41 +1,45 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 5
+order: 1
 image:
   path: /assets/img/0xdef_logo.png
 ---
 
-## 0xdef. - Intelligence Services
+## Cybercrime: An Economy-Wide Threat
 
 ![0xdef_logo](/assets/img/0xdef_logo.png)
 
-Cybercrime isn't just an individual threat—it impacts Vietnam’s entire economy. With extensive experience in cybercrime investigations, I'm committed to making Vietnam safer by exposing fraud, phishing, and scams that harm our people and businesses.
+Cybercrime isn't just an individual threat, it impacts Vietnam’s entire economy. With extensive experience in cybercrime investigations, We are committed to making Vietnam safer by exposing fraud, phishing, and scams that harm our people and businesses.
 
-Our services go beyond investigations. I proactively monitor the dark web, social media, and online threats, tracking data leaks and criminal activity to prevent financial and reputational damage. By fighting cybercrime, will help protect Vietnam’s digital future.
+Our services go beyond investigations. We proactively monitor the dark web, social media, and online threats, tracking data leaks and criminal activity to prevent financial and reputational damage. By fighting cybercrime, We will help protect Vietnam’s digital future.
 
-### Cybercrime Investigation Services
+We provide below services 
+
+## Our Services
+
+### 1. Cyber Investigation 
 
 The Services provide detailed reports on:
 
-1. Investigating fraud, scams, and phishing attempts to verify legitimacy.
-2. Identifying threat actors—determining those responsible for attacks, including potential insider threats or unethical competitors.
-3. Gathering targeted intelligence based on specific requests.
+o	Provide detailed reports on fraud, scams, and phishing attempts to verify legitimacy.
+o	Identify threat actors responsible for attacks, including potential insider threats and unethical competitors.
+o	Gather targeted intelligence based on specific client requests.
 
-### Dark Web & Threat Actor Monitoring
+### 2. Threat Actor Monitoring & Tracking
 
-I offer continuous monitoring and tracking of:
+We offer continuous monitoring and tracking of:
 
-1. Keywords relevant to our clients.
-2. Threat actor tactics and activities.
-3. Data leaks and compromised web content.
-4. Social media content using our custom crawler.
-5. Phishing sites and scams targeting our clients.
+o	Continuously monitor keywords relevant to our clients.
+o	Track threat actor tactics and activities.
+o	Monitor data leaks and compromised web content.
+o	Analyze social media content using our custom crawler.
+o	Detect phishing sites and scams targeting our clients.
 
-## Contact for more information
 
+## Contact Us
+
+For more information about our services, please contact us at:
 📧 Email: zeroska.dev@gmail.com
-
-📞 Phone Number: +84383160201
  
 
