@@ -22,19 +22,19 @@ We provide below services
 
 The Services provide detailed reports on:
 
-o	Provide detailed reports on fraud, scams, and phishing attempts to verify legitimacy.
-o	Identify threat actors responsible for attacks, including potential insider threats and unethical competitors.
-o	Gather targeted intelligence based on specific client requests.
+*	Provide detailed reports on fraud, scams, and phishing attempts to verify legitimacy.
+*	Identify threat actors responsible for attacks, including potential insider threats and unethical competitors.
+*	Gather targeted intelligence based on specific client requests.
 
 ### 2. Threat Actor Monitoring & Tracking
 
 We offer continuous monitoring and tracking of:
 
-o	Continuously monitor keywords relevant to our clients.
-o	Track threat actor tactics and activities.
-o	Monitor data leaks and compromised web content.
-o	Analyze social media content using our custom crawler.
-o	Detect phishing sites and scams targeting our clients.
+*	Continuously monitor keywords relevant to our clients.
+*	Track threat actor tactics and activities.
+*	Monitor data leaks and compromised web content.
+*	Analyze social media content using our custom crawler.
+*	Detect phishing sites and scams targeting our clients.
 
 
 ## Contact Us
