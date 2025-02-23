@@ -116,7 +116,7 @@ From my perspective, how would I take action against it based on the context tha
 - Where do I want to take these action?
 - How long does it take for these action to come in to play?
 
-From the above question I could do such things, that I know it's gonna work fast and give result, I do know that I could report to vendors or platfrom that incharge of these thing, if the response time is faster ()
+From the above question I could do such things, that I know it's gonna work fast and give result, I do know that I could report to vendors or platfrom that incharge of these thing, if the response time is faster.
 
 
 #### Post on X with the proper hashtag
