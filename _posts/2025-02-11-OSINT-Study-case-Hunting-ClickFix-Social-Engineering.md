@@ -16,7 +16,7 @@ image:
 From reading a bunch of TI reports & news related to phishing & social engineering, there is somewhat new phishing technique in 2024 - 2025, which is ClickFix. I've done a blog post about Telegram Impersonate or you could
 say [How to find impersonate website](https://0xdefh.github.io/posts/OSINT-TTP-How-to-find-impersonate-website/).
 
-In that blog, I show how to track or find a impersonate website using pivoting from various thing from the legit website & and some HTML content, javascript, and UIL. In thise blog, from thoes core concept we will applied it for
+In that blog, I show how to track or find a impersonate website using pivoting from various thing from the legit website & and some HTML content, javascript, and UIL. In this blog, from those core concept we will applied it for
 different case. 
 
 `I hope you feel inspired by the ideas and techniques to start hunting on your own, just as I have drawn inspiration from those who came before me`
@@ -28,24 +28,26 @@ Specifically, the TA would send an email or attachment that, when opened, displa
 
 After a year, ClickFix has evolved, I would say, but in my opinion, it has merely experimented with existing methods using different legitimate services that were already available.
 
-Here is the general concept of 
+Here is the general concept of a ClickFix or ClearFake and some example of it: 
+
+![ClickFix General Concept]()
 
 
 **By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
-and use it to spread. 
+and use it to spread the Malware
 
 Every day there will be a bunch of 
 
 
 ### Ads-Networks 
 
-Threat Actor leverage these ads-network in order to maximize their infection, most of the 
+Threat Actor leverage these ads-network in order to maximize their infection, most of the others techniques also use it
 
-This is how the ads-network suppose to work 
+This is how the ads-network suppose to work or it work in general
 
 ![Ads-Network](/assets/img/Ad-networks.png)
 
-From the above picture you can see that it is 
+From the above picture you can see that it is leverage a proxy which will deliver ads to user based on the Browser Fingerprint 
 
 ## Hunting for ClickFix/ ClearFake Website 
 
@@ -71,9 +73,13 @@ Here are the list of X / Twitter Account that publish and sharing information & 
 - [@skocherhan - Provide information & intelligence on Phishing page](https://x.com/skocherhan)
 - [Gen Threat Labs](https://x.com/GenThreatLabs)
 
-From these X / Twitter account I advise you to follow even more accounts.
+From these X / Twitter account I advise you to follow even more accounts. Those are just some example account.
 
-Or you can searach on Twitter on these hashtag: #ClickFix, #FakeCapcha, #ClearFake, 
+Or you can searach on Twitter on these hashtag: **#ClickFix**, **#FakeCapcha**, and **#ClearFake**, from these information you gain for these you will conduct to use to pivoting even more.
+
+Here are some example about the information that present on these accounts
+
+![Example X Information](/assets/img/example_x_intel.png){: w="400" h="200" }
 
 
 > Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
@@ -98,9 +104,26 @@ There still a lot of data sources that you can collect, others social media plat
 
 ### Start Pivoting & Investigate 
 
+After a long Collection phase, you are ready to start or 
 
 ### Take Action upon it 
 
+From my perspective, how would I take action against it based on the context that:
+
+- Who am I?
+- What am I capable of?
+- When do I want to take actio?n
+- Where do I want to take these action?
+- How long does it take for these action to come in to play?
+
+From the above question I could do such things, that I know it's gonna work fast and give result, I do know that I could report to vendors or platfrom that incharge of these thing, if the response time is faster ()
+
+
+#### Post on X with the proper hashtag
+
+I know it is very hard to 
+
+#### 
 
 
 ## Conclusion & Biaes
