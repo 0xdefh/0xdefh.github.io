@@ -28,16 +28,18 @@ Specifically, the TA would send an email or attachment that, when opened, displa
 
 After a year, ClickFix has evolved, I would say, but in my opinion, it has merely experimented with existing methods using different legitimate services that were already available.
 
-Here is the general concept of a 
+Here is the general concept of 
 
 
-**By the end of 2024**, The term **DeceptionAds** was a thing, which(you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
-and use it to spread infection 
+**By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
+and use it to spread. 
+
+Every day there will be a bunch of 
 
 
 ### Ads-Networks 
 
-Threat Actor leverage these ads-network in order to maximize their infection, most of the
+Threat Actor leverage these ads-network in order to maximize their infection, most of the 
 
 This is how the ads-network suppose to work 
 
@@ -53,7 +55,7 @@ For this type of job I'll used tool & information that related to URL, Domain, a
 
 - [Validin](https://www.validin.com/)
 - [URLScan.io](https://urlscan.io/)
-
+- [AnyRun](http://any.run/)
 
 ### Obtain intial lead or seed information - Collection
 
@@ -61,15 +63,38 @@ I’m not sure why, but when it comes to the collection phase, I always get goos
 
 So, let’s dive into the collection phase, where we gather information from various sources. For this, I want to highlight one of my favorite platforms: X (formerly Twitter). It’s a hub of talented individuals sharing valuable information and intelligence on social media.
 
+#### Social Media, Webistes, Forum, ... (I used X for example)
 
 Here are the list of X / Twitter Account that publish and sharing information & intelligence: 
 
+- [Lontz - Threat Intelligence Researcher](https://x.com/lontze7)
+- [@skocherhan - Provide information & intelligence on Phishing page](https://x.com/skocherhan)
+- [Gen Threat Labs](https://x.com/GenThreatLabs)
 
 From these X / Twitter account I advise you to follow even more accounts.
+
+Or you can searach on Twitter on these hashtag: #ClickFix, #FakeCapcha, #ClearFake, 
 
 
 > Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
 > to look in to it, probably 2025 will be the year I start to bring back those tool. If you curios what's tool I used today, I use [MISP](https://www.misp-project.org/) 
+{: .prompt-info }
+
+#### MISP 
+
+I do use MISP in order to have a bunch of information that reported by others security folk or intelligence agencies, these information really help me to gain pivoting point,
+These information ingested from multile data feed such as: Threat Fox, URLHaus, and other different sources -> so I don't have to use each of those API to ingest manually myself
+
+Here are some of my queries that I use to extract information for every day triage and analyzed.
+
+
+#### Others
+
+There still a lot of data sources that you can collect, others social media platform such as Tiktok, Instagram, Facebook and other forum that I haven't listed here
+
+
+> As you can see, data collection is a meticulous process that requires significant effort. The scope and quality of the information gathered depend on the context, customer requirements, or personal objectives. While I have yet to master the art of collection, I continue to refine my skills and improve.
+{: .prompt-info } 
 
 ### Start Pivoting & Investigate 
 
