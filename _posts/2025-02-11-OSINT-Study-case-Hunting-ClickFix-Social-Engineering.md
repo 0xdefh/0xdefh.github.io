@@ -23,18 +23,18 @@ different case.
 
 ## Undertand What is ClickFix/ClearFake
 
-ClickFix is not a new tactic. In **July 2023**, it was reported that a Threat Actor (TA) used it to execute a social engineering phishing scheme, tricking users into copying and running a command under the guide of fixing an issue. 
-Specifically, the TA would send an email or attachment that, when opened, displays an error—often mimicking a familiar file type—to lure the user into following the provided instructions. But this was the beginning of it 
+Proofpoint researchers, who coined the term ClickFix for this tactic, reported that the initial access broker TA571 had been using it in phishing campaigns since March 2024. The scheme involved tricking users into copying and executing a command under the pretense of resolving an issue.
 
-After a year, ClickFix has evolved, I would say, but in my opinion, it has merely experimented with existing methods using different legitimate services that were already available.
+In practice, the TA would send an email or attachment that, when opened, triggered a fake error message—often designed to resemble a familiar file type—prompting the user to follow the provided instructions. But that was just the beginning.
 
-Here is the general concept of a ClickFix or ClearFake and some example of it: 
+A year later, ClickFix has certainly evolved. However, in my view, it has merely recycled existing techniques, experimenting with different legitimate services that were already available.
+
+
 
 
 **By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
 and use it to spread the Malware
 
-Every day there will be a bunch of 
 
 
 ### Ads-Networks 
@@ -77,7 +77,7 @@ Or you can searach on Twitter on these hashtag: **#ClickFix**, **#FakeCapcha**, 
 
 Here are some example about the information that present on these accounts
 
-![Example X Information](/assets/img/example_x_intel.png){: w="500" h="300" }
+![Example X Information](/assets/img/example_x_intel.png)
 
 
 > Early 2021, I'm still be able to use Twitter APIs to crawl these tweet and aggregated it into my system for everyday triage & verify -> analyze, but since Twitter decided the API shouldn't free any more. The tools I used just die out, I haven't had the time 
@@ -96,13 +96,52 @@ Here are some of my queries that I use to extract information for every day tria
 
 There still a lot of data sources that you can collect, others social media platform such as Tiktok, Instagram, Facebook and other forum that I haven't listed here
 
+Or you could just take a look that the most used website and then start picking any UIL and part of it and search on various platform to check are there any infomation.
+
 
 > As you can see, data collection is a meticulous process that requires significant effort. The scope and quality of the information gathered depend on the context, customer requirements, or personal objectives. While I have yet to master the art of collection, I continue to refine my skills and improve.
 {: .prompt-info } 
 
 ### Start Pivoting & Investigate 
 
-After a long Collection phase, you are ready to start or 
+After a long Collection phase, you are ready to start investigate. The time of this Study Case is **24/02/2025** which all the data & the step that I took during this Study Case could
+be alter because of the site is down, we will start with 2 separate study case
+
+- With intial information
+- Wihtout intial information
+
+#### With Intial Information
+
+
+- Domain:
+- HTML Content: 
+- Javascript Content: 
+
+#### Without Intial Information
+
+Without intial information & and the limiation of resource such has robust tools, we will do this in old fashion way. Let's research some of the most used website in the Internet and the core concept of ClickFix
+
+Which is using **copy-paste to clipboard script and make user to paste it to their CMD or Powershell command line**.
+
+
+**Copy-Paste Clipboard**
+
+From other vendors and the report that I've read these keyword usually used on the Copy-Paste notification or pop-up that request user to copy the script
+
+* 
+
+
+
+**Captcha Page**
+
+
+**Google Related Pages**
+
+
+**Microsoft Related Pages**
+
+
+
 
 ### Take Action upon it 
 
@@ -119,12 +158,35 @@ From the above question I could do such things, that I know it's gonna work fast
 
 #### Post on X with the proper hashtag
 
-I know it is very hard to 
+I think this is the simplest action you can take, just post your finding with some picture to the Twitter and with the proper tag you could probably help a bunch of people,
 
-#### 
+#### Report it to intelligence  opensource platform 
+
+Use can publish your finding on these plaform, and tag them as such: 
+
+- URLHaus
+- ThreatFox
+- URLScan.io
+
+-> By doing this you help the intelligence commmunity to fight against the TA.
+
+#### Publish on MISP (If you could) 
+
+By having an account on MISP you can publish your finding on
 
 
 ## Conclusion & Biaes
+
+I know this was a lengthy article, and I hope it provided valuable insights to support you on your journey to conducting hunts independently. My inspiration came largely from the blogs of Sekoia and Group-IB. Also not
+to mention folks that are sharing information and intelligence for free on Social Media / Blogs Platform.
+
+My conclusion and perspective on these type of phishing is that, if only one momment that you careless and paste something on your computer without prior checking then 
+changes are you getting hacked will be very high, we are living in a fast world and a lot of information floating around, by verify all of the information you come arcoss will take
+a bunch of time.
+
+TA know this and exploit evevy corner of it. By hunting and reported these type of phishing -> we only contribute a small little effort into slowing them down (I mean you can't absolute stoping any evil and bad thing tbh)
+
+Honestly, Hunting is just like a quest fo
 
 ## Refs
 
