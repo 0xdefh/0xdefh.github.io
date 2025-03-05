@@ -25,16 +25,12 @@ different case.
 
 Proofpoint researchers, who coined the term ClickFix for this tactic, reported that the initial access broker TA571 had been using it in phishing campaigns since March 2024. The scheme involved tricking users into copying and executing a command under the pretense of resolving an issue.
 
-In practice, the TA would send an email or attachment that, when opened, triggered a fake error message—often designed to resemble a familiar file type—prompting the user to follow the provided instructions. But that was just the beginning.
+In practice, the TA would send an email or attachment that, when opened, **triggered a fake error message—often designed to resemble a familiar file type—prompting the user to follow the provided instructions**. But that was just the beginning.
 
 A year later, ClickFix has certainly evolved. However, in my view, it has merely recycled existing techniques, experimenting with different legitimate services that were already available.
 
-
-
 **By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
-and use it to spread the Malware
-
-
+and use it to spread the Malware.
 
 ### Ads-Networks 
 
@@ -90,10 +86,8 @@ Here are some example about the information that present on these accounts
 #### MISP 
 
 I do use MISP in order to have a bunch of information that reported by others security folk or intelligence agencies, these information really help me to gain pivoting point,
-These information ingested from multile data feed such as: Threat Fox, URLHaus, and other different sources -> so I don't have to use each of those API to ingest manually myself
 
-Here are some of my queries that I use to extract information for every day triage and analyzed.
-
+These information ingested from multile data feed such as: Threat Fox, URLHaus, and other different sources -> so I don't have to use each of those API to ingest manually myself. 
 
 #### Others
 
@@ -128,7 +122,6 @@ Without intial information & and the limiation of resource such has robust tools
 
 Which is using **copy-paste to clipboard script and make user to paste it to their CMD or Powershell command line**.
 
-
 **Copy-Paste Clipboard**
 
 From other vendors and the report that I've read these keyword usually used on the Copy-Paste notification or pop-up that request user to copy the script. So let's hunt for that indidcator or UIL.
@@ -156,14 +149,16 @@ Let's use Internet Scanner tools for these type of search, let's search for the 
 ```shell
 services.http.response.body: "Windows + R" or "Verification Steps" or "CTRL + V" or "Ctrl + V" or "Windows Key" and "powershell"
 ```
-Or you can search each of the term one by one in order to have more granular information
+Or you can search each of the term one by one in order to have more granular information.
+
+> I’ve been attempting to use Google Dorks and other search engines to identify ClickFix sites indexed by them, but the process is quite time-consuming. While it’s possible to occasionally locate a ClickFix website this way, it’s not practical for scaling. I think accessing premium tools like Censys, URLScan, Fofa, or similar internet scanning platforms would significantly accelerate the process. These tools could also enable automation, allow for the creation of more precise signatures, and facilitate sharing—plus, they’d saving a lot of time.
+{: .prompt-info }
 
 We found a server that has: 
 * IP Address: **66.248.206.135**
 * Query: **services.http.response.body: "Windows + R"** 
 
-
-
+By the time, I access it the site has down. 
 
 We also found another server: 
 
@@ -212,22 +207,22 @@ Well but look like I'm quite late on this discovery because on VT there are a lo
 
 ![VT Information](/assets/img/VTInformation_2.png)
 
-> Why am I check so much information? To be honest this isn't all of the information I gather
+> Why am I check so much information? To be honest this isn't all of the information I gather, as I was saying all the time, you should exhaust the artifact (the information)
 {: .prompt-info }
-
 
 **Captcha Page**
 
 Fake-Captcha page also their main thing to fake and deliver their malware, as you can see from the above example 
 
+You could search by the title **reCAPTCHA Verification** on Fofa, Censys, ... and with the combination keyword above.
+
 **Google Related Pages**
 
-
+From the above TTPs you can also applied for Google related page such as:
 
 **Microsoft Related Pages**
 
-
-
+Same as above, collect the information from the legit page & information on the internet, reports, and tweet.
 
 ### Take Action upon it 
 
@@ -254,30 +249,29 @@ Use can publish your finding on these plaform, and tag them as such:
 - ThreatFox
 - URLScan.io
 
--> By doing this you help the intelligence commmunity to fight against the TA.
+-> By doing this you help the intelligence commmunity to fight against the TA. Faster detection mean less time waste on finding it and shut it down (I do know they has BulletProof Hosting and Infrastructure Laundering)
 
 #### Publish on MISP (If you could) 
 
-By having an account on MISP you can publish your finding on
-
+By having an account on MISP you can publish your finding on MISP.
 
 ## Conclusion & Biaes
 
-I know this was a lengthy article, and I hope it provided valuable insights to support you on your journey to conducting hunts independently. My inspiration came largely from the blogs of Sekoia and Group-IB. Also not
-to mention folks that are sharing information and intelligence for free on Social Media / Blogs Platform.
+I realize this was a long article, but I hope it offered useful insights to help you conduct independent hunts. I drew much of my inspiration from the blogs of Sekoia and Group-IB, as well as from individuals who generously share information and intelligence for free on social media and blog platforms.
 
-My conclusion and perspective on these type of phishing is that, if only one momment that you careless and paste something on your computer without prior checking then 
-changes are you getting hacked will be very high, we are living in a fast world and a lot of information floating around, by verify all of the information you come arcoss will take
-a bunch of time.
+My takeaway on this type of phishing is that a single moment of carelessness—like pasting something onto your computer without checking it first—can drastically increase your chances of being hacked. We live in a fast-paced world with an overwhelming amount of information circulating, and verifying everything you encounter would take an enormous amount of time.
 
-TA know this and exploit evevy corner of it. By hunting and reported these type of phishing -> we only contribute a small little effort into slowing them down (I mean you can't absolute stoping any evil and bad thing tbh)
+Threat actors are well aware of this and exploit every opportunity they can. By hunting and reporting these phishing attempts, we’re making a small but meaningful contribution to slowing them down—though, to be honest, it’s impossible to completely stop every malicious or harmful act.
 
-Honestly, Hunting is just like a quest fo
+I’d rather take small actions than do nothing at all, and I hope these efforts can support you on your hunting journey. By the time this blog gains recognition, those threat actors might be reading it too. I’ve read Beyond Good and Evil by Friedrich Nietzsche, and I understand that your existence is inevitable, just as there’s a moral gray area to navigate. With all due respect, good luck—we’ll do our best to slow you down as much as we can. After all, we’re inevitable too.
 
 ### Bias
 
-Also these thing doesn't actually work everytime, there infrastructure change and they will use CDN such as CloudFlare & Akamai and other thing to
-hide their infra from detection such as URLScan, Google Dork, generally internet scanner
+Also these thing doesn't actually work everytime, their infrastructure will change and they will use CDN such as CloudFlare & Akamai and other thing to  hide their infra from detection such as URLScan, Google Dork, generally internet scanner.
+
+I do think that if you guy (TA) reply on CDN and those CDN servers are also on the Internet and has fixed number of servers (probably not too fixed). In my opinion, sooner or later we'll be able to scan those & corner you. 
+
+Just my opinion, maybe I'm wrong.
 
 ## Refs
 
