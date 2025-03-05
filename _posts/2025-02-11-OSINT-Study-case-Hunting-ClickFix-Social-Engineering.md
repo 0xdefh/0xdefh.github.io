@@ -31,7 +31,6 @@ A year later, ClickFix has certainly evolved. However, in my view, it has merely
 
 
 
-
 **By the end of 2024**, The term **DeceptionAds** was a thing, which (you can read it right [here](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)) was a Ad-Networks As Enablers to `cloak` their intention
 and use it to spread the Malware
 
@@ -110,10 +109,12 @@ be alter because of the site is down, we will start with 2 separate study case
 - With intial information
 - Wihtout intial information
 
+> I don't have access to robust tool, so I will try to be resourceful as possible and leverage free tools & free source of data.
+{: .prompt-info }
+
 #### With Intial Information
 
-
-- Domain:
+- Domain: 
 - HTML Content: 
 - Javascript Content: 
 
@@ -126,16 +127,32 @@ Which is using **copy-paste to clipboard script and make user to paste it to the
 
 **Copy-Paste Clipboard**
 
-From other vendors and the report that I've read these keyword usually used on the Copy-Paste notification or pop-up that request user to copy the script
+From other vendors and the report that I've read these keyword usually used on the Copy-Paste notification or pop-up that request user to copy the script. So let's hunt for that indidcator or UIL.
 
-* 
+Here are some picture related these type of pop-up, which I found on Twitter and other intelligence report from [Germán Fernández's Tweet](https://x.com/1ZRR4H/status/1897023643668062243)
+
+![Copy-Paste Click Fix 1](/assets/img/clickfix_copy_paste1.jpeg)
+
+And from [ܛܔܔܔܛܔܛܔܛ's Tweet](https://x.com/skocherhan/status/1889754939859009917)
+
+![Copy-Paste Click Fix 2](/assets/img/clickfix_copy_paste2.png)
+
+Or from [Lumma Stealer ClickFix](https://www.silentpush.com/blog/lumma-stealer/)
+
+![Lumma Stealer ClickFix](/assets/img/clickfix_copypaste_lumma.png)
+
+These Copy-Paste has **embeded a javascript contain a powershell script** and always has a **Control (CTRL) + C** and **Control (CTRL) + V** and the **Press Windows Button** which quite a UIL in my opinion
 
 
+So let's start from it
 
 **Captcha Page**
 
+Fake-Captcha page also their main thing to fake and deliver their malware
+
 
 **Google Related Pages**
+
 
 
 **Microsoft Related Pages**
@@ -188,6 +205,11 @@ TA know this and exploit evevy corner of it. By hunting and reported these type 
 
 Honestly, Hunting is just like a quest fo
 
+### Bias
+
+Also these thing doesn't actually work everytime, there infrastructure change and they will use CDN such as CloudFlare & Akamai and other thing to
+hide their infra from detection such as URLScan, Google Dork, generally internet scanner
+
 ## Refs
 
 * [Sekoia - ClickFix Tactic The Phantom Meet](https://blog.sekoia.io/clickfix-tactic-the-phantom-meet/)
@@ -200,3 +222,4 @@ Honestly, Hunting is just like a quest fo
 * [Criminal IP - ClickFix Fake Error Messags](https://blog.criminalip.io/2024/10/07/clickfix-fake-error-messages/)
 * [Malicious Ads Push Lumma Information Stealer via Fake Captcha Pages](https://www.bleepingcomputer.com/news/security/malicious-ads-push-lumma-infostealer-via-fake-captcha-pages/)
 * [DeceptionAds - Fake Captcha](https://labs.guard.io/deceptionads-fake-captcha-driving-infostealer-infections-and-a-glimpse-to-the-dark-side-of-0c516f4dc0b6)
+* [Recorded Future - 2024 Malicious Infrastucture Report](https://www.recordedfuture.com/research/2024-malicious-infrastructure-report) (You should read the whole report)
