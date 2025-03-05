@@ -128,10 +128,36 @@ Let's pick a random domain and start pivoting, if we ran to dead end, please cho
 
 -> Then redirect to another sudomain: **booking.completedgustra[.]com** which will only show the ClickFix if the the site detect browser fingerprinting is a Windows-based machine. 
 
-Here is the screenshot:
+Here is the screenshot from URLScan.io, access [here](https://urlscan.io/result/aac0099c-526c-47e4-94d9-aea6906a1a61/)
 
+![Windows Only](/assets/img/windows_only.png)
 
-We will understand this website and start to pivoting to find others that simlilar to this Website and probably we will discover the campain or the cluster of it (hopefully)
+From this, you can identify additional pivot points, like the phrase: '**This page is intended for Windows users only.**'
+
+We’ll aim to analyze this website and use it as a starting point to uncover others that are similar, potentially revealing the broader campaign or cluster behind it (with any luck).
+
+We start examinate the headers, requets, javascript and many more -> these thing make this website unique.
+
+First, it is the request to the main website that return a HTTP response, we will search on URLScan the resource hash which is unique for this HTTP response. 
+
+![HTTP Response](/assets/img/unique_hash.png)
+
+By searching this hash on URLScan.io or any platform that allow you search for HTTP response content in term of hash value the it should do it
+
+![Unique Hash Result](/assets/img/unique_hash_search_result.png)
+
+We’ve observed a few key details here:
+
+* Consistent naming conventions
+* Identical HTTP response hashes
+* The same 'booking' subdomain
+* The same resource path '/win'
+
+These domains likely belong to the same threat actor. We could dive deeper, but that would lead us down a rabbit hole, making this blog much longer. Still, you get the gist of it.
+
+Also honestly you should check more information on those domains such as whois information, the date of register and so on.
+
+But alright, let's start without the intial informaion.
 
 #### Without Intial Information
 
