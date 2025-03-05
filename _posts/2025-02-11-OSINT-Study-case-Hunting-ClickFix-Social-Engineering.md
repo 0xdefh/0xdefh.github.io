@@ -206,7 +206,10 @@ Example Screenshot:
 
 We found another domain: **hxxps://2ur[.]jp/NJgY** which will download a **AsycnClient.exe**, We will use URLScan.io to scan this domain you can access this link [https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions](https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions)
 
-Which it will redirect to **hxxps://196.251.113[.]41/AsyncClient.exe** 
+Which it will redirect to **hxxps://196.251.113[.]41/AsyncClient.exe** with the file hash 284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76 and if you ever to search the hash on the VirusTotal (VT) -> ALL RED VT Link: [https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76](https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76)
+
+
+
 
 **Captcha Page**
 
