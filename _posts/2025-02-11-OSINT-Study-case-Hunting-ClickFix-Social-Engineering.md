@@ -126,7 +126,12 @@ Let's pick a random domain and start pivoting, if we ran to dead end, please cho
 - HTML Content: CloudFlae 
 - Javascript Content: 
 
--> Then redirect to another sudomain: booking.completedgustra[.]com which will only show the ClickFix if the the site detect browser fingerprinting is a Windows-based machien
+-> Then redirect to another sudomain: **booking.completedgustra[.]com** which will only show the ClickFix if the the site detect browser fingerprinting is a Windows-based machine. 
+
+Here is the screenshot:
+
+
+We will understand this website and start to pivoting to find others that simlilar to this Website and probably we will discover the campain or the cluster of it (hopefully)
 
 #### Without Intial Information
 
@@ -275,7 +280,7 @@ My takeaway on this type of phishing is that a single moment of carelessness—l
 
 Threat actors are well aware of this and exploit every opportunity they can. By hunting and reporting these phishing attempts, we’re making a small but meaningful contribution to slowing them down—though, to be honest, it’s impossible to completely stop every malicious or harmful act.
 
-I’d rather take small actions than do nothing at all, and I hope these efforts can support you on your hunting journey. By the time this blog gains recognition, those threat actors might be reading it too. I’ve read Beyond Good and Evil by Friedrich Nietzsche, and I understand that your existence is inevitable, just as there’s a moral gray area to navigate. With all due respect, good luck—we’ll do our best to slow you down as much as we can. After all, we’re inevitable too.
+`I’d rather take small actions than do nothing at all, and I hope these efforts can support you on your hunting journey. By the time this blog gains recognition, those threat actors might be reading it too. I’ve read Beyond Good and Evil by Friedrich Nietzsche, and I understand that your existence is inevitable, just as there’s a moral gray area to navigate. With all due respect, good luck—we’ll do our best to slow you down as much as we can. After all, we’re inevitable too.`
 
 ### Bias
 
