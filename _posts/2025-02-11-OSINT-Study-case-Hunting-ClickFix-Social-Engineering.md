@@ -101,7 +101,7 @@ Or you could just take a look that the most used website and then start picking 
 
 ### Start Pivoting & Investigate 
 
-After a long Collection phase, you are ready to start investigate. The time of this Study Case is **24/02/2025** which all the data & the step that I took during this Study Case could
+After a long Collection phase, you are ready to start investigate. The time of this Study Case is **5/03/2025** which all the data & the step that I took during this Study Case could
 be alter because of the site is down, we will start with 2 separate study case
 
 - With intial information
@@ -112,9 +112,21 @@ be alter because of the site is down, we will start with 2 separate study case
 
 #### With Intial Information
 
-- Domain: 
-- HTML Content: 
+You could go to these services and then obtain intial information from them such as:
+
+* [Threat Fox](https://threatfox.abuse.ch/) -> you can search for the ClickFix tag, here is the query: [https://threatfox.abuse.ch/browse.php?search=tag%3Aclickfix](https://threatfox.abuse.ch/browse.php?search=tag%3Aclickfix)
+
+Here are the result: 
+
+![ClickFix Result from Threat Fox](/assets/img/ClickFix_threatfox.png)
+
+Let's pick a random domain and start pivoting, if we ran to dead end, please choose another and start the loop again.
+
+- Domain: completedgustra[.]com
+- HTML Content: CloudFlae 
 - Javascript Content: 
+
+-> Then redirect to another sudomain: booking.completedgustra[.]com which will only show the ClickFix if the the site detect browser fingerprinting is a Windows-based machien
 
 #### Without Intial Information
 
