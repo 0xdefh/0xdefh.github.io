@@ -36,11 +36,13 @@ and use it to spread the Malware.
 
 Threat Actor leverage these ads-network in order to maximize their infection, most of the others techniques also use it
 
-This is how the ads-network suppose to work or it work in general
+This is how the ads-network suppose to work or it work in general.
 
 ![Ads-Network](/assets/img/Ad-networks.png)
 
-From the above picture you can see that it is leverage a proxy which will deliver ads to user based on the Browser Fingerprint 
+From the above picture you can see that it is leverage a proxy which will deliver ads to user based on the Browser Fingerprint. I will not go into detail about these. There are a lot of resource talk about this and explain way better than I do.
+
+But hey, **Let the Hunt Begin!!!**
 
 ## Hunting for ClickFix/ ClearFake Website 
 
@@ -122,8 +124,8 @@ Here are the result:
 
 Let's pick a random domain and start pivoting, if we ran to dead end, please choose another and start the loop again.
 
-- Domain: completedgustra[.]com
-- HTML Content: CloudFlae 
+- Domain: **completedgustra[.]com**
+- HTML Content: **CloudFlare checkbox**
 - Javascript Content: 
 
 -> Then redirect to another sudomain: **booking.completedgustra[.]com** which will only show the ClickFix if the the site detect browser fingerprinting is a Windows-based machine. 
@@ -132,7 +134,7 @@ Here is the screenshot from URLScan.io, access [here](https://urlscan.io/result/
 
 ![Windows Only](/assets/img/windows_only.png)
 
-From this, you can identify additional pivot points, like the phrase: '**This page is intended for Windows users only.**'
+From this, you can identify additional pivot points, like the phrase: '**This page is intended for Windows users only.**' you can use this to search for more information.
 
 We’ll aim to analyze this website and use it as a starting point to uncover others that are similar, potentially revealing the broader campaign or cluster behind it (with any luck).
 
@@ -153,11 +155,11 @@ We’ve observed a few key details here:
 * The same 'booking' subdomain
 * The same resource path '/win'
 
-These domains likely belong to the same threat actor. We could dive deeper, but that would lead us down a rabbit hole, making this blog much longer. Still, you get the gist of it.
+These domains **likely belong to the same threat actor**. We could dive deeper, but that would lead us down a rabbit hole, making this blog much longer. Still, you get the gist of it.
 
 Also honestly you should check more information on those domains such as whois information, the date of register and so on.
 
-But alright, let's start without the intial informaion.
+But alright, let's start without the intial information.
 
 #### Without Intial Information
 
