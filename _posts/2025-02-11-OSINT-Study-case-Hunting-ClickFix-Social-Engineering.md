@@ -107,7 +107,7 @@ After a long Collection phase, you are ready to start investigate. The time of t
 be alter because of the site is down, we will start with 2 separate study case
 
 - With intial information
-- Wihtout intial information
+- Without intial information
 
 > I don't have access to robust tool, so I will try to be resourceful as possible and leverage free tools & free source of data.
 {: .prompt-info }
