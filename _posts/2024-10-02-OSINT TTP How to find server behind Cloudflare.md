@@ -1,7 +1,7 @@
 ---
 title: ENG - OSINT Techniques | How to find a server behind Cloudflare
 date: 2024-10-02
-author: khuong
+author: zeroska
 layout: post
 categories: [Security]
 tags: [investigation,osint,ttp]
@@ -184,11 +184,9 @@ cURL offers a --resolve argument to explicitly map a domain name and port to an 
 
 **If the site is still host on that server, it will return the content of the website.**
 
-
 ## Conclusion
 
 Honestly, there are a ton of ways to do anything. It really depends on how creative you are and how well you understand the basics. These tips and tricks have been a huge help for me.
-
 
 ## Refs
 
