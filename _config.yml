@@ -14,29 +14,29 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 0xdef - An Intelligence Agency # the main title
+title: 0xdefh - An Intelligence Agency # the main title
 
-tagline: 0xdef is an intelligence agency specializing in Vietnam and the APAC region, providing intelligence to combat cybercrime. # it will display as the sub-title
+tagline: 0xdefh is an intelligence agency specializing in Vietnam and the APAC region, providing intelligence to combat cybercrime. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  0xdef is an intelligence agency specializing in Vietnam and the APAC region, providing intelligence to combat cybercrime.
+  0xdefh is an intelligence agency specializing in Vietnam and the APAC region, providing intelligence to combat cybercrime.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 URL: ""
 
 github:
-  username: Zeroska # change to your github username
+  username: 0xdefh # change to your github username
 
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Khuong Nguyen Dang
+  name: 0xdefh 
   email: contact@0xdefh.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/username # change to your github homepage
+    - https://github.com/0xdefh # change to your github homepage
     # Uncomment below to add more social links
     - https://www.linkedin.com/in/nguyen-dang-khuong-2a7a58168/
 
