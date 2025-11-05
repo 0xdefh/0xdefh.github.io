@@ -6,7 +6,7 @@
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
-  url: "zeroska.dev@gmail.com"
+  url: "contact@0xdefh.com"
 
 - type: rss
   icon: "fas fa-rss"

@@ -1,7 +1,7 @@
 ---
 title: Fresh off the boat - for new Blue Teamer & SOC Analyst
 date: 2024-03-27 
-author: khuong
+author: zeroska
 layout: post
 categories: [Security]
 tags: [beginner]   

@@ -1,10 +1,10 @@
 ---
 title: ENG - Investigation using OSINT | Case 0x00 A Vietnamese MMO 
 date: 2024-07-05
-author: khuong
+author: zeroska
 layout: post
 categories: [Security]
-tags: [beginner]
+tags: [investigation,osint]
 toc: true
 mermaid: true
 image:
