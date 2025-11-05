@@ -41,6 +41,6 @@ We offer continuous monitoring and tracking of:
 
 For more information about our services, please contact us at:
 
-📧 Email: zeroska.dev@gmail.com
+📧 Email: contact@0xdefh.com
  
 
